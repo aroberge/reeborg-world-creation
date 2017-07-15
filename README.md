@@ -14,7 +14,7 @@ I assume that you have a good working knowledge of writing programs using either
 
 ### About Reeborg's World
 
-[Reeborg's World \(main site\)](http://reeborg.ca) is a website I designed to help people to learn programming. It includes a Python tutorial \(which is in constant need of updating\) available in English, French and Korean. However, its main feature, and the one referred to in this document, is a single-app page which I refer to simply as [Reeborg's World](http://reeborg.ca/reeborg.html). 
+[Reeborg's World \(main site\)](http://reeborg.ca) is a website I designed to help people to learn programming. It includes a Python tutorial \(which is in constant need of updating\) available in English, French and Korean. However, its main feature, and the one referred to in this document, is a single-app page which I refer to simply as [Reeborg's World](http://reeborg.ca/reeborg.html).
 
 * **It is free**.
   * I pay for the required hosting fees myself and currently have no plan to derive income from the site.  It is the natural evolution of a project which started in 2004 as a desktop program named RUR-PLE \(now obsolete\).
@@ -30,13 +30,13 @@ I assume that you have a good working knowledge of writing programs using either
 
 Reeborg's World is based on the _Karel the robot_ approach introduced by Richard Pattis in 1981.
 
-Karel vs Reeborg
+### Karel vs Reeborg
 
 Here's an image taken from a relatively recent version of Karel the Robot that is used to teach Java. \(See [https://csis.pace.edu/~bergin/KarelJava2ed/Karel++JavaEdition.html](https://csis.pace.edu/~bergin/KarelJava2ed/Karel++JavaEdition.html)\)
 
 ![](/assets/kjr2.gif)
 
-Karel's world can have walls, blocking the way, and beepers, which are artefact which can be picked up and put down by Karel. To my knowledge, a given version of Karel can only be programmed using an OOP approach or a simple function based approach \(like Pattis's original version\). 
+Karel's world can have walls, blocking the way, and beepers, which are artefact which can be picked up and put down by Karel. To my knowledge, a given version of Karel can only be programmed using an OOP approach or a simple function based approach \(like Pattis's original version\).
 
 By contrast, worlds in Reeborg's World can have multiple artefacts with which Reeborg can interact, including animated images.
 
@@ -48,5 +48,5 @@ If a programming task has defined goals, a student can receive feedback automati
 
 ![](/assets/good_result.png)
 
-
+There are many more features available in Reeborg's World, too many to describe here without the appropriate context. This book's aim is to document everything that is possible to do with Reeborg's World.
 
