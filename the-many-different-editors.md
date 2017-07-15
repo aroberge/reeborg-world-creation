@@ -46,7 +46,7 @@ Before a program \(entered in the main editor\) is run, it is concatenated with 
 
 See the **Pre editor**.
 
-## The Description \(desc\) editor
+## The Description \(Desc.\) editor
 
 The Description editor is intended to provide some explanation for a given world, like a task to be accomplished. The content of this editor is assumed to be some html code.
 
@@ -61,8 +61,8 @@ INSERT\_PRE, INSERT\_POST,  INSERT\_ONLOAD, INSERT\_EDITOR or INSERT\_LIBRARY
 
 An example of this is provided if you load a world by running a program containing the following instruction:
 
-```
-World("worlds/examples/simple_path_explain.json", "path_explain")
+```py
+World("worlds/examples/simple_path_explained.json", "path_explain")
 ```
 
 and, once the world is loaded, by clicking on the **World Info** button.
@@ -70,6 +70,10 @@ and, once the world is loaded, by clicking on the **World Info** button.
 ### Even more info
 
 Let's assume that you have clicked \(once\) on the **World Info** button so that the window/dialog is showing.  If you click on a grid square in the world, you might see some additional info specific to that location appearing at the bottom of the world info window/dialog.  For example, with the `"path_explain"` world mentioned above, if you click on a grid square, you should at the very least get the information about which type of background \(grass or gravel\) is present at that location.
+
+### Suggestion
+
+If you have the **World Info** window open, close it. Then select one of the worlds that you created in the previous chapter and click on **World Info** to see the information displayed. Note how the information about the desired final location and the current robot position and the objects it carries is automatically displayed. This type of information is always appended to what your write in the Description editor.
 
 ### Add your own code
 
@@ -89,7 +93,9 @@ Unless the very first character of the code in this editor is `#`, the content o
 
 The syntax highlighting mode for this editor is initially set to be the same as the programming language; if code is present, the syntax highlighting is changed whether or not the first character is `#`.
 
-Whenever a world is loaded, or reloaded, this code is normally executed using either Javascript's `eval()` or Python/Brython's `exec()`, again based on whether or not the first character is `#`. This onload code can be used to specify which programming language or programming mode must be used for a given world, as well as for dynamically creating world features, including new objects represented by custom images.
+Except when in world editing mode, whenever a world is loaded, or reloaded, the code in the **Onload editor** is automatically executed using either Javascript's `eval()` or Python/Brython's `exec()`, again based on whether or not the first character is `#`. You saw the result of this in the third world created in the previous chapter.
 
-Unless some custom code is included in the other code editors \(Pre, Post, main editor, and possibly library\), you should not set the programming language or mode in the editor; this way, a learner could use your world with programs written in all of the available modes and programming languages.
+This onload code can be used to specify which programming language or programming mode must be used for a given world, as well as for dynamically creating world features, including new objects represented by custom images.
+
+Unless some custom code is included in the **Pre **or **Post **editor, you should not set the programming language or mode; this way, a learner could use your world with programs written in all of the available modes and programming languages.
 
