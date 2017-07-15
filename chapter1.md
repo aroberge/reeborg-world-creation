@@ -16,8 +16,6 @@ And this is what  it will look like:
 
 It is important that you follow along, creating three different versions of the same world \(programming task\) so that you can understand the more complex examples provided later.
 
-
-
 ## 1. Using the menu-driven World editor
 
 I strongly suggest that you follow along on the [Reeborg's World](http://reeborg.ca/reeborg.html) site. It is possible, even likely, that you will find at least some minor differences between the images included in this book and what you see on the actual site as I constantly tweak the site to make improvements. If the difference are so large as to make the instructions difficult to follow, please contact me so that I can update the information found in this book.
@@ -90,9 +88,67 @@ _**That's it!**_  Using the World editor, you have created and saved a new world
 
 ## 2. Using a simple program
 
-Explain the procedure
+This time we will create an identical copy by writing a program instead of using the menu-driven World editor. Remember what we want for this world:
+
+1. Starting from a default world, we want to change its size
+2. Next, we want to use the image of a house to indicate the desired final position for Reeborg
+3. Finally, we want to add a wall in front of Reeborg.
+
+Here's how to do this.
+
+* Start with the same default world as before \[**Alone**\].
+* Enter the following program in the editor and execute it; you can use either Python or Javascript to do so.
+
+```py
+RUR.set_world_size(3, 3)
+RUR.add_final_position("house", 3, 1)
+RUR.add_wall("east", 1, 1)
+```
+
+The result should look like the following, where I have moved the** Reeborg shouts** dialog window to be able to see the world. **Leave it as is, without reloading.**
+
+![](/assets/3x3_run.png)
+
+* Like you did previously, Click on **Additional options**, followed by **Edit World** so as to be able to save the world.
+* Click on the **Save world in browser** button, entering a different name than you did previously \(I chose world\_2\).
+
+* Next, dismiss the **World editor** window, maximize the **Additional options** window, and save the world to a differently named .json file.
+
+The contents of the two files you have saved should be identical. You should confirm this using a "diff" program on your computer, or an online tool, such as [https://www.diffchecker.com/](https://www.diffchecker.com/).
+
+Note that, instead of using `RUR.add\_wall("east", 1, 1)`_ _
+
+```py
+RUR.add_wall("east", 1, 1)
+```
+
+we could have used_ _
+
+```py
+RUR.add_wall("west", 2, 1)
+```
+
+instead. Internally, instead of using all four possible directions \(`north == towards the top`, `east == towards the right`, `south`, and `west`\), everything is converted to only use `north` and `east`.
 
 ## 3. Using the Onload editor
 
-Explain the procedure
+Again start with the default world \[**Alone**\]. Then click on the **Additional options** button, followed by the **Edit world** button to change the mode to world editing. Move the World editor window so that you can clearly see the code editors. Instead of only one \(if you use Javascript\) or two \(if you use Python\) editor tabs, you should now see 5 or 6 available editors.![](/assets/editor_tabs.png)
+
+Copy the code which we used previously from the main editor \(**Python Code** in my case\) to the **Onload **editor. Once this is done, you can delete the code in the main editor.
+
+Next, in the World editor window, click on Onload to indicate that you wish to save the content of that editor as part of the world content.
+
+![](/assets/select_onload.png)
+
+Then, as before, save a copy of the world in the browser \(giving it a different name\) and dismiss the World editor window: you should see the world change to look identical to the previous versions.  However, if you save it to a file, you will find that this file is different from the other two.
+
+## Which way is better?
+
+The answer is ... it depends.  If all I want to do is to create a static world where all artefacts except the robot are at a fixed position, and where I only use default artefacts/images, like the world shown below \[_except for the bridge over the water_\], I find that this is more easily done using only the menu-driven **World editor**. 
+
+![](/assets/nice_path.png)
+
+However, if I want to use different artefact, or to create new types of interactions, _etc_., I most often use a hybrid approach where I first write all the code in the main editor, like you did in the second example, doing various tests until I am satisfied with the result. Then, I move some of the code to the **Onload **editor and, very often, some to the **Pre **and **Post **editors whose role I will explain in the next chapter. 
+
+I have no doubt that, as you create more worlds, you will find an approach that works for you.
 
