@@ -10,7 +10,13 @@ The world that we will create will:
 * have a wall blocking Reeborg's way
 * have a house indicating a final position that needs to be reached.
 
+And this is what  it will look like:
+
+![](/assets/3x3_final.png)
+
 It is important that you follow along, creating three different versions of the same world \(programming task\) so that you can understand the more complex examples provided later.
+
+
 
 ## 1. Using the menu-driven World editor
 
