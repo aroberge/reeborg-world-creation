@@ -2,7 +2,7 @@
 
 While the menu driven **World editor**_ _ included in Reeborg's World makes it possible to create your own worlds, it is limited to create worlds with predefined objects. Furthermore, it only creates static worlds which are then interacted with through a user's program. A world creator may wish to introduce additional interactivity by changing the state of the world when a user's program has achieved a partial goal, like reaching a predefined position. The functions documented in this book are intended to give world creators all the flexibility they need to create their own worlds.
 
-If you follow along the instructions described in this chpaterl, you will first create and save a world using the menu driven **World editing**_ _and then create the same world running a program that makes use of available methods instead. Finally, you will learn how to dynamically create a similar world using the **Onload editor**.
+If you follow along the instructions described in this chpaterl, you will first create and save a world using the menu driven **World editing**\_ \_and then create the same world running a program that makes use of available methods instead. Finally, you will learn how to dynamically create a similar world using the **Onload editor**.
 
 The world that we will create will:
 
@@ -74,11 +74,11 @@ The world has been saved in your browser's local storage; unless you explicitly 
 
 ![](/assets/down_arrow.png)
 
-Next, in the text field under the Edit World button, enter a file name \(I chose world\_1\); the ".json" extension will be automatically added. After entering the name, click on the **Save world to file** button.
+Next, in the text field under the Edit World button, enter a file name \(I chose world\_1\); the ".json" extension will be automatically added reflecting the fact that a world is a simple javascript object stored in json format. After entering the name, click on the **Save world to file** button.
 
 ![](/assets/save_world_to_file.png)
 
-Depending on your browser and your computer type \(Apple are acting very differently\), you may be given \(or not\) a choice of location to which you can save your file, or, if using Safari on an Apple computer, the content of the file might be displayed and you might have to explicitly save it using a standard Mac file dialog.
+Depending on your browser and your computer type \(Apple computers are acting very differently\), you may be given \(or not\) a choice of location to which you can save your file, or, if using Safari on an Apple computer, the content of the file might be displayed and you might have to explicitly save it using a standard Mac file dialog. I trust that you will be able to find the file that was saved.
 
 _**That's it!**_  Using the World editor, you have created and saved a new world.  You might want to test it by writing a program that will make Reeborg reach its final destination.
 
