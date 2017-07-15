@@ -10,7 +10,7 @@ The world that we will create will:
 * have a wall blocking Reeborg's way
 * have a house indicating a final position that needs to be reached.
 
-And this is what  it will look like:
+And this is what it will look like:
 
 ![](/assets/3x3_final.png)
 
@@ -18,7 +18,7 @@ It is important that you follow along, creating three different versions of the 
 
 ## 1. Using the menu-driven World editor
 
-I strongly suggest that you follow along on the [Reeborg's World](http://reeborg.ca/reeborg.html) site. It is possible, even likely, that you will find at least some minor differences between the images included in this book and what you see on the actual site as I constantly tweak the site to make improvements. If the difference are so large as to make the instructions difficult to follow, please contact me so that I can update the information found in this book.
+I strongly suggest that you follow along on the [Reeborg's World](http://reeborg.ca/reeborg.html) site. It is possible, even likely, that you will find at least some minor differences between the images included in this book and what you see on the actual site as I often tweak the site to make improvements. If the difference are so large as to make the instructions difficult to follow, please contact me so that I can update the information found in this book.
 
 To access the menu-driven World editor dialog, you first need to click on the **Additional options** button.
 
@@ -38,15 +38,19 @@ As you hover your mouse over the menu bar near the middle of the World editor wi
 
 ![](/assets/menus_editor.png)
 
-Make sure that the world that is currently selected is the default world named Alone, which has a robot in it at location \(1, 1\) and nothing else; it is the world displayed in the very first image shown in this chapter.
+Make sure that the world that is currently selected is the default world named **Alone**, which has a robot in it at location \(1, 1\) and nothing else; it is the world displayed in the very first image shown in this chapter.
 
 ![](/assets/alone.png)
 
-Then, in the World editor, click on **World dimensions**; a dialog similar to that shown below should appear.![](/assets/world_dimension.png)
+Then, in the **World editor**, click on **World dimensions**; a dialog similar to that shown below should appear.![](/assets/world_dimension.png)
 
 Change the maximum values for x and y both to 3 and click **OK**; the world displayed should now be much smaller.![](/assets/3x3.png)
 
-Next, hover over the **Goal **menu item and click on the **Robot **sub-menu: this allows us to choose a final position as a desired goal for the robot. By default, this final position can be indicated by one of three images.
+Next, hover over the **Goal **menu item and click on the **Robot **sub-menu: this allows us to choose a final position as a desired goal for the robot.
+
+![](/assets/goal_robot_menu.png)
+
+ By default, this final position can be indicated by one of three images.
 
 ![](/assets/position_image.png)
 
@@ -54,7 +58,7 @@ Click on the image of a house.  Then, in the small world, click on the grid loca
 
 ![](/assets/3x3_goal.png)
 
-Finally, hover over the **Add **menu and click on **Wall**.
+Finally, hover over the **Add **menu and click on **Walls**.
 
 ![](/assets/add_wall.png)
 
@@ -74,15 +78,15 @@ Dismiss the **World Editor** by clicking on the X at the top-right corner.![](/a
 
 ![](/assets/3x3_final.png)
 
-The world has been saved in your browser's local storage; unless you explicitly delete it, it should be available next time you visit the site. However, you cannot share this world yet.  To do so, maximize the **Additional options** window by clicking on the bottom arrow next to the X at the right.
+The world has been saved in your browser's local storage; unless you explicitly delete it, it should be available next time you visit the site. However, you cannot share this world yet.  To do so, maximize the **Additional options** window by clicking on the bottom arrow to the left of the X at the right.
 
 ![](/assets/down_arrow.png)
 
-Next, in the text field under the Edit World button, enter a file name \(I chose world\_1\); the ".json" extension will be automatically added reflecting the fact that a world is a simple javascript object stored in json format. After entering the name, click on the **Save world to file** button.
+Next, in the text field under the Edit World button, enter a file name \(I again chose world\_1\); the ".json" extension will be automatically added reflecting the fact that a world is a simple javascript object stored in json format. After entering the name, click on the **Save world to file** button.
 
 ![](/assets/save_world_to_file.png)
 
-Depending on your browser and your computer type \(Apple computers are acting very differently\), you may be given \(or not\) a choice of location to which you can save your file, or, if using Safari on an Apple computer, the content of the file might be displayed and you might have to explicitly save it using a standard Mac file dialog. I trust that you will be able to find the file that was saved.
+Depending on your browser and your computer type \(Apple computers are acting very differently\), you may be given \(or not\) a choice of location to which you can save your file, or, if using Safari on an Apple computer, the content of the file might be displayed and you might have to explicitly save it using a standard Mac file dialog. I trust that you will be able to both save the file and find where it was saved.
 
 _**That's it!**_  Using the World editor, you have created and saved a new world.  You might want to test it by writing a program that will make Reeborg reach its final destination.
 
@@ -90,8 +94,8 @@ _**That's it!**_  Using the World editor, you have created and saved a new world
 
 This time we will create an identical copy by writing a program instead of using the menu-driven World editor. Remember what we want for this world:
 
-1. Starting from a default world, we want to change its size
-2. Next, we want to use the image of a house to indicate the desired final position for Reeborg
+1. Starting from a default world, we want to change its size.
+2. Next, we want to use the image of a house to indicate the desired final position for Reeborg.
 3. Finally, we want to add a wall in front of Reeborg.
 
 Here's how to do this.
@@ -116,7 +120,7 @@ The result should look like the following, where I have moved the** Reeborg shou
 
 The contents of the two files you have saved should be identical. You should confirm this using a "diff" program on your computer, or an online tool, such as [https://www.diffchecker.com/](https://www.diffchecker.com/).
 
-Note that, instead of using `RUR.add\_wall("east", 1, 1)`_ _
+Note that, instead of using
 
 ```py
 RUR.add_wall("east", 1, 1)
@@ -128,15 +132,15 @@ we could have used_ _
 RUR.add_wall("west", 2, 1)
 ```
 
-instead. Internally, instead of using all four possible directions \(`north == towards the top`, `east == towards the right`, `south`, and `west`\), everything is converted to only use `north` and `east`.
+Internally, rather than using all four possible directions \(`north == towards the top`, `east == towards the right`, `south`, and `west`\), everything is converted to only use `north` and `east`.
 
 ## 3. Using the Onload editor
 
-Again start with the default world \[**Alone**\]. Then click on the **Additional options** button, followed by the **Edit world** button to change the mode to world editing. Move the World editor window so that you can clearly see the code editors. Instead of only one \(if you use Javascript\) or two \(if you use Python\) editor tabs, you should now see 5 or 6 available editors.![](/assets/editor_tabs.png)
+Again start with the default world \[**Alone**\]. Then click on the **Additional options** button, followed by the **Edit world** button to change the mode to world editing. Move the **World editor** window so that you can clearly see the code editors. Instead of only one \(if you use Javascript\) or two \(if you use Python\) editor tabs, you should now see 5 or 6 available editors.![](/assets/editor_tabs.png)
 
 Copy the code which we used previously from the main editor \(**Python Code** in my case\) to the **Onload **editor. Once this is done, you can delete the code in the main editor.
 
-Next, in the World editor window, click on Onload to indicate that you wish to save the content of that editor as part of the world content.
+Next, in the World editor window, click first on Onload to indicate that you wish to save the content of that editor as part of the world content.
 
 ![](/assets/select_onload.png)
 
@@ -144,11 +148,11 @@ Then, as before, save a copy of the world in the browser \(giving it a different
 
 ## Which way is better?
 
-The answer is ... it depends.  If all I want to do is to create a static world where all artefacts except the robot are at a fixed position, and where I only use default artefacts/images, like the world shown below \[_except for the bridge over the water_\], I find that this is more easily done using only the menu-driven **World editor**. 
+The answer is ... it depends.  If all I want to do is to create a static world where all artefacts except the robot are at a fixed position, and where I only use default artefacts/images, like the world shown below \[_except for the bridge over the water_\], I find that this is more easily done using only the menu-driven **World editor**.
 
 ![](/assets/nice_path.png)
 
-However, if I want to use different artefact, or to create new types of interactions, _etc_., I most often use a hybrid approach where I first write all the code in the main editor, like you did in the second example, doing various tests until I am satisfied with the result. Then, I move some of the code to the **Onload **editor and, very often, some to the **Pre **and **Post **editors whose role I will explain in the next chapter. 
+However, if I want to use different artefact, or to create new types of interactions, _etc_., I most often use a hybrid approach where I first write all the code in the main editor, like you did in the second example, doing various tests until I am satisfied with the result. Then, I move some of the code to the **Onload **editor and, very often, some to the **Pre **and **Post **editors whose role I will explain in the next chapter.
 
-I have no doubt that, as you create more worlds, you will find an approach that works for you.
+I have no doubt that, as you create more worlds, you will find an approach that works best for you.
 
