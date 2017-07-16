@@ -16,7 +16,7 @@ RUR.add_final_position("house", 3, 1)
 RUR.add_wall("east", 1, 1)
 ```
 
-You can see all the relevant functions for creating world \[add link here\]. Please note that there are likely more functions belonging to the `RUR` namespace than what is documented on that site.  As a general rule, you should not create additional functions belonging to this namespace.
+You can see all the relevant functions included in the Application Programming Interface \(API\) \[todo: add link\] for creating world. Please note that there are likely more functions belonging to the `RUR` namespace than what is documented on that site.  As a general rule, you should not create additional functions belonging to the RUR namespace.
 
 ## A simple pattern
 
