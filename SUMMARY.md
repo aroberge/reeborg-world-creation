@@ -5,5 +5,6 @@
 * [The many different editors](the-many-different-editors.md)
 * [Naming convention](naming-convention.md)
 * [Adding objects](adding-objects.md)
-* Background tiles, obstacles, and decorative objects
+* [Background tiles, obstacles, and decorative objects](backgrounds.md)
+
 
