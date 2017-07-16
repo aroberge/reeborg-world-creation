@@ -10,7 +10,7 @@ You can add a single object as follows:
  RUR.add_object("token", 3, 4)
 ```
 
-The result will look like this:
+The result will look similar to the following image: 
 
 ![](/assets/token_added.png)
 
