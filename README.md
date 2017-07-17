@@ -20,7 +20,7 @@ While I have included many screenshots to give examples, to get the full picture
 
 [Reeborg's World \(main site\)](http://reeborg.ca) is a website I designed to help people to learn programming. It includes a Python tutorial \(which is in constant need of updating\) available in English, French and Korean. However, its main feature, and the one referred to in this document, is a single-app page which I refer to simply as [Reeborg's World](http://reeborg.ca/reeborg.html).
 
-* **Reeborg's World is free; **you do not have to pay to use it.
+* **Reeborg's World is free;** you do not have to pay to use it.
   * I pay for the required hosting fees myself and currently have absolutely no plan to derive income from the site.
 * Reeborg's World is open source; the main repository is public and can be found at [https://github.com/aroberge/reeborg](https://github.com/aroberge/reeborg).  I know that some teachers have installed a copy on their school servers for convenience.
 * Reeborg's World does not require users to log in.  In fact, there is no login feature.  Unless users \(teachers or students\) contact me, I have no way to know who you are.
@@ -43,9 +43,5 @@ The first few chapters of this book \[todo: specify which\] are meant to be read
 
 Starting with chapter \[todo: specify which\], the pace increases dramatically. I only give a cursory explanation of a topic and, most often, instead of including a complete code sample in the book, I ask you to load a specific world in Reeborg's World. This way, if I make changes to the code running the site, I only have to update the relevant worlds that I created without having to worry about correcting the code in this book.
 
-<<<<<<< Updated upstream
 Finally, there are a series of appendices. The most interesting of those is likely going to be the the list of worlds that include all relevant examples described in this book to which **I plan to add examples provided by people like you**!
-=======
-Finally, there are a series of appendices. The most interesting of those is likely going to be the the list of worlds that include all relevant examples described in this book to which I plan to add examples provided by people like you!
->>>>>>> Stashed changes
 
