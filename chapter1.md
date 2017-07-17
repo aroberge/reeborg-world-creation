@@ -2,7 +2,7 @@
 
 While the menu driven **World editor**_ _ included in Reeborg's World makes it possible to create your own worlds, it is limited to create worlds with predefined objects. Furthermore, it only creates static worlds which are then interacted with through a user's program. A world creator may wish to introduce additional interactivity by changing the state of the world when a user's program has achieved a partial goal, like reaching a predefined position. The functions documented in this book are intended to give world creators all the flexibility they need to create their own worlds.
 
-If you follow along the instructions described in this chpaterl, you will first create and save a world using the menu driven **World editing**\_ \_and then create the same world running a program that makes use of available methods instead. Finally, you will learn how to dynamically create a similar world using the **Onload editor**.
+If you follow along the instructions described in this chpaterl, you will first create and save a world using the menu driven **World editor **and then create the same world running a program that makes use of available methods instead. Finally, you will learn how to dynamically create a similar world using the **Onload editor**.
 
 The world that we will create will:
 
@@ -10,7 +10,7 @@ The world that we will create will:
 * have a wall blocking Reeborg's way
 * have a house indicating a final position that needs to be reached.
 
-And this is what it will look like:
+This is what it will look like:
 
 ![](/assets/3x3_final.png)
 
@@ -18,7 +18,7 @@ It is important that you follow along, creating three different versions of the 
 
 ## 1. Using the menu-driven World editor
 
-I strongly suggest that you follow along on the [Reeborg's World](http://reeborg.ca/reeborg.html) site. It is possible, even likely, that you will find at least some minor differences between the images included in this book and what you see on the actual site as I often tweak the site to make improvements. If the difference are so large as to make the instructions difficult to follow, please contact me so that I can update the information found in this book.
+For this example, you need follow along on the [Reeborg's World](http://reeborg.ca/reeborg.html) site. I know that you will find at least some minor differences between some of the images included in this book and what you see on the actual site as I often tweak the site to make improvements. If the difference are so large as to make the instructions difficult to follow, please contact me so that I can update the information found in this book.
 
 To access the menu-driven World editor dialog, you first need to click on the **Additional options** button.
 
@@ -136,7 +136,7 @@ Internally, rather than using all four possible directions \(`north == towards t
 
 ## 3. Using the Onload editor
 
-Again start with the default world \[**Alone**\]. Then click on the **Additional options** button, followed by the **Edit world** button to change the mode to world editing. Move the **World editor** window so that you can clearly see the code editors. Instead of only one \(if you use Javascript\) or two \(if you use Python\) editor tabs, you should now see 5 or 6 available editors.![](/assets/editor_tabs.png)
+Again start with the default world \[**Alone**\]. Then click on the **Additional options** button, followed by the **Edit world** button to change the mode to world editing. Move the **World editor** window so that you can clearly see the code editors. Instead of only one editor tab  \(if you use Javascript\) or two \(if you use Python\), you should now see 5 or 6 available editors.![](/assets/editor_tabs.png)
 
 Copy the code which we used previously from the main editor \(**Python Code** in my case\) to the **Onload **editor. Once this is done, you can delete the code in the main editor.
 
