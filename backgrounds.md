@@ -96,11 +96,19 @@ By default, it would make little sense to put objects that need to be picked up 
 
 ## Beyond the menu-driven World editor
 
-The menu-driven World editor limits choices as to what can be drawn as a background tile, an obstacle, a decorative object, etc. Using the API, one is not limited. As a possible interesting example, one can imagine drawing a "river" with consecutive `water` tiles as background tile except at one location where we draw it as a decorative object. Visually, it would appear to be the same everywhere. However, as a decorative object, `water` would be harmless so that Reeborg could cross it safely. One could make a story about finding the point where the river is shallow enough for Reeborg to cross it. This could be done by Reeborg using either `front_is_clear()` or `right_is_clear()`. For demonstration purpose I have created a world that demonstrate this idea. However, instead of drawing the unsafe river **and** the safe passage all at the same time, I separated the two so that you can see better how it is done.  Load the world by executing the following instruction and then click on **World Info** to see the code used to create this world.
+The menu-driven World editor limits choices as to what can be drawn as a background tile, an obstacle, a decorative object, etc. Using the API, one is not limited. As a possible interesting example, one can imagine drawing a "river" with consecutive `water` tiles as background tile except at one location where we draw it as a decorative object. Visually, it would appear to be the same everywhere. However, as a decorative object, `water` would be harmless so that Reeborg could cross it safely. One could make a story about finding the point where the river is shallow enough for Reeborg to cross it. This could be done by Reeborg using either `front_is_clear()` or `right_is_clear()`. For demonstration purpose I have created two versions of a world that demonstrate this idea. The first version is the one that I would use with students:
 
-```python
-World("worlds/examples/river.json", "Crossing the river")
+```py
+World("worlds/examples/river_demo.json", "Crossing the river")
 ```
 
+Load this world, then click on **World Info** to see how it is done.
 
+In the second version, I do not draw the safe river passage in the **Onload **editor, but do so in the **Pre **editor instead. This way, one can see before running the program where the passage will be.
+
+```python
+World("worlds/examples/river.json", "River")
+```
+
+Again, click on **World Info** to see how it is done as I used a very special trick.  When a program is run from the Onload editor, it is run in its own context/scope: any variable defined in this context is not going to be shared with the user's program. In order to make a variable available globally, I use a special Javascript object / Python dict to store the value and to retrieve it when needed.
 
