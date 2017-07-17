@@ -85,15 +85,13 @@ From either the editor or the Python REPL, you can also get some _help_:
     help(reeborg_en)
   ```
 
-  You can use `reeborg_fr` to get the corresponding French version. \[**Suggestion**: if you teach using a language other than English or French, I will gladly add a version in your own language ;-\)\] Note that this help system is specific to Python and does **not** include the available functions prefixed by `RUR.`
+  You can use `reeborg_fr` to get the corresponding French version. \[**Suggestion**: if you teach using a language other than English or French, I will gladly add a version in your own language ;-\)\] Note that this help system is specific to Python and does **not** include the available functions prefixed by `RUR.` With a few exceptions, if a function exists in Python \(e.g. `move()`\), there is one with the same name also available when using Javascript.
 
 There is a separate function to show existing robot images:
 
 ```
 RUR.show_all_robots()
 ```
-
-Its purpose will be explained later.
 
 ## Note about the word "thing"
 
