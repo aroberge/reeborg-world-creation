@@ -6,5 +6,5 @@
 * [Naming convention](naming-convention.md)
 * [Adding objects](adding-objects.md)
 * [Background tiles, obstacles, and decorative objects](backgrounds.md)
-
+* [Appendix: Example worlds](appendix-example-worlds.md)
 
