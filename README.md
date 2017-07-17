@@ -4,7 +4,7 @@ If you have stumbled upon this document, please be advised that many of the feat
 
 # About Advanced World Creation
 
-This book is intended for those that create **worlds **\(i.e. programming tasks\) to help others learn programming using [Reeborg's World](http://reeborg.ca/reeborg.html).  In this book I will refer to you as a _**teacher**_** **and to those that wish to learn programming using your creations as _**students**_.
+This book is intended for those that create **worlds** \(i.e. programming tasks\) to help others learn programming using [Reeborg's World](http://reeborg.ca/reeborg.html).  In this book I will refer to you as a _**teacher**_ and to those that wish to learn programming using your creations as _**students**_.
 
 Using the menu-driven world editor available in Reeborg's World, it is easy to create relatively simple worlds.  However, one can do much more using the advanced API. This book is a guide which should help you create more interesting  and challenging worlds for your students.
 
@@ -21,18 +21,18 @@ While I have included many screenshots to give examples, to get the full picture
 [Reeborg's World \(main site\)](http://reeborg.ca) is a website I designed to help people to learn programming. It includes a Python tutorial \(which is in constant need of updating\) available in English, French and Korean. However, its main feature, and the one referred to in this document, is a single-app page which I refer to simply as [Reeborg's World](http://reeborg.ca/reeborg.html).
 
 * **Reeborg's World is free; **you do not have to pay to use it.
-  * I pay for the required hosting fees myself and currently have absolutely no plan to derive income from the site.  
+  * I pay for the required hosting fees myself and currently have absolutely no plan to derive income from the site.
 * Reeborg's World is open source; the main repository is public and can be found at [https://github.com/aroberge/reeborg](https://github.com/aroberge/reeborg).  I know that some teachers have installed a copy on their school servers for convenience.
 * Reeborg's World does not require users to log in.  In fact, there is no login feature.  Unless users \(teachers or students\) contact me, I have no way to know who you are.
 
-  * I do use [Clicky ](https://clicky.com/)to keep track of how many people are using the site. However I know that some adblockers will disable Clicky. 
+  * I do use [Clicky ](https://clicky.com/)to keep track of how many people are using the site. However I know that some adblockers will disable Clicky.
   * I do not embed any social media widget, nor do I have any ads on the site.
   * Reeborg's World does save the current state of a session in your browser's local storage, thus allowing to resume your work when you leave and come back to the site at a later time. I do not have access to this information.
   * There is a live collaboration feature available where two or more people can work together remotely; this makes use of Mozilla's server with [TogetherJS](https://togetherjs.com/). If you use this feature, Mozilla may know who you are - I do not.
 
 * Reeborg's World is designed to help students learn programming in Python or Javascript, using either a traditional "code written in an editor" approach or a blockly interface; the blockly interface does not give access to the full programming possibilities from a student's point of view.
 
-  * It supports a basic function-based approach \[e.g. `move()`\] as well as an OOP approach \[e.g. `reeborg.move()`\]. 
+  * It supports a basic function-based approach \[e.g. `move()`\] as well as an OOP approach \[e.g. `reeborg.move()`\].
   * Reeborg's World is the natural evolution of a project which started in 2004 as a desktop program I wrote named RUR-PLE, and which is now obsolete. It is based on the _Karel the robot_ approach introduced by Richard Pattis in 1981.
 
 * Reeborg's World is also designed with teachers in mind: while some basic worlds are included by default, you can easily create and add your own. In fact, this is what this book is all about.
@@ -43,5 +43,9 @@ The first few chapters of this book \[todo: specify which\] are meant to be read
 
 Starting with chapter \[todo: specify which\], the pace increases dramatically. I only give a cursory explanation of a topic and, most often, instead of including a complete code sample in the book, I ask you to load a specific world in Reeborg's World. This way, if I make changes to the code running the site, I only have to update the relevant worlds that I created without having to worry about correcting the code in this book.
 
+<<<<<<< Updated upstream
 Finally, there are a series of appendices. The most interesting of those is likely going to be the the list of worlds that include all relevant examples described in this book to which **I plan to add examples provided by people like you**!
+=======
+Finally, there are a series of appendices. The most interesting of those is likely going to be the the list of worlds that include all relevant examples described in this book to which I plan to add examples provided by people like you!
+>>>>>>> Stashed changes
 
