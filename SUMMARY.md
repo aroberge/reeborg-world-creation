@@ -7,7 +7,6 @@
 * [Adding objects](adding-objects.md)
 * [Background tiles, obstacles, and decorative objects](backgrounds.md)
 * [Setting up a custom goal](setting-up-a-custom-goal.md)
+* [Built-in randomness](built-in-randomness.md)
 * [Appendix: Example worlds](appendix-example-worlds.md)
 * [Appendix: Images and their source](appendix-images-and-their-source.md)
-* [Built-in randomness](built-in-randomness.md)
-
