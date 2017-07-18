@@ -8,4 +8,5 @@
 * [Background tiles, obstacles, and decorative objects](backgrounds.md)
 * [Appendix: Example worlds](appendix-example-worlds.md)
 * [Appendix: Images and their source](appendix-images-and-their-source.md)
+* [Setting up a custom goal](setting-up-a-custom-goal.md)
 
