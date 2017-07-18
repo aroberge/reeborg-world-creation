@@ -84,5 +84,9 @@ The important thing to note here are the strings `INSERT_ONLOAD`, `INSERT_PRE` a
 ## Important consideration
 
 When you design a custom goal, like we do here with the verification in the **Post** editor that the correct path has been followed,  
-it is essential to prevent the students to use `done()`,  otherwise the code in the **Post** editor could be bypassed and, as long as Reeborg ends up at the desired final position, the goal would have been determined to be accomplished.  
+it is essential to prevent the students to use `done()`,  otherwise the code in the **Post** editor could be bypassed and, as long as Reeborg ends up at the desired final position, the goal would have been determined to be accomplished.
+
+## Custom Errors
+
+When using Python, you can use `ReeborgError` to signal a problem with the code as is done in this example. You can also use `ReeborgOK` to give a custom message when everything has been done to meet the goal you have set.  If you are using Javascript, you must prepend `RUR.`  as in `RUR.ReeborgError`.
 
