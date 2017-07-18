@@ -79,8 +79,6 @@ World("worlds/examples/nice_path.json", "Nice path")
 
 Like was done for `simple_path_grid.json`, with `nice_path.json`one could set `RUR.state.visible_grid` to `True` to show the grid.
 
-
-
 ### river.json and river\_demo.json
 
 These two worlds show how one can create a seemingly unpassable river by using water as a decorative object instead of a background tile. The first one shows how I would present this task to students \(but without showing them the code included in the description\).

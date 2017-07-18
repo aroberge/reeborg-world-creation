@@ -144,7 +144,7 @@ Next, in the World editor window, click first on Onload to indicate that you wis
 
 ![](/assets/select_onload.png)
 
-Then, as before, save a copy of the world in the browser \(giving it a different name\) and dismiss the World editor window: you should see the world change to look identical to the previous versions.  However, if you save it to a file, you will find that this file is different from the other two.
+**While still in editing mode**, save a copy of the world in the browser \(giving it a different name\); also save it to a file. Then, dismiss the World editor window: you should see the world change to look identical to the previous versions.  However, the file that you saved is different from the previous versions.
 
 ## Which way is better?
 
@@ -154,7 +154,7 @@ The answer is ... it depends.  If all I want to do is to create a static world w
 
 However, if I want to use different artefact, or to create new types of interactions, _etc_., I most often use a hybrid approach where I first write all the code in the main editor, like you did in the second example, doing various tests until I am satisfied with the result. Then, I move some of the code to the **Onload **editor and, very often, some to the **Pre **and **Post **editors whose role I will explain in the next chapter.
 
-However, I do sometimes make the mistake of starting from a world with an artefact already present \(such as a wall or a house as final position, etc.\) and have a function call in the **Onload **editor attempting to add again the same artefact - thus raising an error. So, when using the dynamic creation from the **Onload **editor, it is often less error prone to start with an empty world and create everything from the **Onload **editor.
+However, I do sometimes make the mistake of starting from a world with an artefact already present \(such as a wall or a house as final position, etc.\) or to not be in editing mode while saving a file; in these instances, if I have a function call in the **Onload **editor attempting to add again the same artefact, it can raise an error. So, when using the dynamic creation from the **Onload **editor, it is often less error prone to start with an empty world and create everything from the **Onload **editor rather than adding some artefact using the menu-driven World editor.
 
 I have no doubt that, as you create more worlds, you will find an approach that works best for you.
 

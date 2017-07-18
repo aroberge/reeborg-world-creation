@@ -10,3 +10,5 @@
 * [Built-in randomness](built-in-randomness.md)
 * [Appendix: Example worlds](appendix-example-worlds.md)
 * [Appendix: Images and their source](appendix-images-and-their-source.md)
+* [Adding your own robots and artefacts](adding-your-own-robots-and-artefacts.md)
+
