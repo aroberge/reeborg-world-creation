@@ -48,7 +48,7 @@ See the **Pre editor**.
 
 ## The Description \(Desc.\) editor
 
-The Description editor is intended to provide some explanation for a given world, like a task to be accomplished. The content of this editor is assumed to be some html code.
+The Description editor is intended to provide some explanation for a given world, like a task to be accomplished. The content of this editor is assumed to be some html code. You may find it useful to include images using the html img tag.
 
 The processed content of this editor can be viewed by the user when they click on the **World info** button.
 
