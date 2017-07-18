@@ -1,6 +1,12 @@
 # Built-in randomness
 
-Having well-defined worlds is nice, but it is sometimes useful to be able to see if students can write programs general enough to address a whole range of situations. To this end, Reeborg's World easily support designing worlds with some randomly chosen values but in a way that is very visible to the students when they load the world.
+Having well-defined worlds is nice, but it is sometimes useful to be able to see if students can write programs general enough to address a whole range of situations. To this end, Reeborg's World easily support designing worlds with some randomly chosen values but in a way that is very visible to the students when they load the world.  This is different than the last example from a previous chapter,
+
+```py
+World("worlds/examples/river_demo.json", "Crossing the river")
+```
+
+where we were using Python's random module to select a secret location \(not visible to the student\) where Reeborg could cross a river.
 
 ### Important caveat
 
