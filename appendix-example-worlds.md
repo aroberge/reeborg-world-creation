@@ -49,7 +49,7 @@ Finally, for perhaps a more realistic example, have a look at World\("worlds/exa
 
 simple\_path.json shows a world that could be given to a student as a simple programming task; the content of **World Info** is limited to what is needed by the student.
 
-By contrast, the content of **World Info** simple\_path\_explained.json includes the code explaining 
+By contrast, the content of **World Info** simple\_path\_explained.json includes the code explaining
 
 1. how `move` is redefined to keep track of the path followed,
 2. how `done` is redefined to prevent the user from ending a program before the code in the Post editor is run and 
@@ -77,5 +77,23 @@ World("worlds/examples/boring_path.json", "Boring path")
 World("worlds/examples/nice_path.json", "Nice path")
 ```
 
-Like was done for `simple_path_grid.json`, with `nice_path.json `one could set `RUR.state.visible_grid` to `True` to show the grid.
+Like was done for `simple_path_grid.json`, with `nice_path.json`one could set `RUR.state.visible_grid` to `True` to show the grid.
+
+
+
+### river.json and river\_demo.json
+
+These two worlds show how one can create a seemingly unpassable river by using water as a decorative object instead of a background tile. The first one shows how I would present this task to students \(but without showing them the code included in the description\).
+
+```
+World("worlds/examples/river_demo.json", "Crossing the river")
+```
+
+In the second version, I do not draw the safe river passage in the **Onload **editor, but do so in the **Pre **editor instead. This way, one can see before running the program where the passage will be.
+
+```python
+World("worlds/examples/river.json", "River")
+```
+
+
 
