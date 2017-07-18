@@ -84,16 +84,5 @@ The important thing to note here are the strings `INSERT_ONLOAD`, `INSERT_PRE` a
 ## Important consideration
 
 When you design a custom goal, like we do here with the verification in the **Post** editor that the correct path has been followed,  
-it is important to prevent the students to use `done()`, otherwise the code in the **Post** editor could be bypassed and, as long as Reeborg ends up at the desired final position, the goal would have been determined to be accomplished.  For example, try the following:
-
-```python
-for i in range(9):
-    move()
-turn_left()
-move()
-move()
-RUR._done_()  ## cheating!!
-```
-
-With a dynamic language like Javascript powering Reeborg World, it is nearly impossible to find a way to prevent completely prevent every single student from bypassing any restriction you put in place.
+it is essential to prevent the students to use `done()`,  otherwise the code in the **Post** editor could be bypassed and, as long as Reeborg ends up at the desired final position, the goal would have been determined to be accomplished.  
 
