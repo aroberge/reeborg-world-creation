@@ -37,4 +37,5 @@
 * [Real-time collaboration](real-time-collaboration.md)
 * [Uses of local storage](uses-of-local-storage.md)
 * [Reeborg's keyboard](reeborgs-keyboard.md)
+* [Mazes](mazes.md)
 
