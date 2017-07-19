@@ -11,7 +11,6 @@
 * [Built-in randomness](built-in-randomness.md)
 * [Adding your own robots and artefacts](adding-your-own-robots-and-artefacts.md)
 * [Appendix: Example worlds](appendix-example-worlds.md)
-* [Loading worlds and other files](loading-worlds.md)
 * [Protection against fatalities](protection-against-fatalities.md)
 * [Using the Python REPL](using-the-python-repl.md)
 * [Just the path, please](just-the-path-please.md)
