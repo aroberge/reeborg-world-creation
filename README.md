@@ -6,7 +6,7 @@ If you have stumbled upon this document, please be advised that many of the feat
 
 This very short book is intended for those that create **worlds** \(i.e. programming tasks\) to help others learn programming using [Reeborg's World](http://reeborg.ca/reeborg.html).  In this book I will refer to you as a _**teacher**_ and to those that wish to learn programming using your creations as _**students**_.
 
-Using the menu-driven world editor available in Reeborg's World, it is easy to create relatively simple worlds.  However, one can do much more using the advanced API. This book is a guide which should help you create more interesting  and challenging worlds for your students.
+Using the menu-driven world editor available in Reeborg's World, it is easy to create relatively simple worlds.  However, one can do much more using the advanced API. This book is a guide which should help you create more interesting  and challenging worlds for your students, while explaining other features of Reeborg's World.
 
 ### What I expect of you
 
@@ -18,7 +18,7 @@ While I have included many screenshots to give examples, to get the full picture
 
 ### About Reeborg's World
 
-[Reeborg's World \(main site\)](http://reeborg.ca) is a website I designed to help people to learn programming. It includes a Python tutorial \(which is in constant need of updating\) available in English, French and Korean. However, its main feature, and the one referred to in this document, is a single-app page which I refer to simply as [Reeborg's World](http://reeborg.ca/reeborg.html).
+[Reeborg's World \(main site\)](http://reeborg.ca) is a website I designed to help people to learn programming. It includes a Python tutorial \(which is in constant need of updating\) available in English, French and Korean. However, **its main feature**, and the one referred to in this document, is a single-app page which I refer to simply as [Reeborg's World](http://reeborg.ca/reeborg.html).
 
 * **Reeborg's World is free;** you do not have to pay to use it.
   * I pay for the required hosting fees myself and currently have absolutely no plan to derive income from the site.
