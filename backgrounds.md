@@ -2,7 +2,7 @@
 
 While walls can be used to create obstacles in Reeborg's path, using other elements, such as certain background tiles and obstacles can achieve the same purpose while being visually a lot more attractive.
 
-if you are familiar with the menu-driven **World editor**, you will realize that most of the examples given below could be created just as easily using the World editor.** **However, the methods we present can be used more generally to create much more interesting worlds, which could not be done by simply using the World editor.
+if you are familiar with the menu-driven **World editor**, you will realize that most of the examples given below could be created just as easily using the **World editor**.** **However, the methods we present can be used more generally to create much more interesting worlds, which could not be done by simply using the World editor.
 
 ## Preamble
 

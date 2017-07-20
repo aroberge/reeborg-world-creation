@@ -10,7 +10,7 @@ You can add a single object as follows:
  RUR.add_object("token", 3, 4)
 ```
 
-The result will look similar to the following image: 
+The result will look similar to the following image:
 
 ![](/assets/token_added.png)
 
@@ -89,7 +89,7 @@ RUR.add_object("tulip", 3, 4, {"number":5})
 
 ![](/assets/token_tulip.png)
 
-However, by cliking on World Info, and then clicking at a given location, the information about how many objects are found at that location is still available to the user.
+However, by cliking on **World Info**, and then clicking at a given location, the information about how many objects are found at that location is still available to the user.
 
 ![](/assets/objects_at_position.png)
 

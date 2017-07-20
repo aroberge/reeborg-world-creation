@@ -1,6 +1,6 @@
 # Appendix: About non-breaking spaces
 
-Prior to execution by Python, non-breaking spaces are converted into regular space characters to allow copy-pasting code samples from the web \(which sometimes have nonbreaking spaces inserted\) and have them viewed as valid Python code.
+Prior to execution by Python, non-breaking spaces are converted into regular space characters to allow copy-pasting code samples from the web \(which sometimes have nonbreaking spaces inserted\) and have them viewed as valid Python code. So, if your program contains non-breaking spaces \(in a string, for example\) intended to be used in a meaningful way, it will not execute as expected.
 
 ### Detailed explanation
 

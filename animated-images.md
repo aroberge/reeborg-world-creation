@@ -21,15 +21,11 @@ pause()
 move()
 pause()
 toss()
-
 ```
-
-
 
 To create an animation, a series of different images is associated with a given object. Excluding robot animations, which are explained below, all images are animated \(i.e. the image shown changes\) at a set interval, which is independent of the animation time use to show each execution step of the program; thus, the program \(playback\) can be paused and the animations will continue.
 
-  
-The default time interval between changes of images is 120 ms; this is reset whenever a world is loaded and can be changed for a given world by assigning a value to `RUR.ANIMATION_TIME` in the **Onload **or **Pre **editor; this value is a global value and the last setting is the one that applies for the entire program.
+The default time interval between changes of images is 120 ms; this is reset whenever a world is loaded and can be changed for a given world by assigning a value to `RUR.ANIMATION_TIME` in the **Onload **or **Pre **editor; this is a global value and the last setting is the one that applies for the entire program.[^1]
 
 Currently, 5 different types of animations are supported. This is demonstrated in the world
 
@@ -45,7 +41,66 @@ which you should look at closely to better understand the following description 
 4. A single cycle through all the images is done; after it is completed, the last image is shown repeatedly. \(Currently, it is redrawn each time, even when it is not changing\). This is shown on the `y=8` row.
 5. A single cycle is done after which the tile/object is removed from the world. This cannot realistically be used for objects which cannot be picked up by the robot.  However, this is the type of animation that has been used in the first example above for the burst of flame and for the flame being doused by water.  
 
-## Add section on animated robots
+## Animated robots
+
+Robot animation is done independently of other animations; it also uses a different approach.  You may recall the example we have seen on how to add your own robots:
+
+```py
+   RUR.new_robot_images({"model": "rat",
+    "east": "/src/images/rat_e.png",
+    "north": "/src/images/rat_n.png",
+    "west": "/src/images/rat_w.png",
+    "south": "/src/images/rat_s.png"
+    })
+```
+
+Each robot is identified by a model number and has 4 different images, one for each orientation. Animating a robot is done by changing the model number in a cyclical pattern, as shown in the following example:
+
+```py
+World("Empty")
+reeborg = UsedRobot()
+RUR.animate_robot(["classic", "light blue", "yellow"], reeborg.body)
+for i in range(8):
+    move()
+    turn_left()
+```
+
+The speed of animation is controlled via the global variable `RUR.ROBOT_ANIMATION_TIME` which has a default value of 150 ms. Like `RUR.ANIMATION_TIME,`this is a global value and the last setting is the one that applies for the entire program.
+
+We can, however, change the way a robot is animated in different parts of a program; if we don't specify a `robot.body`, then the default robot is used.
+
+```py
+World("Alone")
+RUR.ROBOT_ANIMATION_TIME = 250
+think(1000)
+RUR.animate_robot(["classic", "yellow"])
+for i in range(4):
+    move()
+    turn_left()
+RUR.animate_robot(["classic", "light blue"])
+```
+
+To indicate that only one animation cycle should be done, ending with the last model, we use the value if `-1` as the last value. For example, one could redefine functions like `move()` or `turn_left()` and design a robot that would go through a series of animations as it moves \(perhaps with bigger images\) so that the robot could be seen "slowly" moving from one square grid to the next, or slowly rotating. Since I do not have appropriate images to illustrate this idea, here's a rough implementation of what it might look like.
+
+```py
+World("Alone")
+left = turn_left
+RUR.ROBOT_ANIMATION_TIME = 150 # this is the default
+def turn_left():
+    old_delay = think(601) # time to complete 4 animations and switch to 5th model
+    RUR.animate_robot(["yellow", "light blue", "yellow", "light blue", "classic", -1])
+    think(0)
+    left()
+    think(old_delay)
+    RUR.animate_robot(["classic"])
+
+for i in range(4):
+    move()
+    move()
+    turn_left()
+```
 
 
+
+[^1]: You may recall that running a program means creating a series of frames which are then displayed one by one. When they are displayed, the value of global variables like `RUR.ANIMATION_TIME` has been set and will not change until a program is stopped and the world reloaded.
 

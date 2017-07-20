@@ -1,4 +1,8 @@
-todo: add world with opening/closing fence
+**todo**: add world with opening/closing fence
+
+**todo**: create menu collection with these
+
+**todo**: add image for each of these
 
 Below is a list of example worlds with an ultra-brief summary of what they illustrate, together with the command you need to execute to load the world, so that you can simply copy, paste into the editor \(or the REPL\) and run the program. In all cases, after loading the world, you should click on **World Info** to see more details.
 
@@ -11,7 +15,7 @@ By contrast, if you copy the code `World(...)` as a line in the Python REPL, bot
 This world shows how to add and remove different type of "things", and use `assert` statements to show what the output from  
 `is_X` and `get_Y` would be, for various values of `X` and `Y`.
 
-```
+```py
 World("worlds/examples/add_remove_is_get.json", "Artefacts")
 ```
 
@@ -21,7 +25,7 @@ You might want to add a `pause()` instruction in the editor prior to running the
 
 This world shows the 5 different ways one can animate an image \(background tile, object, etc., but not robots\). This example is written using Javascript, but can easily be reproduced in Python.
 
-```
+```py
 World("worlds/examples/animated_all.json", "Animated")
 ```
 
@@ -29,7 +33,7 @@ World("worlds/examples/animated_all.json", "Animated")
 
 This world shows the different syntax that can be used to indicate a color \(name, rgb, rgba, hsl, hsla, \#-notation\). It also illustrates the use of simpler commands like `paint_square()` and `color_here()` which could be useful in end-user's programs.
 
-```
+```py
 World("worlds/examples/colors.json", "Colors")
 ```
 
@@ -37,7 +41,7 @@ World("worlds/examples/colors.json", "Colors")
 
 Bridges can protect from otherwise fatal background tiles. Similarly, objects carried can sometimes protect against fatal background tiles and fatal obstacles: this is illustrated in the following two worlds.
 
-```
+```py
 World("worlds/examples/protection_bridge.json", "Protection: bridge")
 
 World("worlds/examples/protection_objects.json", "Protection: objects")
@@ -57,7 +61,7 @@ By contrast, the content of **World Info** simple\_path\_explained.json includes
 2. how `done` is redefined to prevent the user from ending a program before the code in the Post editor is run and 
 3. how a custom test is added in the Post editor to verify that the desired path has been followed.
 
-```
+```py
 World("worlds/examples/simple_path.json", "Simple path")
 
 World("worlds/examples/simple_path_explained.json", "Simple path explained")
@@ -73,7 +77,7 @@ World("worlds/examples/simple_path_grid.json", "Simple path with grid")
 
 boring\_path.json shows a basic world with the "look and feel" of a traditional "Karel the robot" presentation. nice\_path.json shows a world that is functionally identical, but that looks very different.
 
-```
+```py
 World("worlds/examples/boring_path.json", "Boring path")
 
 World("worlds/examples/nice_path.json", "Nice path")
@@ -85,7 +89,7 @@ Like was done for `simple_path_grid.json`, with `nice_path.json`one could set `R
 
 These two worlds show how one can create a seemingly unpassable river by using water as a decorative object instead of a background tile. The first one shows how I would present this task to students \(but without showing them the code included in the description\).
 
-```
+```py
 World("worlds/examples/river_demo.json", "Crossing the river")
 ```
 
