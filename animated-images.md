@@ -65,7 +65,7 @@ for i in range(8):
     turn_left()
 ```
 
-The speed of animation is controlled via the global variable `RUR.ROBOT_ANIMATION_TIME` which has a default value of 150 ms. Like `RUR.ANIMATION_TIME,`this is a global value and the last setting is the one that applies for the entire program.
+The speed of animation is controlled via the global variable `RUR.ROBOT_ANIMATION_TIME` which has a default value of 150 ms. Like `RUR.ANIMATION_TIME,`this is a global value and the last setting is the one that applies for the entire program. With the default value for the transition between each frame \(300 ms\), we never see the _yellow_ value until the end of the program: each frame starts the animation at the first image. If you want to control completely the animation, you can redefine `think()` to set a specific value and prevent the student from changing the playback speed.
 
 We can, however, change the way a robot is animated in different parts of a program; if we don't specify a `robot.body`, then the default robot is used.
 
@@ -80,7 +80,7 @@ for i in range(4):
 RUR.animate_robot(["classic", "light blue"])
 ```
 
-To indicate that only one animation cycle should be done, ending with the last model, we use the value if `-1` as the last value. For example, one could redefine functions like `move()` or `turn_left()` and design a robot that would go through a series of animations as it moves \(perhaps with bigger images\) so that the robot could be seen "slowly" moving from one square grid to the next, or slowly rotating. Since I do not have appropriate images to illustrate this idea, here's a rough implementation of what it might look like.
+To indicate that only one animation cycle should be done, ending with the last model, we use the value if `-1` as the last value. For example, one could redefine functions like `move()` or `turn_left()` and design a robot that would go through a series of animations as it moves[^2] so that the robot could be seen "slowly" moving from one square grid to the next, or slowly rotating. Since I do not have appropriate images to illustrate this idea, here's a rough implementation of what it might look like.
 
 ```py
 World("Alone")
@@ -100,7 +100,7 @@ for i in range(4):
     turn_left()
 ```
 
-
-
 [^1]: You may recall that running a program means creating a series of frames which are then displayed one by one. When they are displayed, the value of global variables like `RUR.ANIMATION_TIME` has been set and will not change until a program is stopped and the world reloaded.
+
+[^2]: This may require using robot images larger than a grid square.
 

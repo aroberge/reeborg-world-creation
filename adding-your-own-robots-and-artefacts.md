@@ -14,10 +14,10 @@ In this world, we have a rat ![](/assets/rat_e.png) that must eat cheese ![](/as
 
 ## Adding a robot
 
-To add a robot, we must specify the source of images for each directions \(East, North, South, West\) as well as a model number; for every such information missing, a default image or model number will be used.
+To add a robot, we must specify the source of images for each directions \(East, North, South, West\) as well as a model name; if the model name is missing, it will be set to `"anonymous"`; if an image is missing, the default robot image for that orientation will be used.
 
 ```py
-RUR.new_robot_images({"model":10,
+RUR.new_robot_images({"model":"rat",
     "east": "/src/images/rat_e.png",
     "north": "/src/images/rat_n.png",
     "west": "/src/images/rat_w.png",
@@ -25,7 +25,7 @@ RUR.new_robot_images({"model":10,
     })
 ```
 
-Here, we specified images found on the site; use the full URL for images found on some other site.
+In the example above, we specified images found on the Reeborg's World site; use the full URL for images found on some other site.
 
 ## Adding new things
 
