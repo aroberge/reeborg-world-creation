@@ -49,13 +49,19 @@ World("worlds/examples/protection_objects.json", "Protection: objects")
 
 For the second example, make sure to read the code in the **World Info **so that you can add some appropriate code in the editor to see the result.
 
-Finally, for perhaps a more realistic example, have a look at 
+Finally, for perhaps a more realistic example, have a look at
 
 ```py
 World("worlds/examples/protection_example.json", "Protection: example").
 ```
 
 This last world was saved with some code in the editor which is shown in the **World Info** by writing INSERT\_EDITOR in the description editor.
+
+![](/assets/protect1.png)![](/assets/protect2.png)![](/assets/protect3.png)
+
+![](/assets/protect4.png)
+
+![](/assets/protect5.png)
 
 ### simple\_path.json, simple\_path\_explained.json and simple\_path\_grid.json
 
