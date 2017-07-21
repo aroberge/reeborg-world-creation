@@ -86,17 +86,11 @@ There is another method: the site will recognize specially written url. You can 
 
 Using this method, the example above could have been written as
 
-> Click on http://reeborg.ca/reeborg.html?url=some\_url
+> Click on [http://reeborg.ca/reeborg.html?url=some\_url](http://reeborg.ca/reeborg.html?url=some_url)
 
-As a concrete example, try 
+As a concrete example, try
 
 [http://reeborg.ca/reeborg.html?lang=en&mode=python&url=http://pastebin.com/raw/rGHudX7a&name=Desert](http://reeborg.ca/reeborg.html?lang=en&mode=python&url=http://pastebin.com/raw/rGHudX7a&name=Desert)
 
-Explain how to use the `World` function.
-
-Also explain the custom URL format
-
-Also explain how to use the html menu selector AND loading a local file from the Additional Options window.
-
-Cover loading code including library content.
+As a rule, if you Reeborg's World is already loaded in your browser, you should use `World(URL)` instead of clicking on a link as this will minimize the bandwidth use.
 

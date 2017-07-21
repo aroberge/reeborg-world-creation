@@ -16,7 +16,7 @@ To see how bridges can protect against fatal background tiles, but not
 obstacles, load up the following and click on **World Info** for the details  
 prior to running the program:
 
-```
+```py
 World("worlds/examples/protection_bridge.json")
 ```
 
@@ -28,11 +28,23 @@ To see how carried objects can protect against fatal background tiles, obstacles
 and picking up fatal objects, load up the following and click on **World Info** for the details  
 prior to running the program:
 
+```py
+World("worlds/examples/protection_objects.json")
 ```
-World("worlds/examples/protection_bridge.json")
+
+A more interesting example is
+
+```py
+World("worlds/examples/protection_example.json")
 ```
 
-**TODO**: add better example where model changes color based on object carried
+where we choose a different robot model automatically based on the protection given by the object carried.
 
+![](/assets/protect1.png)![](/assets/protect2.png)![](/assets/protect3.png)
 
+![](/assets/protect4.png)
+
+![](/assets/protect5.png)
+
+This world was saved with some code in the editor which is shown in the **World Info** by writing INSERT\_EDITOR in the description editor.
 
