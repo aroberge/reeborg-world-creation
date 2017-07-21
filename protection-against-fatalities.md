@@ -36,20 +36,6 @@ A more interesting example is
 
 ```py
 World("worlds/examples/protection_example.json")
-move()
-take()
-move()
-move()
-move()
-put()
-move()
-move()
-take()
-move()
-move()
-move()
-put()
-move()
 ```
 
 where we choose a different robot model automatically based on the protection given by the object carried.
@@ -59,4 +45,6 @@ where we choose a different robot model automatically based on the protection gi
 ![](/assets/protect4.png)
 
 ![](/assets/protect5.png)
+
+This world was saved with some code in the editor which is shown in the **World Info** by writing INSERT\_EDITOR in the description editor.
 
