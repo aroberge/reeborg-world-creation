@@ -26,8 +26,6 @@ In the previous section, you have created worlds that were saved in the browser.
 
 ```py
 World("world_1")World("worlds/examples/simple_path.json", "Simple path")
-
-
 ```
 
 and it would work just like it does for the worlds included by default. \(You should really try it with yours.\)
@@ -66,7 +64,33 @@ However, this cause the html selector to become extremely wide.
 
 Furthermore, if you load many such worlds, it becomes difficult to identify them quickly. A better approach is to use a second argument for the `World` function
 
+```py
+# World(URL, name)
+World("worlds/examples/nice_path.json", "Nice path")
+```
 
+The name argument is what will be displayed in the html selector.  Later in the session, if needed, you will be able to load this world by simply using `World(name)`
+
+### Sharing with a custom URL
+
+If you want to share some information online about a particular world, you might be tempted to do something like the following:
+
+> Go to [http://reeborg.ca/reeborg.html](http://reeborg.ca/reeborg.html). Then, enter `World("some_url")` in the editor and click run.
+
+There is another method: the site will recognize specially written url. You can include information about
+
+1. the programming mode/language
+2. the human language for the interface
+3. a URL pointing to a file containing the world definition
+4. an optional name to display in the world select menu instead of the URL.
+
+Using this method, the example above could have been written as
+
+> Click on http://reeborg.ca/reeborg.html?url=some\_url
+
+As a concrete example, try 
+
+[http://reeborg.ca/reeborg.html?lang=en&mode=python&url=http://pastebin.com/raw/rGHudX7a&name=Desert](http://reeborg.ca/reeborg.html?lang=en&mode=python&url=http://pastebin.com/raw/rGHudX7a&name=Desert)
 
 Explain how to use the `World` function.
 
