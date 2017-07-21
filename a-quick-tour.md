@@ -5,7 +5,7 @@
 Just in case you are not familiar with Reeborg's World, here's a quick tour:
 
 1. \[red\] This is where the programming tasks are displayed - what I think of as the "visible world".
-2. \[red\] The code editor, where a user writes their program. Here it is shown in the default Python mode.
+2. \[red\] The code editor, where a user writes their program. Here it is shown in the default Python mode. You can "click and drag" to move it anywhere on the page \(you need to "grab" it by the to bar, where the number 11 is shown\); you can also resize it by click-and-drag from the right side or the bottom.
 3. \[red\] The world selector.
 4. \[red\] Two active buttons: run and step; clicking either results in the program being run, a series of "frames" being recorded and displayed one at a time. When programs are running, the other button in this area become active: one can pause or stop a program, step back, or reload the world.
 5. \[green\] The frame selector. Once a program is running \(and paused\), one can use the frame selector to select any given frame.
@@ -19,6 +19,4 @@ Just in case you are not familiar with Reeborg's World, here's a quick tour:
 13. \[purple\] The language selector. Currently, one can write program using either English or French instructions; the user interface is available in English, French and Korean.
 
 ![](/assets/blockly.png)
-
-
 
