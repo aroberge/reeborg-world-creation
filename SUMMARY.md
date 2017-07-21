@@ -2,8 +2,8 @@
 
 * [Introduction](README.md)
 * [Part 1](part1.md)
-  * [Creating a world: 3 different ways](chapter1.md)
   * [A quick tour](a-quick-tour.md)
+  * [Creating a world: 3 different ways](chapter1.md)
   * [Loading worlds and other files](loading-worlds.md)
   * [The many different editors](the-many-different-editors.md)
   * [Naming convention](naming-convention.md)
@@ -13,8 +13,6 @@
   * [Built-in randomness](built-in-randomness.md)
   * [Adding your own robots and artefacts](adding-your-own-robots-and-artefacts.md)
   * [Just the path, please](just-the-path-please.md)
-  * A quick tour
-* A quick tour
 * [Part 2](part2.md)
   * [Lists, tuples, dicts](lists-tuples-dicts.md)
   * [The default robot](about-the-default-robot.md)
