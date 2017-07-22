@@ -97,7 +97,19 @@ In addition to writing programs using a code editor, Reeborg's World makes it po
 
 ![](/assets/blockly_example.png)
 
-This is made possible thanks to [Google's Blockly](https://developers.google.com/blockly/).  One feature of Reeborg's World is the possibility for the student to see how a program constructed using blocks would be translated into Python or Javascript.
+This is made possible thanks to [Google's Blockly](https://developers.google.com/blockly/).  
+
+In their [Best practices document](https://developers.google.com/blockly/guides/app-integration/best-practices), the creators of Blockly mention the importance of having a so-called _exit strategy_.
+
+> Block-based programming is often a starting point for programming. In the context of teaching computer programming, it is a gateway drug that gets students addicted, before moving them on to harder things. How long this block-based programming period should last for students is hotly debated, but if your goal is to teach programming it should be temporary.
+>
+> ...
+>
+> Block-based programming environments used for teaching programming need to have a concrete plan for graduating their students. A solid exit strategy also goes a long way towards placating those who argue that block-based programming isn't "real programming".
+
+
+
+One feature of Reeborg's World is the possibility for the student to see how a program constructed using blocks would be translated into Python or Javascript, thus providing such an _exit strategy_.
 
 ![](/assets/blockly_example_python.png)
 
@@ -135,13 +147,29 @@ In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](htt
 
 * _The interpreter should also provide visualization for those concepts of the language that are not visualized by the microworld. Important features include visualization of variables and the stack of subroutine calls._
 
-  * With the exception of the visualization of the stack of subroutine calls, this is possible with the "watching variable" feature.
+  * With the exception of the visualization of the stack of subroutine calls, this is possible with the somewhat experimental "watching variable" feature.
+
+![](/assets/watch_vars.png)
 
 * _A good mini-language should be complemented with a good set of attractive and meaningful problems for students to solve._
 
   * I completely agree. Reeborg's World include a small set of such programming tasks \(worlds\) ... and I am counting on your to increase the number of such tasks available! :-\)
 
 I do have one disagreement with the traditional mini-language approach: I believe that students can be more motivated to learn programming if they are using a "real" programming language rather than an artificial and limited one made up only to teach basic programming concepts.
+
+## Supporting for non-English speaking students
+
+Reeborg's World has been designed to support languages other than English. The User Interface currently supports English, French and Korean. The programming constructs are available in English and French.  This could "easily" be extended to other languages through user's contributions.
+
+Some young students who are not used to writing using an ascii-based keyboard may find it difficult to write programs. To help them, Reeborg's World includes a special keyboard, which has three versions: one for traditional Python programming another for Javascript, and a third when using the Python REPL.
+
+![](/assets/keyboard1.png)
+
+![](/assets/keyboard2.png)
+
+![](/assets/keyboard3.png)
+
+![](/assets/keyboard4.png)
 
 ## A brief word about the organization of this book
 
