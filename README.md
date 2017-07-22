@@ -37,8 +37,7 @@ I am using the words _**Reeborg's World**_ to mean three different things. [Reeb
 
 Reeborg's World is designed to help students learn programming in Python or Javascript. Reeborg's World is the natural evolution of a project which started in 2004 as a desktop program I wrote named RUR-PLE, and which is now obsolete. It is based on the [_Karel the robot_](http://www.amazon.ca/Karel-Robot-Gentle-Introduction-Programming/dp/0471089281/ref=sr_1_6?s=books&ie=UTF8&qid=1440177128&sr=1-6) approach introduced by Richard Pattis in 1981.
 
-Reeborg's World has been created with the goal of keeping much of Pattis's basic idea, while still making it possible to introduce very advanced programming concepts.  So, instead of the "simple" **first program** found in some tutorials supposedly aimed  
-at complete beginners:
+Reeborg's World has been created with the goal of keeping much of Pattis's basic idea, while still making it possible to introduce very advanced programming concepts.  So, instead of the "simple" **first program** found in some tutorials supposedly aimed at complete beginners:
 
 ```java
 public class HelloWorld {
