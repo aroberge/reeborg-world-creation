@@ -6,7 +6,7 @@ If you have stumbled upon this document, please be advised that many of the feat
 
 This book is intended for those that create **worlds** \(i.e. programming tasks\) to help others learn programming using [Reeborg's World](http://reeborg.ca/reeborg.html).  In this book I will refer to you as a _**teacher**_ and to those that wish to learn programming using your creations as _**students**_.
 
-Using the menu-driven world editor available in Reeborg's World, it is easy to create relatively simple worlds.  However, one can do much more using the advanced API. This book is a guide which should help you create more interesting  and challenging worlds for your students, while explaining other features of Reeborg's World.
+Using the menu-driven world editor available in [Reeborg's World](http://reeborg.ca/reeborg.html), it is easy to create relatively simple worlds.  However, one can do much more using the advanced API. This book is a guide which should help you create more interesting  and challenging worlds for your students, while explaining other features of Reeborg's World.
 
 ## What I expect of you
 
@@ -91,13 +91,13 @@ While most programming tasks will likely be relatively simple and aimed at begin
 
 If you have some examples \(particularly tasks for Reeborg\) that you find useful for your students, I would appreciate if you could share them with me so as to improve Reeborg's World for everyone.
 
-## A brief word about Blockly
+### A brief word about Blockly
 
 In addition to writing programs using a code editor, Reeborg's World makes it possible to use visual programming blocks to write programs.
 
 ![](/assets/blockly_example.png)
 
-This is made possible thanks to [Google's Blockly](https://developers.google.com/blockly/).  
+This is made possible thanks to [Google's Blockly](https://developers.google.com/blockly/).
 
 In their [Best practices document](https://developers.google.com/blockly/guides/app-integration/best-practices), the creators of Blockly mention the importance of having a so-called _exit strategy_.
 
@@ -106,8 +106,6 @@ In their [Best practices document](https://developers.google.com/blockly/guides/
 > ...
 >
 > Block-based programming environments used for teaching programming need to have a concrete plan for graduating their students. A solid exit strategy also goes a long way towards placating those who argue that block-based programming isn't "real programming".
-
-
 
 One feature of Reeborg's World is the possibility for the student to see how a program constructed using blocks would be translated into Python or Javascript, thus providing such an _exit strategy_.
 
@@ -157,7 +155,7 @@ In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](htt
 
 I do have one disagreement with the traditional mini-language approach: I believe that students can be more motivated to learn programming if they are using a "real" programming language rather than an artificial and limited one made up only to teach basic programming concepts.
 
-## Supporting for non-English speaking students
+### Support for non-English speaking students
 
 Reeborg's World has been designed to support languages other than English. The User Interface currently supports English, French and Korean. The programming constructs are available in English and French.  This could "easily" be extended to other languages through user's contributions.
 
