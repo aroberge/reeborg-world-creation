@@ -155,7 +155,7 @@ In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](htt
 
 I do have one disagreement with the traditional mini-language approach: I believe that students can be more motivated to learn programming if they are using a "real" programming language rather than an artificial and limited one made up only to teach basic programming concepts.
 
-### Support for non-English speaking students
+### Support for non English-speaking students
 
 Reeborg's World has been designed to support languages other than English. The User Interface currently supports English, French and Korean. The programming constructs are available in English and French.  This could "easily" be extended to other languages through user's contributions.
 
