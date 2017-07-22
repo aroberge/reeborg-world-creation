@@ -73,3 +73,17 @@ RUR.add_final_position("house", 3, 3)
 
 To indicate that a choice will be made, the images \(for the robot, or the final destination\) are made partly transparent when there is more than one possible choice. Later, when the program is executed with this world as a starting point, the very first step is to randomly make a selection among the possible values.
 
+## Random orientation
+
+Random orientation are shown ... by the robot changing orientation randomly \(!\) and constantly; it cannot be adequately shown by static screenshots.
+
+Select world **Alone**, or any other world with a robot already in it.  Then enter the following program and run it:
+
+```py
+RUR.set_random_orientation()
+```
+
+
+
+
+
