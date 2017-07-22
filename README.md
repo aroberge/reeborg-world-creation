@@ -178,7 +178,7 @@ If you do find that some explanations are missing or too brief to be of much use
 
 The very last part of this book is a series of appendices. The most interesting of those is likely going to be the the list of worlds that include all relevant examples described in this book to which **My hope is that I will be able to add examples provided by people like you**!
 
-[^1]: It is for this reason that I have added `repeat` as a fake Python keyword. See the appendix on `repeat` for more details.
+[^1]: It is for a reason similar to this that I have added `repeat` as a fake Python keyword. See the appendix on `repeat` for more details.
 
 [^2]: I have not created such a similar task; interested teachers are certainly welcome to contribute such advanced programming tasks.
 
