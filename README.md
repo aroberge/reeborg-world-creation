@@ -147,7 +147,7 @@ In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](htt
 
   * With the exception of the visualization of the stack of subroutine calls, this is possible with the somewhat experimental "watching variable" feature.
 
-![](/assets/watch_vars.png)
+![](/assets/watch_vars1.png)
 
 * _A good mini-language should be complemented with a good set of attractive and meaningful problems for students to solve._
 
