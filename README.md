@@ -113,7 +113,7 @@ One feature of Reeborg's World is the possibility for the student to see how a p
 
 ## Checklist for a good programming environment
 
-In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](http://www.contrib.andrew.cmu.edu/~plb/papers/minilang.html)[^3], Brusilovsky _et.al._ provide an overview of the mini-language approach to teach programming and mention many requirements that they consider important for a successful application of a mini-language. Here I attempt to make a list of these requirements together with an explanation as to how Reeborg's World attempts to meet each requirement.
+In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](http://www.contrib.andrew.cmu.edu/~plb/papers/minilang.html)[^3], Brusilovsky _et.al._ provide an overview of the mini-language approach to teach programming and mention many requirements that they consider important for a successful application of a mini-language. Here is a list of these requirements together with an explanation as to how Reeborg's World attempts to meet each requirement.
 
 * _The mini-language should be **simple **in both its syntax and semantics._
 
@@ -155,7 +155,7 @@ In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](htt
 
 I do have one disagreement with the traditional mini-language approach: I believe that students can be more motivated to learn programming if they are using a "real" programming language rather than an artificial and limited one made up only to teach basic programming concepts.
 
-### Support for non-English speaking students
+### Support for non English-speaking students
 
 Reeborg's World has been designed to support languages other than English. The User Interface currently supports English, French and Korean. The programming constructs are available in English and French.  This could "easily" be extended to other languages through user's contributions.
 
@@ -179,9 +179,9 @@ If you do find that some explanations are missing or too brief to be of much use
 
 The very last part of this book is a series of appendices. The most interesting of those is likely going to be the the list of worlds that include all relevant examples described in this book to which **My hope is that I will be able to add examples provided by people like you**!
 
-[^1]: It is for this reason that I have added \`repeat\` as a fake Python keyword. See the appendix on \`repeat\` for more details.
+[^1]: It is for this reason that I have added `repeat` as a fake Python keyword. See the appendix on `repeat` for more details.
 
 [^2]: I have not created such a similar task; interested teachers are certainly welcome to contribute such advanced programming tasks.
 
-[^3]: Brusilovsky, P., Calabrese, E., Hvorecky, J., Kouchnirenko, A., and Miller, P. \(1997\) Mini-languages: A Way to Learn Programming Principles. Education and Information Technologies 2 \(1\), pp. 65-83.
+[^3]: Brusilovsky, P., Calabrese, E., Hvorecky, J., Kouchnirenko, A., and Miller, P. \(1997\) _Mini-languages: A Way to Learn Programming Principles. Education and Information Technologies_ 2 \(1\), pp. 65-83.
 
