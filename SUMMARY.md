@@ -14,6 +14,7 @@
   * [Adding your own robots and artefacts](adding-your-own-robots-and-artefacts.md)
   * [Just the path, please](just-the-path-please.md)
   * [Protection against fatalities](protection-against-fatalities.md)
+  * [Animated images](animated-images.md)
 * [Part 2](part2.md)
   * [Lists, tuples, dicts](lists-tuples-dicts.md)
   * [The default robot](about-the-default-robot.md)
