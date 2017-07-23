@@ -43,4 +43,5 @@
   * [Why repeat?](why-repeat.md)
   * [About CORS](about-cors.md)
   * [Uses of local storage](uses-of-local-storage.md)
+* [Beepers](beepers.md)
 
