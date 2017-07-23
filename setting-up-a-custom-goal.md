@@ -54,7 +54,7 @@ I've already mentioned how to add the content of various editors in the world's 
 again here in case you have skipped the previous explanation.
 
 The content of the **Description** editor \(shortened to **Desc.** on the editor tab\) is what is shown at the top of the **World Info** window.  
-In the case of the second example we have shown, here was the content of that editor when this document was written.
+In the case of the second example we have shown, here was the content of that editor when this book was written.
 
 ```xml
     Have Reeborg follow the gravel path as indicated.
