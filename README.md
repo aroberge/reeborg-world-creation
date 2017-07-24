@@ -24,6 +24,8 @@ I am using the words _**Reeborg's World**_ to mean three different things. [Reeb
   * I pay for the required hosting fees myself and currently have absolutely no plan to derive income from the site.
 * Reeborg's World is open source; the main repository is public and can be found at [https://github.com/aroberge/reeborg](https://github.com/aroberge/reeborg).  I know that some teachers have installed a copy on their school servers for convenience and I have always try to offer support for those that want to do this.
   * **TODO:** add info about the special repository and update the information on that repository.
+* All written material related to Reeborg's World, including this book, is freely available.
+  * I might look into producing a paper version of this book to be sold at or near cost, but there will always be a free version available online.
 * Reeborg's World does not require users to log in.  In fact, there is no login feature.  Unless users \(teachers or students\) contact me, I have no way to know who you are.
 
   * I do use [Clicky ](https://clicky.com/)to keep track of how many people are using the site. However I know that some adblockers will disable Clicky.
@@ -32,6 +34,8 @@ I am using the words _**Reeborg's World**_ to mean three different things. [Reeb
   * There is a live collaboration feature available where two or more people can work together remotely; this makes use of Mozilla's server with [TogetherJS](https://togetherjs.com/). If you use this feature, Mozilla may know who you are - I do not.
 
 * Reeborg's World is also designed with teachers in mind: while some basic **worlds **\(i.e. programming tasks\) are included by default, you can easily create and add your own. In fact, the motivation for writing this book was to give you the tools required to create interesting programming tasks.
+
+  * It is my hope that you will contribute your worlds \(including images\) freely so that they can be shared with others.
 
 ### Learning programming
 
@@ -177,6 +181,10 @@ As the book progresses, the pace increases significantly. In some sections, I on
 If you do find that some explanations are missing or too brief to be of much use, please contact me with your suggestions so that I can improve the book.
 
 The very last part of this book is a series of appendices. The most interesting of those is likely going to be the the list of worlds that include all relevant examples described in this book to which **My hope is that I will be able to add examples provided by people like you**!
+
+## A brief word about me
+
+I am a physicist by training who has picked up programming as a hobby when my children were in elementary school, more than 10 years ago. I have no formal education in computer science and am continuously learning as I pursue my hobby. The programs I wrote, including the code running Reeborg's site, should not be viewed as a good examples to learn from. However, I do hope that with my perpetual beginner's hat on, I have created a site that makes learning programming accessible to beginners.
 
 [^1]: It is for a reason similar to this that I have added `repeat` as a fake Python keyword. See the appendix on `repeat` for more details.
 
