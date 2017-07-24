@@ -39,7 +39,7 @@
   * [About non-breaking spaces](appendix-about-non-breaking-spaces.md)
   * [Layers and canvases](layers-and-canvases.md)
   * [Traditional Python exercises \[TODO\]](traditional-python-exercices.md)
-  * [Python code pre-processing: the gory details \[TODO\]](python-code-pre-processing-the-gory-details.md)
+  * [Python code pre-processing: the gory details](python-code-pre-processing-the-gory-details.md)
   * [Why repeat? \[TODO\]](why-repeat.md)
   * [About CORS \[TODO\]](about-cors.md)
   * [Uses of local storage \[TODO\]](uses-of-local-storage.md)
