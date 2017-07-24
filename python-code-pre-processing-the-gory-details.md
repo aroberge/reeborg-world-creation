@@ -26,7 +26,11 @@ try {
 }
 ```
 
-The error analysis consists essentially in formatting the information received and presenting it to the user.![](/assets/good_result.png)
+The error analysis consists essentially in formatting the information received and presenting it to the user.
+
+
+
+![](/assets/good_result.png)
 
 ![](/assets/bad_result.png)
 

@@ -98,7 +98,7 @@ This time we will create an identical copy by writing a program instead of using
 2. Next, we want to use the image of a house to indicate the desired final position for Reeborg.
 3. Finally, we want to add a wall in front of Reeborg.
 
-Here's how to do this using the Application Programming Interface \(API\). \[todo: add link\]
+Here's how to do this using the [Application Programming Interface \(API\)](http://reeborg.ca/api/RUR.html).
 
 * Start with the same default world as before \[**Alone**\].
 * Enter the following program in the editor and execute it; you can use either Python or Javascript to do so.
