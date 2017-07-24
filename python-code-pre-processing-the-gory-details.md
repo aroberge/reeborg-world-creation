@@ -28,8 +28,6 @@ try {
 
 The error analysis consists essentially in formatting the information received and presenting it to the user.
 
-
-
 ![](/assets/good_result.png)
 
 ![](/assets/bad_result.png)
@@ -68,9 +66,7 @@ where each required `count_variable` is chosen to be a unique name in _program_,
 
 #### Additional processing: non-breaking space
 
-In addition to the above, non-breaking spaces \(html   or &\#160;\) are transformed into regular spaces \(ASCII 32\). This is to allow users to copy code from a teacher's website or from the API page \[**TODO: provide link**\] into the editor and have it executed correctly. Python does not recognize this character as a valid space character, whereas Javascript does.
-
-#### The library
+In addition to the above, non-breaking spaces \(html `&nbsp;`  or `&\#160;`\) are transformed into regular spaces \(ASCII 32\). This is to allow users to copy code from a teacher's website or from the [API page](http://reeborg.ca/api/RUR.html) into the editor and have it executed correctly. Python does not recognize this character as a valid space character, whereas Javascript does.  
 
 The true library module is not the one seen by the student. Here is its true content:
 
