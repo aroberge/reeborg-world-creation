@@ -58,11 +58,11 @@ If you try this, you will see that the URL is added as the name in the html sele
 World("http://personnel.usainteanne.ca/aroberge/reeborg/token.json")
 ```
 
-However, this cause the html selector to become extremely wide.
+However, this causes the html selector to become extremely wide.
 
 ![](/assets/long_html_select.png)
 
-Furthermore, if you load many such worlds, it becomes difficult to identify them quickly. A better approach is to use a second argument for the `World` function
+Furthermore, if you load many such worlds, it becomes difficult to identify them quickly. A better approach is to use a second argument for the `World` function:
 
 ```py
 # World(URL, name)
@@ -77,7 +77,7 @@ If you want to share some information online about a particular world, you might
 
 > Go to [http://reeborg.ca/reeborg.html](http://reeborg.ca/reeborg.html). Then, enter `World("some_url")` in the editor and click run.
 
-There is another method: the site will recognize specially written url. You can include information about
+There is another method: the site will recognize a specially written URL. You can include information about
 
 1. the programming mode/language
 2. the human language for the interface
@@ -92,5 +92,5 @@ As a concrete example, try
 
 [http://reeborg.ca/reeborg.html?lang=en&mode=python&url=http://pastebin.com/raw/rGHudX7a&name=Desert](http://reeborg.ca/reeborg.html?lang=en&mode=python&url=http://pastebin.com/raw/rGHudX7a&name=Desert)
 
-As a rule, if you Reeborg's World is already loaded in your browser, you should use `World(URL)` instead of clicking on a link as this will minimize the bandwidth use.
+As a rule, if Reeborg's World is already loaded in your browser, you should use `World(URL)` instead of clicking on a link as this will minimize the bandwidth use.
 
