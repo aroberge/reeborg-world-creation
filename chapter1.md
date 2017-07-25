@@ -90,7 +90,7 @@ Next, in the text field under the Edit World button, enter a file name \(I again
 
 ![](/assets/save_world_to_file.png)
 
-Depending on your browser and your computer type \(Apple computers are acting very differently\), you may be given \(or not\) a choice of location to which you can save your file, or, if using Safari on an Apple computer, the content of the file might be displayed and you might have to explicitly save it using a standard Mac file dialog. I trust that you will be able to both save the file and find where it was saved.
+Depending on your browser and your computer type \(Windows, Apple or Linux\), you may be given \(or not\) a choice of location to which you can save your file, or, if using Safari on an Apple computer, the content of the file might be displayed and you might have to explicitly save it using a standard Mac file dialog. I trust that you will be able to both save the file and find where it was saved.
 
 _**That's it!**_  Using the World editor, you have created and saved a new world.  You might want to test it by writing a program that will make Reeborg reach its final destination.
 
