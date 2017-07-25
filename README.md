@@ -180,7 +180,7 @@ As the book progresses, the pace increases significantly. In some sections, I on
 
 If you do find that some explanations are missing or too brief to be of much use, please contact me with your suggestions so that I can improve the book.
 
-The very last part of this book is a series of appendices. The most interesting of those is likely going to be the the list of worlds that include all relevant examples described in this book to which **My hope is that I will be able to add examples provided by people like you**!
+The very last part of this book is a series of appendices. The most interesting of those is likely going to be the list of worlds that includes all relevant examples described in this book. **My hope is that I will be able to add examples provided by people like you**!
 
 ## A brief word about me
 
