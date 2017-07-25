@@ -68,7 +68,7 @@ RUR.add_final_position("house", 3, 3)
 | :--- | :--- |
 | We added a second \(possible\) initial position; the images are dimmed, providing a visual clue that choices are possible. | ![](/assets/random2.png) |
 | Adding a first final position. | ![](/assets/random3.png) |
-| Adding a second final position; this images are dimmed. | ![](/assets/random4.png) |
+| Adding a second final position; these images are dimmed. | ![](/assets/random4.png) |
 | After adding the third final position. | ![](/assets/random5.png) |
 
 To indicate that a choice will be made, the images \(for the robot, or the final destination\) are made partly transparent when there is more than one possible choice. Later, when the program is executed with this world as a starting point, the very first step is to randomly make a selection among the possible values.
