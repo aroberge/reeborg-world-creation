@@ -116,7 +116,7 @@ One feature of Reeborg's World is the possibility for the student to see how a p
 
 ## Checklist for a good programming environment
 
-In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](http://www.contrib.andrew.cmu.edu/~plb/papers/minilang.html)[^3], Brusilovsky _et.al._ provide an overview of the mini-language approach to teach programming and mention many requirements that they consider important for a successful application of a mini-language. Here is a list of these requirements together with an explanation as to how Reeborg's World attempts to meet each requirement.
+In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](http://www.contrib.andrew.cmu.edu/~plb/papers/minilang.html)[^3], Brusilovsky _et al._ provide an overview of the mini-language approach to teach programming and mention many requirements that they consider important for a successful application of a mini-language. Here is a list of these requirements together with an explanation as to how Reeborg's World attempts to meet each requirement.
 
 * _The mini-language should be **simple **in both its syntax and semantics._
 
