@@ -42,15 +42,15 @@ RUR.add_object("token", 3, 4, {"number":7})
 RUR.add_object("token", 4, 4, {"number":7, "goal":True})
 ```
 
-Save for one exception, which we will explain in the next chapter, anything that is evaluated as `"true"` \(i.e., which does not evaluate as `"false"`\) can be used as a value for `"goal"`, leading to the same result.  My **recommendation**: be explicit and use `True/False` in Python and `true/false` in Javascript. 
+Save for one exception, which we will explain in the next chapter, anything that is evaluated as `"true"` \(i.e., which does not evaluate as `"false"`\) can be used as a value for `"goal"`, leading to the same result.  My **recommendation**: be explicit and use `True/False` in Python and `true/false` in Javascript.
 
 A few things to note:
 
 * As a convention, I have chosen to include grey-level version of the images used for the object to indicate a goal; while I would not recommend it, you could choose a different convention when adding your own objects. For example, you could use the image of a basket in which to collect objects of a given kind.
 * The number of objects to put as a goal is indicated at the bottom **right**.
-* The number of actual objects, at the bottom **left** is no longer written in black in the above example, but in red: this gives a visual clue.  By comparison, if we specify positions of objects such that the goal is already met:
+* The number of actual objects, at the bottom **left** is no longer written in black in the example above, but in red: this gives a visual clue.  By comparison, if we specify positions of objects such that the goal is already met:
 
-```
+```py
 RUR.add_object("token", 3, 4, {"number":7})
 RUR.add_object("token", 3, 4, {"number":7, "goal":"true"})
 ```
