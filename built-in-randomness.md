@@ -75,7 +75,7 @@ To indicate that a choice will be made, the images \(for the robot, or the final
 
 ## Random orientation
 
-Random orientation are shown ... by the robot changing orientation randomly \(!\) and constantly; it cannot be adequately shown by static screenshots.
+Random orientations are shown ... by the robot changing orientation randomly \(!\) and constantly; it cannot be adequately shown by static screenshots.
 
 Select world **Alone**, or any other world with a robot already in it.  Then enter the following program and run it:
 
