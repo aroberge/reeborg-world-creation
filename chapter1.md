@@ -1,4 +1,4 @@
-# Creating a world: 3 different ways
+# Creating a world: three different ways
 
 While the menu driven **World editor**_ _ included in Reeborg's World makes it possible to create your own worlds, it is limited to create worlds with predefined objects. Furthermore, it only creates static worlds which are then interacted with through a user's program. A world creator may wish to introduce additional interactivity by changing the state of the world when a user's program has achieved a partial goal, like reaching a predefined position. The functions documented in this book are intended to give world creators all the flexibility they need to create their own worlds.
 
