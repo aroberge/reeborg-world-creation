@@ -1,6 +1,6 @@
 # Built-in randomness
 
-Having well-defined worlds is nice, but it is sometimes useful to be able to see if students can write programs general enough to address a whole range of situations. To this end, Reeborg's World easily support designing worlds with some randomly chosen values but in a way that is very visible to the students when they load the world.  This is different than the last example from a previous chapter,
+Having well-defined worlds is nice, but it is sometimes useful to be able to see if students can write programs general enough to address a whole range of situations. To this end, Reeborg's World easily supports designing worlds with some randomly chosen values but in a way that is very visible to the students when they load the world.  This is different than the last example from a previous chapter,
 
 ```py
 World("worlds/examples/river_demo.json", "Crossing the river")
@@ -33,7 +33,7 @@ This is why you should use code like the above in one of two ways only as mentio
 
 ## Setting goals with random values
 
-Before we had considered the possibility of starting with random values, We had seen how to specify a goal requiring a specific number of objects to be put at one location. But how can we deal with situations where the total number of objects is set randomly? One simple way is to require all the objects to be put at a single location and use the value `"all"` as a goal, as follows:
+Before we had considered the possibility of starting with random values, we had seen how to specify a goal requiring a specific number of objects to be put at one location. But how can we deal with situations where the total number of objects is set randomly? One simple way is to require all the objects to be put at a single location and use the value `"all"` as a goal, as follows:
 
 ```py
 RUR.add_object("token", 2, 1, {"min":2, "max": 5})
@@ -41,7 +41,7 @@ RUR.add_object("token", 3, 1, {"min":0, "max": 4})
 RUR.add_object("token", 4, 1, {"goal":"all"})
 ```
 
-## Random initial and final position
+## Random initial and final positions
 
 In the very first example, in the second instruction, we showed how to set up a final position as a goal:
 
@@ -53,8 +53,8 @@ RUR.add_wall("east", 1, 1)
 
 Repeated calls to this method, with different coordinates, result in a final position that will be chosen at random.  
 The same can be done for the starting position. For example, assuming we start with a robot at position `(1, 1)`  
-we can set up additional possible initial position chosen randomly, and possible final position also chosen randomly,  
-by something like the following and illustrated below.
+we can set up additional possible initial positions chosen randomly, and possible final positions also chosen randomly,  
+by something like the following \[and illustrated below\].
 
 ```py
 RUR.add_initial_position(1, 2)
@@ -66,16 +66,16 @@ RUR.add_final_position("house", 3, 3)
 
 | We start with a world with a single robot. | ![](/assets/random1.png) |
 | :--- | :--- |
-| We added a second \(possible\) initial position; the image are dimmed, providing a visual clue that choices are possible. | ![](/assets/random2.png) |
+| We added a second \(possible\) initial position; the images are dimmed, providing a visual clue that choices are possible. | ![](/assets/random2.png) |
 | Adding a first final position. | ![](/assets/random3.png) |
-| Adding a second final position; this images are dimmed. | ![](/assets/random4.png) |
+| Adding a second final position; these images are dimmed. | ![](/assets/random4.png) |
 | After adding the third final position. | ![](/assets/random5.png) |
 
 To indicate that a choice will be made, the images \(for the robot, or the final destination\) are made partly transparent when there is more than one possible choice. Later, when the program is executed with this world as a starting point, the very first step is to randomly make a selection among the possible values.
 
 ## Random orientation
 
-Random orientation are shown ... by the robot changing orientation randomly \(!\) and constantly; it cannot be adequately shown by static screenshots.
+Random orientations are shown ... by the robot changing orientation randomly \(!\) and constantly; it cannot be adequately shown by static screenshots.
 
 Select world **Alone**, or any other world with a robot already in it.  Then enter the following program and run it:
 

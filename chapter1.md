@@ -1,8 +1,8 @@
-# Creating a world: 3 different ways
+# Creating a world: three different ways
 
 While the menu driven **World editor**_ _ included in Reeborg's World makes it possible to create your own worlds, it is limited to create worlds with predefined objects. Furthermore, it only creates static worlds which are then interacted with through a user's program. A world creator may wish to introduce additional interactivity by changing the state of the world when a user's program has achieved a partial goal, like reaching a predefined position. The functions documented in this book are intended to give world creators all the flexibility they need to create their own worlds.
 
-If you follow along the instructions described in this chpaterl, you will first create and save a world using the menu driven **World editor **and then create the same world running a program that makes use of available methods instead. Finally, you will learn how to dynamically create a similar world using the **Onload editor**.
+If you follow along the instructions described in this chapter, you will first create and save a world using the menu driven **World editor **and then create the same world running a program that makes use of available methods instead. Finally, you will learn how to dynamically create a similar world using the **Onload editor**.
 
 The world that we will create will:
 
@@ -32,7 +32,7 @@ This will open the menu-driven World editor \(and minimize the **Additional opti
 
 ![](/assets/world_editor.png)
 
-This window, like all other windows that can be opened in Reeborg's World as well as the Code editor can be resized by clicking and dragging on the sides or at the bottom, or can be moved on the screen by clicking on the top bar and dragging to a new location.
+This window, like all other windows that can be opened in Reeborg's World as well as the Code editor, can be resized by clicking and dragging on the sides or at the bottom, or can be moved on the screen by clicking on the top bar and dragging to a new location.
 
 As you hover your mouse over the menu bar near the middle of the World editor window, various additional options are displayed.
 
@@ -43,6 +43,8 @@ Make sure that the world that is currently selected is the default world named *
 ![](/assets/alone.png)
 
 Then, in the **World editor**, click on **World dimensions**; a dialog similar to that shown below should appear.![](/assets/world_dimension.png)
+
+![](/assets/world_dimension.png)
 
 Change the maximum values for x and y both to 3 and click **OK**; the world displayed should now be much smaller.![](/assets/3x3.png)
 
@@ -86,7 +88,7 @@ Next, in the text field under the Edit World button, enter a file name \(I again
 
 ![](/assets/save_world_to_file.png)
 
-Depending on your browser and your computer type \(Apple computers are acting very differently\), you may be given \(or not\) a choice of location to which you can save your file, or, if using Safari on an Apple computer, the content of the file might be displayed and you might have to explicitly save it using a standard Mac file dialog. I trust that you will be able to both save the file and find where it was saved.
+Depending on your browser and your computer type \(Windows, Apple or Linux\), you may be given \(or not\) a choice of location to which you can save your file, or, if using Safari on an Apple computer, the content of the file might be displayed and you might have to explicitly save it using a standard Mac file dialog. I trust that you will be able to both save the file and find where it was saved.
 
 _**That's it!**_  Using the World editor, you have created and saved a new world.  You might want to test it by writing a program that will make Reeborg reach its final destination.
 
@@ -136,7 +138,7 @@ Internally, rather than using all four possible directions \(`north == towards t
 
 ## 3. Using the Onload editor
 
-Again start with the default world \[**Alone**\]. Then click on the **Additional options** button, followed by the **Edit world** button to change the mode to world editing. Move the **World editor** window so that you can clearly see the code editors. Instead of only one editor tab  \(if you use Javascript\) or two \(if you use Python\), you should now see 5 or 6 available editors.![](/assets/editor_tabs.png)
+Again start with the default world \[**Alone**\]. Then click on the **Additional options** button, followed by the **Edit world** button to change the mode to world editing. Move the **World editor** window so that you can clearly see the code editors. Instead of only one editor tab  \(if you use Javascript\) or two \(if you use Python\), you should now see five or six available editors.![](/assets/editor_tabs.png)
 
 Copy the code which we used previously from the main editor \(**Python Code** in my case\) to the **Onload **editor. Once this is done, you can delete the code in the main editor.
 
@@ -154,7 +156,7 @@ The answer is ... it depends.  If all I want to do is to create a static world w
 
 However, if I want to use different artefact, or to create new types of interactions, _etc_., I most often use a hybrid approach where I first write all the code in the main editor, like you did in the second example, doing various tests until I am satisfied with the result. Then, I move some of the code to the **Onload **editor and, very often, some to the **Pre **and **Post **editors whose role I will explain in the next chapter.
 
-However, I do sometimes make the mistake of starting from a world with an artefact already present \(such as a wall or a house as final position, etc.\) or to not be in editing mode while saving a file; in these instances, if I have a function call in the **Onload **editor attempting to add again the same artefact, it can raise an error. So, when using the dynamic creation from the **Onload **editor, it is often less error prone to start with an empty world and create everything from the **Onload **editor rather than adding some artefact using the menu-driven World editor.
+However, I do sometimes make the mistake of starting from a world with an artefact already present \(such as a wall or a house as final position, etc.\) or to not be in editing mode while saving a file; in these instances, if I have a function call in the **Onload **editor attempting to add the same artefact again, it can raise an error. So, when using the dynamic creation from the **Onload **editor, it is often less error prone to start with an empty world and create everything from the **Onload **editor rather than adding some artefacts using the menu-driven World editor.
 
 I have no doubt that, as you create more worlds, you will find an approach that works best for you.
 

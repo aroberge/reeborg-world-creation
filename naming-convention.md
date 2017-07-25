@@ -6,7 +6,7 @@
 >
 > \[Note that Karel the robot, the inspiration for Reeborg, was thus named by R. Pattis in honour of Karel Čapek.\]
 
-Since the goal of Reeborg's World is to allow students to run their own programs, name clashes have to be avoided between functions created for Reeborg's World and those created by the student. The imperfect solution I have chosen is to try, as much as possible, to use a single global object or namespace, `RUR`, originally inspired by the 1920 science fiction play but which can stand for _**R**eeborg the **U**sed**R**obot_ and is also valid in French as _le **R**obot **U**sagé **R**eeborg_.
+Since the goal of Reeborg's World is to allow students to run their own programs, name clashes have to be avoided between functions created for Reeborg's World and those created by the student. The imperfect solution I have chosen is to try, as much as possible, to use a single global object or namespace, `RUR`, originally inspired by the 1920 science fiction play but which can stand for _**R**eeborg the **U**sed **R**obot_ and is also valid in French as _le **R**obot **U**sagé **R**eeborg_.
 
 You have already seen this namespace being used in the first chapter with
 
@@ -33,7 +33,7 @@ The _**basic**_ naming convention to do such actions follows the following patte
 * `RUR.add_TYPE(name, x, y)`
 * `RUR.remove_TYPE(name, x, y)`
 
-  Possible value for `TYPE` include the following:
+  Possible values for `TYPE` include the following:
 
   * `background_tile`
   * `bridge`
@@ -52,7 +52,7 @@ Thus, we could have:
 
 As we saw with `RUR.set_world_size(3, 3)`, some functions do not follow this pattern. A few other cases, such as "final position" which we saw, also have only one of the three basic methods \(add/is/remove\) but not the others.
 
-## When 3 is not enough
+## When three is not enough
 
 In some cases, the basic three arguments, `name`, `x`, and `y`, are not sufficient.  To deal with such cases in a general way, a fourth argument can be added; this argument will be a Python **dict** or, if using Javascript, a simple object. Some specific examples are provided later.
 
@@ -76,9 +76,9 @@ Instead of entering this line in the editor, you can use the Python REPL mode; t
 
 From either the editor or the Python REPL, you can also get some _help_:
 
-* To list all available Python functions, classes, etc, simply enter `help()`.
+* To list all available Python functions, classes, etc., simply enter `help()`.
 * To get help about a particular function, for example `move`, enter `help(move)`
-* To get a complete, up to date version of every Python function available in the English version, enter
+* To get a complete, up-to-date version of every Python function available in the English version, enter
 
   ```python
     import reeborg_en

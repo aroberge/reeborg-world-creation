@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Out of the box](part1.md)
   * [A quick tour](a-quick-tour.md)
-  * [Creating a world: 3 different ways](chapter1.md)
+  * [Creating a world: three different ways](chapter1.md)
   * [Loading worlds and other files](loading-worlds.md)
   * [The many different editors](the-many-different-editors.md)
   * [Naming convention](naming-convention.md)
