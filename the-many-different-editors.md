@@ -4,7 +4,7 @@ When programming using Javascript, only a single editor is shown, the **Javascri
 
 ![](/assets/editor_tabs.png)
 
-When creating a world, it is possible to save it with some content included for each of these editors.  For example, here's what it might look like if we wanted to include the content of 4 of these editors in a world definition.
+When creating a world, it is possible to save it with some content included for each of these editors.  For example, here's what it might look like if we wanted to include the content of four of these editors in a world definition.
 
 ![](/assets/editors2.png)
 
@@ -20,7 +20,7 @@ Below, we refer to this editor as the **main editor**.
 
 ## The library editor
 
-The purpose of this editor is to provide an opportunity for the students to learn about Python's `import` statement, and realise that a library "module" is just regular program.  It is also a useful place for a beginner to save some commonly used function.
+The purpose of this editor is to provide an opportunity for the students to learn about Python's `import` statement, and realise that a library "module" is just regular program.  It is also a useful place for a beginner to save some commonly used functions .
 
 The name `library` is in lower case in the tab, reflecting its use in a Python program as in
 
@@ -50,12 +50,11 @@ See the **Pre editor**.
 
 The Description editor is intended to provide some explanation for a given world, like a task to be accomplished. The content of this editor is assumed to be some html code. You may find it useful to include images using the html img tag.
 
-The processed content of this editor can be viewed by the user when they click on the **World info** button.
+The processed content of this editor can be viewed by the users when they click on the **World info** button.
 
 ![](/assets/world_info.png)
 
-You can automatically include in this editor the content of the  
-**Pre**, **Post**, or **Onload , main editor **and **library** by inserting respectively the strings
+You can automatically include in this editor the content of the **Pre**, **Post**, or **Onload , main editor **and **library** by inserting respectively the strings
 
 INSERT\_PRE, INSERT\_POST,  INSERT\_ONLOAD, INSERT\_EDITOR or INSERT\_LIBRARY
 
@@ -67,13 +66,13 @@ World("worlds/examples/simple_path_explained.json", "path_explain")
 
 and, once the world is loaded, by clicking on the **World Info** button.
 
-### Even more info
+### Even more information
 
 Let's assume that you have clicked \(once\) on the **World Info** button so that the window/dialog is showing.  If you click on a grid square in the world, you might see some additional info specific to that location appearing at the bottom of the world info window/dialog.  For example, with the `"path_explain"` world mentioned above, if you click on a grid square, you should at the very least get the information about which type of background \(grass or gravel\) is present at that location.
 
 ### Suggestion
 
-If you have the **World Info** window open, close it. Then select one of the worlds that you created in the previous chapter and click on **World Info** to see the information displayed. Note how the information about the desired final location and the current robot position and the objects it carries is automatically displayed. This type of information is always appended to what your write in the Description editor.
+If you have the **World Info** window open, close it. Then select one of the worlds that you created in the previous chapter and click on **World Info** to see the information displayed. Note how the information about the desired final location and the current robot position and the objects it carries is automatically displayed. This type of information is always appended to what you write in the Description editor.
 
 ### Add your own code
 
@@ -97,5 +96,5 @@ Except when in world editing mode, whenever a world is loaded, or reloaded, the 
 
 This onload code can be used to specify which programming language or programming mode must be used for a given world, as well as for dynamically creating world features, including new objects represented by custom images.
 
-Unless some custom code is included in the **Pre **or **Post **editor, you should not set the programming language or mode; this way, a learner could use your world with programs written in all of the available modes and programming languages.
+Unless some custom code is included in the **Pre **or **Post **editor, you should not set the programming language or mode; this way, a student could use your world with programs written in all of the available modes and programming languages.
 
