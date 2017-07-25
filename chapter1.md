@@ -48,8 +48,6 @@ Then, in the **World editor**, click on **World dimensions**; a dialog similar t
 
 Change the maximum values for x and y both to 3 and click **OK**; the world displayed should now be much smaller.![](/assets/3x3.png)
 
-![](/assets/3x3.png)
-
 Next, hover over the **Goal **menu item and click on the **Robot **sub-menu: this allows us to choose a final position as a desired goal for the robot.
 
 ![](/assets/goal_robot_menu.png)
