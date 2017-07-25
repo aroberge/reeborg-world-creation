@@ -23,7 +23,7 @@ pause()
 toss()
 ```
 
-To create an animation, a series of different images is associated with a given object. Excluding robot animations, which are explained below, all images are animated \(i.e. the image shown changes\) at a set interval, which is independent of the animation time use to show each execution step of the program; thus, the program \(playback\) can be paused and the animations will continue.
+To create an animation, a series of different images is associated with a given object; this was already mentioned in the Beepers chapter. Excluding robot animations, which are explained below, all images are animated  at a set interval, which is independent of the animation time use to show each execution step of the program. Because of this, the program \(playback\) can be paused and the animations will continue.
 
 The default time interval between changes of images is 120 ms; this is reset whenever a world is loaded and can be changed for a given world by assigning a value to `RUR.ANIMATION_TIME` in the **Onload **or **Pre **editor; this is a global value and the last setting is the one that applies for the entire program.[^1]
 
@@ -35,9 +35,9 @@ World("/worlds/examples/animated_all.json", "animated")
 
 which you should look at closely to better understand the following description of each type of animation possible.
 
-1. All animated images of a given type cycle through at the same time. This is shown on the bottom row \(`y=2`\) with images of the world where I have chosen to represent all animated tiles in by the same images \(numbers from 1 to 5\). The animation time has been slowed down from the default.  This is the animation type for `water` and `fire`.
-2. Each animated tile cycle through an orderly fashion, but starts at a random point in a cycle. This is shown on the second bottom row \(`y=4`\).
-3. Each animated tile changes randomly at each cycle. This is shown on the `y=6` row.
+1. All animated images of a given type cycle through at the same time. This is shown on the bottom row \(`y=2`\) with images of the world where I have chosen to represent all animated tiles in by the same images \(numbers from 1 to 5\). The animation time has been slowed down from the default.  
+2. Each animated tile cycle through an orderly fashion, but starts at a random point in a cycle. This is shown on the second bottom row \(`y=4`\). This is the animation type used for beepers.
+3. Each animated tile changes randomly at each cycle. This is shown on the `y=6` row. This is the animation type for `water` and `fire`.
 4. A single cycle through all the images is done; after it is completed, the last image is shown repeatedly. \(Currently, it is redrawn each time, even when it is not changing\). This is shown on the `y=8` row.
 5. A single cycle is done after which the tile/object is removed from the world. This cannot realistically be used for objects which cannot be picked up by the robot.  However, this is the type of animation that has been used in the first example above for the burst of flame and for the flame being doused by water.  
 
