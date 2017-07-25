@@ -6,7 +6,7 @@
 >
 > \[Note that Karel the robot, the inspiration for Reeborg, was thus named by R. Pattis in honour of Karel Čapek.\]
 
-Since the goal of Reeborg's World is to allow students to run their own programs, name clashes have to be avoided between functions created for Reeborg's World and those created by the student. The imperfect solution I have chosen is to try, as much as possible, to use a single global object or namespace, `RUR`, originally inspired by the 1920 science fiction play but which can stand for _**R**eeborg the **U**sed**R**obot_ and is also valid in French as _le **R**obot **U**sagé **R**eeborg_.
+Since the goal of Reeborg's World is to allow students to run their own programs, name clashes have to be avoided between functions created for Reeborg's World and those created by the student. The imperfect solution I have chosen is to try, as much as possible, to use a single global object or namespace, `RUR`, originally inspired by the 1920 science fiction play but which can stand for _**R**eeborg the **U**sed **R**obot_ and is also valid in French as _le **R**obot **U**sagé **R**eeborg_.
 
 You have already seen this namespace being used in the first chapter with
 
