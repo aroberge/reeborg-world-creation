@@ -4,7 +4,7 @@ If you have stumbled upon this document, please be advised that many of the feat
 
 <div class="note">
 <p class="note-title">Title</p>
-<p>Test content for note</p>
+<p>Test content for note.</p>
 </div>
 
 # A Teacher's Guide ...
