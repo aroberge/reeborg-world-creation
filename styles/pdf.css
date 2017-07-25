@@ -1,0 +1,12 @@
+div.note {
+    width: 45%;
+    float: right;
+    margin: 1em 0;
+    background-color: #ffe;
+    padding: 0;
+    border: 1px solid #eee;
+}
+p.note-title {
+    color: white;
+    background-color: #369;
+}
