@@ -140,7 +140,7 @@ Internally, rather than using all four possible directions \(`north == towards t
 
 ## 3. Using the Onload editor
 
-Again start with the default world \[**Alone**\]. Then click on the **Additional options** button, followed by the **Edit world** button to change the mode to world editing. Move the **World editor** window so that you can clearly see the code editors. Instead of only one editor tab  \(if you use Javascript\) or two \(if you use Python\), you should now see 5 or 6 available editors.![](/assets/editor_tabs.png)
+Again start with the default world \[**Alone**\]. Then click on the **Additional options** button, followed by the **Edit world** button to change the mode to world editing. Move the **World editor** window so that you can clearly see the code editors. Instead of only one editor tab  \(if you use Javascript\) or two \(if you use Python\), you should now see five or six available editors.![](/assets/editor_tabs.png)
 
 Copy the code which we used previously from the main editor \(**Python Code** in my case\) to the **Onload **editor. Once this is done, you can delete the code in the main editor.
 
