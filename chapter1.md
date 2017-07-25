@@ -2,7 +2,7 @@
 
 While the menu driven **World editor**_ _ included in Reeborg's World makes it possible to create your own worlds, it is limited to create worlds with predefined objects. Furthermore, it only creates static worlds which are then interacted with through a user's program. A world creator may wish to introduce additional interactivity by changing the state of the world when a user's program has achieved a partial goal, like reaching a predefined position. The functions documented in this book are intended to give world creators all the flexibility they need to create their own worlds.
 
-If you follow along the instructions described in this chpaterl, you will first create and save a world using the menu driven **World editor **and then create the same world running a program that makes use of available methods instead. Finally, you will learn how to dynamically create a similar world using the **Onload editor**.
+If you follow along the instructions described in this chapter, you will first create and save a world using the menu driven **World editor **and then create the same world running a program that makes use of available methods instead. Finally, you will learn how to dynamically create a similar world using the **Onload editor**.
 
 The world that we will create will:
 
@@ -32,7 +32,7 @@ This will open the menu-driven World editor \(and minimize the **Additional opti
 
 ![](/assets/world_editor.png)
 
-This window, like all other windows that can be opened in Reeborg's World as well as the Code editor can be resized by clicking and dragging on the sides or at the bottom, or can be moved on the screen by clicking on the top bar and dragging to a new location.
+This window, like all other windows that can be opened in Reeborg's World as well as the Code editor, can be resized by clicking and dragging on the sides or at the bottom, or can be moved on the screen by clicking on the top bar and dragging to a new location.
 
 As you hover your mouse over the menu bar near the middle of the World editor window, various additional options are displayed.
 
@@ -44,7 +44,11 @@ Make sure that the world that is currently selected is the default world named *
 
 Then, in the **World editor**, click on **World dimensions**; a dialog similar to that shown below should appear.![](/assets/world_dimension.png)
 
+![](/assets/world_dimension.png)
+
 Change the maximum values for x and y both to 3 and click **OK**; the world displayed should now be much smaller.![](/assets/3x3.png)
+
+![](/assets/3x3.png)
 
 Next, hover over the **Goal **menu item and click on the **Robot **sub-menu: this allows us to choose a final position as a desired goal for the robot.
 
