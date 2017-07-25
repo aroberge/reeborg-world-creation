@@ -2,6 +2,11 @@
 
 If you have stumbled upon this document, please be advised that many of the features described here are currently **not** available on the live version of [Reeborg's World](http://reeborg.ca/reeborg.html).
 
+<div class="note">
+<p class="note-title">Title</p>
+<p>Test content for note</p>
+</div>
+
 # A Teacher's Guide ...
 
 This book is intended for those who create **worlds** \(i.e. programming tasks\) to help others learn programming using [Reeborg's World](http://reeborg.ca/reeborg.html).  In this book I will refer to you as a _**teacher**_ and to those who wish to learn programming using your creations as _**students**_.
