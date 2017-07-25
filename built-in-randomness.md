@@ -81,9 +81,15 @@ Select world **Alone**, or any other world with a robot already in it.  Then ent
 
 ```py
 RUR.set_random_orientation()
+pause(3000)
+RUR.add_initial_position(3, 3)
 ```
 
+Perhaps your students are ready to write a program to reliably solve the following task:
 
+```py
+World("worlds/examples/very_random.json", "Very random")
+```
 
-
+This last example could have been created using the menu-driven World editor; however, I used methods in the **Onload **editor as you can see if you click on **World Info**.
 
