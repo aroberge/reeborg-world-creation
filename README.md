@@ -4,7 +4,7 @@ If you have stumbled upon this document, please be advised that many of the feat
 
 # A Teacher's Guide ...
 
-This book is intended for those that create **worlds** \(i.e. programming tasks\) to help others learn programming using [Reeborg's World](http://reeborg.ca/reeborg.html).  In this book I will refer to you as a _**teacher**_ and to those that wish to learn programming using your creations as _**students**_.
+This book is intended for those who create **worlds** \(i.e. programming tasks\) to help others learn programming using [Reeborg's World](http://reeborg.ca/reeborg.html).  In this book I will refer to you as a _**teacher**_ and to those who wish to learn programming using your creations as _**students**_.
 
 Using the menu-driven world editor available in [Reeborg's World](http://reeborg.ca/reeborg.html), it is easy to create relatively simple worlds.  However, one can do much more using the advanced API. This book is a guide which should help you create more interesting  and challenging worlds for your students, while explaining other features of Reeborg's World.
 
@@ -22,7 +22,7 @@ I am using the words _**Reeborg's World**_ to mean three different things. [Reeb
 
 * **Reeborg's World is free;** you do not have to pay to use it.
   * I pay for the required hosting fees myself and currently have absolutely no plan to derive income from the site.
-* Reeborg's World is open source; the main repository is public and can be found at [https://github.com/aroberge/reeborg](https://github.com/aroberge/reeborg).  I know that some teachers have installed a copy on their school servers for convenience and I have always try to offer support for those that want to do this.
+* Reeborg's World is open source; the main repository is public and can be found at [https://github.com/aroberge/reeborg](https://github.com/aroberge/reeborg).  I know that some teachers have installed a copy on their school servers for convenience and I have always try to offer support for those who want to do this.
   * **TODO:** add info about the special repository and update the information on that repository.
 * All written material related to Reeborg's World, including this book, is freely available.
   * I might look into producing a paper version of this book to be sold at or near cost, but there will always be a free version available online.
