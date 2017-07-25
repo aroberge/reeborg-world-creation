@@ -1,4 +1,4 @@
-# Background tiles, obstacles and decorative objects
+# Adding other types of artefacts
 
 While walls can be used to create obstacles in Reeborg's path, using other elements, such as certain background tiles and obstacles can achieve the same purpose while being visually a lot more attractive.
 
