@@ -22,7 +22,7 @@
   * [Worlds collections \[TODO\]](worlds-collections.md)
   * [Extra module \[TODO\]](extra-module.md)
   * [Extra frame insertion \[TODO\]](extra-frame-insertion.md)
-* \[Python teaching support \[TODO\]\] \(python.md\)
+* [Python teaching support \[TODO\]](python.md)
   * [Why repeat? \[TODO\]](why-repeat.md)
   * [Using the Python REPL \[TODO\]](using-the-python-repl.md)
   * [Lists, tuples, dicts \[TODO\]](lists-tuples-dicts.md)
