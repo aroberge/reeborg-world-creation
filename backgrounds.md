@@ -2,7 +2,7 @@
 
 While walls can be used to create obstacles in Reeborg's path, using other elements, such as certain background tiles and obstacles can achieve the same purpose while being visually a lot more attractive.
 
-if you are familiar with the menu-driven **World editor**, you will realize that most of the examples given below could be created just as easily using the **World editor**.** **However, the methods we present can be used more generally to create much more interesting worlds, which could not be done by simply using the World editor.
+If you are familiar with the menu-driven **World editor**, you will realize that most of the examples given below could be created just as easily using the **World editor**.** **However, the methods we present can be used more generally to create much more interesting worlds, which could not be done by simply using the World editor.
 
 ## Preamble
 
@@ -19,7 +19,7 @@ RUR.add_background_tile("gravel", 3, 1)
 
 If you write this code in the main editor and run the program, you will see that each background tile is added one at a time: each time a change occurs in the world, a **frame** is recorded and shown separately. When creating a background, this will likely not be the desired behaviour. Usually, you will want to create backgrounds by writing code in the **Onload **editor; in this case, you will not see tiles added one by one: code executed from the Onload editor does not result in a visible frame-by-frame recording.
 
-However, you might sometimes want to make such addition or transformation of the world while a program is running. In this case, if you do not want to see the additions done one by one, you will have to suspend the recording of changes being made, make multiple changes, and resume the recording so that changes can appear. We can control the recording behaviour with the `recording()` function as shown in the following example which you should try.
+However, you might sometimes want to make such additions or transformations of the world while a program is running. In this case, if you do not want to see the additions done one by one, you will have to suspend the recording of changes being made, make multiple changes, and resume the recording so that changes can appear. We can control the recording behaviour with the `recording()` function as shown in the following example which you should try.
 
 ```py
 previous_recording_state = recording(0)
@@ -38,7 +38,7 @@ Since `pause()` does not change the content of the world, it does not trigger a 
 
 > French version: _En français, utilisez _`enregistrement()`_ au lieu de _`recording()`_._
 
-If we want to fill the entire world with a single tile, we can use something like the following:
+If we want to fill the entire world with a single tile type, we can use something like the following:
 
 ```py
 RUR.fill_background("grass")
@@ -96,7 +96,7 @@ By default, it would make little sense to put objects that need to be picked up 
 
 ## Beyond the menu-driven World editor
 
-The menu-driven World editor limits choices as to what can be drawn as a background tile, an obstacle, a decorative object, etc. Using the API, one is not limited. As a possible interesting example, one can imagine drawing a "river" with consecutive `water` tiles as background tile except at one location where we draw it as a decorative object. Visually, it would appear to be the same everywhere. However, as a decorative object, `water` would be harmless so that Reeborg could cross it safely. One could make a story about finding the point where the river is shallow enough for Reeborg to cross it. This could be done by Reeborg using either `front_is_clear()` or `right_is_clear()`. For demonstration purpose I have created two versions of a world that demonstrate this idea. The first version is the one that I would use with students:
+The menu-driven World editor limits choices as to what can be drawn as a background tile, an obstacle, a decorative object, etc. Using the API, one is not limited. As a possible interesting example, one can imagine drawing a "river" with consecutive `water` tiles as background tile except at one location where we draw it as a decorative object. Visually, it would appear to be the same everywhere. However, as a decorative object, `water` would be harmless so that Reeborg could cross it safely. One could make a story about finding the point where the river is shallow enough for Reeborg to cross it. This could be done by Reeborg using either `front_is_clear()` or `right_is_clear()`. For demonstration purposes I have created two versions of a world. The first version is the one that I would use with students:
 
 ```py
 World("worlds/examples/river_demo.json", "Crossing the river")
@@ -110,5 +110,5 @@ In the second version, I do not draw the safe river passage in the **Onload **ed
 World("worlds/examples/river.json", "River")
 ```
 
-Again, click on **World Info** to see how it is done as I used a very special trick.  When a program is run from the Onload editor, it is run in its own context/scope: any variable defined in this context is not going to be shared with the user's program. In order to make a variable available globally, I use a special Javascript object / Python dict to store the value and to retrieve it when needed.
+Again, click on **World Info** to see how it is done as I used a very special trick.  When a program is run from the **Onload **editor, it is run in its own context/scope: any variable defined in this context is not going to be shared with the user's program. In order to make a variable available globally, I use a special Javascript object / Python dict to store the value and to retrieve it when needed.
 
