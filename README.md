@@ -154,7 +154,7 @@ In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](htt
 
 * _A good mini-language should be complemented with a good set of attractive and meaningful problems for students to solve._
 
-  * I completely agree. Reeborg's World include a small set of such programming tasks \(worlds\) ... and I am counting on your to increase the number of such tasks available! :-\)
+  * I completely agree. Reeborg's World include a small set of such programming tasks \(worlds\) ... and I am counting on you to increase the number of such tasks available! :-\)
 
 I do have one disagreement with the traditional mini-language approach: I believe that students can be more motivated to learn programming if they are using a "real" programming language rather than an artificial and limited one made up only to teach basic programming concepts.
 
