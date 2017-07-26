@@ -44,7 +44,7 @@ Make sure that the world that is currently selected is the default world named *
 
 Then, in the **World editor**, click on **World dimensions**; a dialog similar to that shown below should appear.![](/assets/world_dimension.png)
 
-![](/assets/world_dimension.png)
+
 
 Change the maximum values for x and y both to 3 and click **OK**; the world displayed should now be much smaller.![](/assets/3x3.png)
 
