@@ -132,7 +132,7 @@ repeat 4:
 
 You use this example to explain the concept of an **indented code block** the use of a colon, ":", to precede such a code block, and the introduction of one "special" keyword: `repeat`.
 
-You can show how a pattern like this is "written" using Blockly[^2]:
+You can show how a pattern like this is "written" using Blockly:[^2]
 
 ![](/assets/repeat_blockly.png)
 
@@ -180,7 +180,7 @@ you will need to explain \(or at least mention\):
 4. the introduction of a built-in function, `range()`
 5. that a function can have an **argument** and the notation for "passing" arguments to a function.
 
-I believe that, until students have seen that functions can have arguments, such as `take("token")`, and have seen the concept of a variable, it is better to use `repeat` than the standard Python for loop idiom[^1].
+I believe that, until students have seen that functions can have arguments, such as `take("token")`, and have seen the concept of a variable, it is better to use `repeat` than the standard Python for loop idiom.[^2]
 
 I should also mention that I have often seen the following awful construct by Python beginners, some of which were competent programmers in other languages:
 
@@ -221,7 +221,8 @@ repeat n:  # n is not known on this line of code
 
 This is a design choice to force the transition to using "normal" Python as soon as students have learned about variables and need to use them to repeat a block of code a fixed number of times, as determined by the value of that variable.
 
-[^1]: When teaching older students in formal courses, like a university level first-year course, the use of `repeat` might be limited to only the first and possibly second week of teaching; by the end of the course, it should have been mostly forgotten by the students who would have become familiar with the standard Python idiom.
+[^1]: I would argue that, even if you do not want your students to use Blockly, it might be useful occasionally and mostly at the beginning, to show them what a small "program" looks like using Blockly - if only to give them a different visual representation of the block-structure of code, like in the examples shown here.
 
-[^2]: I would argue that, even if you do not want your students to use Blockly, it might be useful occasionally and mostly at the beginning, to show them what a small "program" looks like using Blockly - if only to give them a different visual representation of the block-structure of code, like in the examples shown here.
+[^2]: When teaching older students in formal courses, like a university level first-year course, the use of `repeat` might be limited to only the first and possibly second week of teaching; by the end of the course, it should have been mostly forgotten by the students who would have become familiar with the standard Python idiom.
+
 
