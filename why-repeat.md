@@ -197,6 +197,13 @@ for item in some_list:
     do_something(item)
 ```
 
+I believe that such awful constructs can be avoided if beginners are initially taught to use`repeat` and that the standard for loop idiom for repeating a fixed number of times is not taught until the students have seen some other examples of for loops. By that time, **if** they need the loop index, they would likely be ready to learn the proper Python idiom:
+
+```py
+for index, item in enumerate(iterable):
+   do_something(index, item)
+```
+
 ## Limitation of `repeat`
 
 By design, what comes after `repeat` must evaluate as an integer without taking into account the surrounding lines of code.
