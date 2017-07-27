@@ -122,7 +122,7 @@ move()
 turn_left()
 ```
 
-And show them that they can write this as:
+And show them that, **using repeat** they can write this as:
 
 ```
 repeat 4:
