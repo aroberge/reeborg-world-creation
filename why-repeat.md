@@ -132,7 +132,7 @@ repeat 4:
 
 You use this example to explain the concept of an **indented code block** the use of a colon, ":", to precede such a code block, and the introduction of one "special" keyword: `repeat`.
 
-You can show how a pattern like this is "written" using Blockly:[^2]
+You can show how a pattern like this is "written" using Blockly:[^1]
 
 ![](/assets/repeat_blockly.png)
 
