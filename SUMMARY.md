@@ -1,8 +1,14 @@
 # Summary
 
-* [Introduction](README.md)
+* [About Reeborg's World](about/about.md)
+  * [Learning programming](about/learning.md)
+  * [Task driven learning](about/tdl.md)
+  * [A quick tour](about/a-quick-tour.md)
+  * [Reeborg's World is free](about/free.md)
+  * [A brief word about Blockly](about/blockly.md)
+  * [Checklist for a good programming environment](about/checklist.md)
+  * [Support for non-English students](about/international.md)
 * [Out of the box](part1.md)
-  * [A quick tour](a-quick-tour.md)
   * [Creating a world: three different ways](chapter1.md)
   * [Loading worlds and other files](loading-worlds.md)
   * [The many different editors](the-many-different-editors.md)
