@@ -197,6 +197,13 @@ for item in some_list:
     do_something(item)
 ```
 
+I believe that such awful constructs can be avoided if beginners are initially taught to use`repeat` and that the standard for loop idiom for repeating a fixed number of times is not taught until the students have seen some other examples of for loops. By that time, **if** they need the loop index, they would likely be ready to learn the proper Python idiom:
+
+```py
+for index, item in enumerate(iterable):
+   do_something(index, item)
+```
+
 ## Limitation of `repeat`
 
 By design, what comes after `repeat` must evaluate as an integer without taking into account the surrounding lines of code.
@@ -223,5 +230,5 @@ This is a design choice to force the transition to using "normal" Python as soon
 
 [^1]: I would argue that, even if you do not want your students to use Blockly, it might be useful occasionally and mostly at the beginning, to show them what a small "program" looks like using Blockly - if only to give them a different visual representation of the block-structure of code, like in the examples shown here.
 
-[^2]: When teaching older students in formal courses, like a university level first-year course, the use of `repeat` might be limited to only the first and possibly second week of teaching; by the end of the course, it should have been mostly forgotten by the students who would have become familiar with the standard Python idiom.
+[^2]: When teaching older students in formal courses, like a university-level introduction to programming course, the use of `repeat` might be limited to only the first and possibly second week of teaching; by the end of the course, it should have been mostly forgotten by the students who would have become familiar with the standard Python idiom.
 
