@@ -1,5 +1,7 @@
 # Automatic transformations
 
+**This is an incomplete first draft.**
+
 In Reeborg's World, some artefacts can be pushed, some can be tossed \(thrown on the square in front of Reeborg\), and some can be put down by Reeborg. When this happens, depending on the particular artefact and the content of the grid square where it ends up, some automatic transitions can take place:
 
 * A box pushed by Reeborg onto a water background tile becomes a bridge allowing Reeborg to move safely onto that tile.
@@ -21,8 +23,8 @@ I will first describe how you might implement this by writing explicit code.  Im
 recording_state = recording(False)
 move()
 x, y = position_in_front()
-if (   RUR.is_pushable("box", x, y) and 
-       RUR.is_obstacle("water", x, y) and 
+if (   RUR.is_pushable("box", x, y) and
+       RUR.is_obstacle("water", x, y) and
        not RUR.is_bridge("bridge", x, y)
     ):
     RUR.remove_pushable("box", x, y)
@@ -39,8 +41,8 @@ def redefine(fn):
         recording_state = recording(False)
         fn()
         x, y = position_in_front()
-        if (    RUR.is_pushable("box", x, y) and 
-                RUR.is_obstacle("water", x, y) and 
+        if (    RUR.is_pushable("box", x, y) and
+                RUR.is_obstacle("water", x, y) and
                 not RUR.is_bridge("bridge", x, y)
             ):
             RUR.remove_pushable("box", x, y)
@@ -74,5 +76,5 @@ If you compare with the first code example, you will see that the `transform` at
 
 note that `transform` is an array: there can be multiple sets of conditions/actions that are listed in this array.
 
-If you create a **world collection**, you only have to add such objects when creating the menu ... and they will be available in all worlds used.
+If you create a **world collection**, you only have to add such objects when creating the menu ... and they will be available in all worlds used, without having to redefine `move()`, `toss()` or `put()`: Reeborg's World will take care of that for you.
 
