@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](introduction.md)
 * [About Reeborg's World](about/about.md)
   * [Learning programming](about/learning.md)
   * [Task driven learning](about/tdl.md)
@@ -51,4 +52,5 @@
   * [Python code pre-processing: the gory details](appendices/python-code-pre-processing-the-gory-details.md)
   * [About CORS \[TODO\]](appendices/about-cors.md)
   * [Uses of local storage \[TODO\]](appendices/uses-of-local-storage.md)
+* [Design choices \[To be completed\]](design-choices-to-be-completed.md)
 
