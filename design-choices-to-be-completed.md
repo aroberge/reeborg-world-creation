@@ -19,7 +19,7 @@ I have decided that some errors should be always silenced, while others should b
 RUR.add_bridge("bridge", 2, 2)
 ```
 
-a bridge will be added to the world's content when the world is imported.  If this world is then saved \(perhaps after some editing done\), there will be a bridge included in the new world definition.  When this new world is imported, the Onload code will be executed ... and since there can only be one bridge at a given location, an error would normally be raised immediately.  Most world creators would not be able to find the source of that error easily ... and once they would have found it, they might be frustrated at having to either explicitly edit the json world file using a text editor, or alter some code in the Onload editor \(which is not executed when editing a world\). 
+a bridge will be added to the world's content when the world is imported.  If this world is then saved \(perhaps after some editing done\), there will be a bridge included in the new world definition.  When this new world is imported, the Onload code will be executed ... and since there can only be one bridge at a given location, an error would normally be raised immediately.  Most world creators would not be able to find the source of that error easily ... and once they would have found it, they might be frustrated at having to either explicitly edit the json world file using a text editor, or alter some code in the Onload editor \(which is not executed when editing a world\).
 
 #### Background tiles
 
@@ -57,7 +57,7 @@ Decorative objects are of no consequence for the behaviour of a program. If one 
 
 #### Objects
 
-By "objects", I mean those that Reeborg can `take()` and `put()`. 
+By "objects", I mean those that Reeborg can `take()` and `put()`.
 
 New error handling to be implemented and documented better: in the Onload editor, "adding" an object will be seen as identical to "set".
 
@@ -84,6 +84,10 @@ New error handling to be implemented. Should be handled somewhat similarly to br
 ## Editor content cannot be changed when using Blockly
 
 To be explained
+
+## Why having both obstacles and background tiles?
+
+While both obstacles and background tiles can be "fatal", having both enables a world creator to combine images and make the world more visually appealing. For example, we can have fire as an obstacle on an otherwise harmless grass background. The alternative would be to combine fire and grass into a single image to be used as a fatal element. Such an approach could lead to an exponentially growing number of images having to be created.
 
 
 
