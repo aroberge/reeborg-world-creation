@@ -63,7 +63,7 @@ New error handling to be implemented and documented better: in the Onload editor
 
 #### Obstacles
 
-New error handling to be implemented.  Should be handled somewhat similarly to decorative objects.
+Multiple obstacles can exist at a given location. However, attempting to add a named obstacle where one already exists with the same name will raise an error except if this is done from the Onload editor, in which case a message will simply be logged in the browser's console.
 
 #### Overlays
 
@@ -88,6 +88,4 @@ To be explained
 ## Why having both obstacles and background tiles?
 
 While both obstacles and background tiles can be "fatal", having both enables a world creator to combine images and make the world more visually appealing. For example, we can have fire as an obstacle on an otherwise harmless grass background. The alternative would be to combine fire and grass into a single image to be used as a fatal element. Such an approach could lead to an exponentially growing number of images having to be created.
-
-
 
