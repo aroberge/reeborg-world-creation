@@ -13,15 +13,58 @@ Unless explicitly silenced.
 ...
 ```
 
-I have decided that some errors should be always silenced, while others should be silenced depending on context.  On this last point, in particular, if a world is created with code from the **Onload **editor, like:
+I have decided that some errors should be always silenced, while others should be silenced depending on context.  The errors that are silenced are based on the following scenario:
 
-```
-RUR.add_bridge("bridge", 2, 2)
+* A user creates a world with some code in the Onload editor to add artefacts in the world, and saves this world \(either in the browser's local storage or on a file\).
+* At a later time, the user selects this world **without being in world editing mode**, planning to use this world as a basis for creating a new one.  At this stage, code in the Onload editor is being executed and artefacts are added.
+* The user edits the world and saves it.  This world now contains artefacts already created **and **code to create artefacts. Some artefacts \(walls for example\) cannot be added if they are already present; attempting to do so will result in an error being raised.
+* Much puzzlement when this world is later being selected as the code in the Onload editor appears to be completely consistent with the world's content as visually displayed.
+
+I explain below how I treat each category of artefact when such a "problem" is encountered.
+
+
+
+#### Bridges
+
+Attempting to add a bridge where one already exists \(even if it is the same type\) will raise an error except if this is done from the Onload editor, in which case a message will simply be logged in the browser's console.
+
+#### Decorative objects
+
+Decorative objects are of no consequence for the behaviour of a program. If one tries to add a second decorative object of a given type \(for example, a tulip\) at a given location, the request will be silently ignored, whether this is done from code in the Onload editor or elsewhere.  Note that this could result in an error later if one attempts to remove a given type of decorative object twice at the same location.
+
+#### Objects
+
+By "objects", I mean those that Reeborg can `take()` and `put()`. Depending on whether or not the optional argument attribute `options.replace` has been set to true, adding an object via
+
+```js
+RUR.add_object('name', x, y, options)
 ```
 
-a bridge will be added to the world's content when the world is imported.  If this world is then saved \(perhaps after some editing done\), there will be a bridge included in the new world definition.  When this new world is imported, the Onload code will be executed ... and since there can only be one bridge at a given location, an error would normally be raised immediately.  Most world creators would not be able to find the source of that error easily ... and once they would have found it, they might be frustrated at having to either explicitly edit the json world file using a text editor, or alter some code in the Onload editor \(which is not executed when editing a world\).
+will normally result in either adding to the total number of objects present \(if `replace==True`\) or in having the existing number of objects being replace by the specified value of `options.number` \(with a default of 1\).  For code in the Onload editor, it is assumed that `replaced==True` by default \(it makes no sense to repeatedly add objects in the Onload editor since no individual frame is recorded and only the final result is shown to the student as the initial world\).
+
+#### Obstacles
+
+Multiple obstacles can exist at a given location. However, attempting to add a named obstacle where one already exists with the same name will raise an error **except **if this is done from the Onload editor, in which case a message will simply be logged in the browser's console.
+
+#### Overlays
+
+```js
+raise NotImplementedError
+```
+
+Overlays do not exist yet. When they are, they should be handled somewhat similarly to decorative objects.
+
+#### Pushables
+
+Pushables are dealt with in a similar way to Bridges.
+
+#### Walls
+
+Walls are dealt with in a similar way to Bridges.
 
 #### Background tiles
+
+No error needs to be silenced for Background tiles when a new one is added. However, for the sake of completeness, I add a few details about their behaviour.
 
 There can only be one background tile per location. Rather than requiring to first remove an existing background tile, and then add a new one, when a new one is to be added using
 
@@ -46,40 +89,6 @@ RUR.fill_background("type", x, y)
 where `"type"` can be either a known artefact or a color: not check is performed.
 
 **Note**: if the "color" is not recognized as valid by JS/HTML, it will be painted black.
-
-#### Bridges
-
-As mentioned above, attempting to add a bridge where one already exists \(even if it is the same type\) will raise an error except if this is done from the Onload editor, in which case a message will simply be logged in the browser's console.
-
-#### Decorative objects
-
-Decorative objects are of no consequence for the behaviour of a program. If one tries to add a second decorative object of a given type \(for example, a tulip\) at a given location, the request will be silently ignored.  Note that this could result in an error later if one attempts to remove a given type of decorative object twice at the same location.
-
-#### Objects
-
-By "objects", I mean those that Reeborg can `take()` and `put()`.
-
-New error handling to be implemented and documented better: in the Onload editor, "adding" an object will be seen as identical to "set".
-
-#### Obstacles
-
-Multiple obstacles can exist at a given location. However, attempting to add a named obstacle where one already exists with the same name will raise an error except if this is done from the Onload editor, in which case a message will simply be logged in the browser's console.
-
-#### Overlays
-
-```js
-raise NotImplementedError
-```
-
-Overlays do not exist yet. When they are, they should be handled somewhat similarly to decorative objects.
-
-#### Pushables
-
-New error handling to be implemented. Should be handled somewhat similarly to bridges.
-
-#### Walls
-
-New error handling to be implemented. Should be handled somewhat similarly to bridges.
 
 ## Editor content cannot be changed when using Blockly
 
