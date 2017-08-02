@@ -44,8 +44,6 @@ Make sure that the world that is currently selected is the default world named *
 
 Then, in the **World editor**, click on **World dimensions**; a dialog similar to that shown below should appear.![](/assets/world_dimension.png)
 
-
-
 Change the maximum values for x and y both to 3 and click **OK**; the world displayed should now be much smaller.![](/assets/3x3.png)
 
 Next, hover over the **Goal **menu item and click on the **Robot **sub-menu: this allows us to choose a final position as a desired goal for the robot.
@@ -156,7 +154,9 @@ The answer is ... it depends.  If all I want to do is to create a static world w
 
 However, if I want to use different artefact, or to create new types of interactions, _etc_., I most often use a hybrid approach where I first write all the code in the main editor, like you did in the second example, doing various tests until I am satisfied with the result. Then, I move some of the code to the **Onload **editor and, very often, some to the **Pre **and **Post **editors whose role I will explain in the next chapter.
 
-However, I do sometimes make the mistake of starting from a world with an artefact already present \(such as a wall or a house as final position, etc.\) or to not be in editing mode while saving a file; in these instances, if I have a function call in the **Onload **editor attempting to add the same artefact again, it can raise an error. So, when using the dynamic creation from the **Onload **editor, it is often less error prone to start with an empty world and create everything from the **Onload **editor rather than adding some artefacts using the menu-driven World editor.
+However, I do sometimes make the mistake of starting from a world with an artefact already present \(such as a wall or a house as final position, etc.\) or to not be in editing mode while saving a file; in these instances, if I have a function call in the **Onload **editor attempting to add the same artefact again, it can raise an error.[^1] So, when using the dynamic creation from the **Onload **editor, it is often less error prone to start with an empty world and create everything from the **Onload **editor rather than adding some artefacts using the menu-driven World editor.
 
 I have no doubt that, as you create more worlds, you will find an approach that works best for you.
+
+[^1]: Since I wrote this, I made changes, described in the **Design choices** section in an attempt to completely eliminate these errors from being raised. If you do see such errors, please file a bug report.
 
