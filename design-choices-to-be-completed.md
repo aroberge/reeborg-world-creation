@@ -18,11 +18,9 @@ I have decided that some errors should be always silenced, while others should b
 * A user creates a world with some code in the Onload editor to add artefacts in the world, and saves this world \(either in the browser's local storage or on a file\).
 * At a later time, the user selects this world **without being in world editing mode**, planning to use this world as a basis for creating a new one.  At this stage, code in the Onload editor is being executed and artefacts are added.
 * The user edits the world and saves it.  This world now contains artefacts already created **and **code to create artefacts. Some artefacts \(walls for example\) cannot be added if they are already present; attempting to do so will result in an error being raised.
-* Much puzzlement when this world is later being selected as the code in the Onload editor appears to be completely consistent with the world's content as visually displayed.
+* Much puzzlement when this world is later being selected and an error is being raised since the code in the Onload editor appears to be completely consistent with the world's content as visually displayed.
 
 I explain below how I treat each category of artefact when such a "problem" is encountered.
-
-
 
 #### Bridges
 
