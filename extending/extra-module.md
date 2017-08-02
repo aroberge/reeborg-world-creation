@@ -27,9 +27,9 @@ The second method is to use the Python specific `install_extra(url)`\(without th
 World("worlds/examples/install_extra_test.json", "Extra 2")
 ```
 
-This second example loads some code from a URL. 
+This second example loads some code from a URL.
 
-Currently, when executing a program using code from the **extra **module, the content of this module is logged each time in the browser's console. This allows you to see what code was loaded from the URL.
+If you open the **Additional options** menu, at the very bottom there is an **Update extra** button; clicking on it should reveal the current content of the extra module if it was not already there.
 
 ### What about JavaScript?
 
