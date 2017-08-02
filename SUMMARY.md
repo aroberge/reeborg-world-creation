@@ -27,7 +27,7 @@
   * [Automatic transformations](extending/automatic-transformations.md)
   * [Animated images](extending/animated-images.md)
   * [Worlds collections](extending/worlds-collections.md)
-  * [Extra module \[TODO\]](extending/extra-module.md)
+  * [Extra module](extending/extra-module.md)
   * [Extra frame insertion \[TODO\]](extending/extra-frame-insertion.md)
 * [Python teaching support \[TODO\]](teaching_py/python.md)
   * [Why repeat?](teaching_py/why-repeat.md)
