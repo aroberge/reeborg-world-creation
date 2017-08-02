@@ -4,11 +4,9 @@ Reeborg's World has been designed to support languages other than English. The U
 
 ### A special keyboard
 
-Some young students who are not used to writing using an ascii-based keyboard may find it difficult to write programs. To help them, Reeborg's World includes a special keyboard, which has three versions: one for traditional Python programming another for Javascript, and a third when using the Python REPL, each having multiple "tabs".
+Some young students who are not used to writing using an ascii-based keyboard may find it difficult to write programs. To help them, Reeborg's World includes a special keyboard, which has three versions: one for traditional Python programming another for Javascript, and a third when using the Python REPL, each having multiple "tabs". Even if they have English-compatible keyboards, older students may find the special keyboard useful as a tool to quickly find out the exact spelling of a command or of an object.
 
 ![](/assets/keyboard1.png)
-
-
 
 ![](/assets/keyboard3.png)
 
