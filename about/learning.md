@@ -11,7 +11,9 @@ public class HelloWorld {
     }
 }
 ```
+
 or the equivalent Karel program from a well-known version:
+
 ```java
 import stanford.karel.*;
 public class KarelMove extends Karel {
@@ -20,6 +22,7 @@ public class KarelMove extends Karel {
     }
 }
 ```
+
 the simplest valid program in Reeborg's World is:
 
 ```
@@ -46,5 +49,5 @@ So, the idea is to have the student deal with as few concepts as possible to wri
 
 However, the simplicity of the approach used in Reeborg's World does not mean that what can be done is limited to the basics of the virtual robot world. The Python version of Reeborg's World is based on [Brython](http://brython.info/), and includes many Python modules found in Python's standard library which can be used to write advanced programs.
 
+[^1]: It is for a reason similar to this that I have added `repeat` as a fake Python keyword. See the section on `repeat` for more details.
 
-[^1]: It is for a reason similar to this that I have added `repeat` as a fake Python keyword. See the appendix on `repeat` for more details.
