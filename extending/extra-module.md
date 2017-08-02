@@ -29,7 +29,7 @@ World("worlds/examples/install_extra_test.json", "Extra 2")
 
 This second example loads some code from a URL.
 
-If you open the **Additional options** menu, at the very bottom there is an **Update extra** button; clicking on it should reveal the current content of the extra module if it was not already there.
+Currently, if you open the **Additional options** menu, at the very bottom there is an **Update extra** button; clicking on it should reveal the current content of the extra module if it was not already there.  In a future version, I might change this to add the content to another editor tab easily visible for students, next to the **library** tab instead.
 
 ### What about JavaScript?
 
