@@ -4,7 +4,7 @@ In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](htt
 
 * _The mini-language should be **simple **in both its syntax and semantics._
 
-  * Using the simple function based approach, with instructions like `move()` and `turn_left()`, and using Python as the basic programming language \(limiting to simple constructs\) meets this requirement - especially if one initially uses the fake Python keyword, `repeat n:` that I added to replace the standard construct `for variable in range(n):`; see the appendix on `repeat` for more details.
+  * Using the simple function based approach, with instructions like `move()` and `turn_left()`, and using Python as the basic programming language \(limiting to simple constructs\) meets this requirement - especially if one initially uses the fake Python keyword, `repeat n:` that I added to replace the standard construct `for variable in range(n):`; see the section on `repeat` for more details.
 
 * ... _most operations performed by the actor should make visible changes in the microworld represented on the screen._
 
@@ -42,5 +42,5 @@ In their 1997 paper, [Mini-languages: A Way to Learn Programming Principles](htt
 
 I do have one disagreement with the traditional mini-language approach: I believe that students can be more motivated to learn programming if they are using a "real" programming language rather than an artificial and limited one made up only to teach basic programming concepts.
 
-
 [^3]: Brusilovsky, P., Calabrese, E., Hvorecky, J., Kouchnirenko, A., and Miller, P. \(1997\) _Mini-languages: A Way to Learn Programming Principles. Education and Information Technologies_ 2 \(1\), pp. 65-83.
+
