@@ -4,9 +4,13 @@ After using Reeborg's World for a while or reading the world creation API docume
 
 ## Visual design
 
-My work on early prototypes of [Reeborg's World](http://reeborg.ca/reeborg.html) started before the "flat css style" became popular. As a designer once told me, the site looks a bit "dated" with the styling choices I have made. I do recognize this, but I not consider making any kind of style changes a high priority. 
+My work on early prototypes of [Reeborg's World](http://reeborg.ca/reeborg.html) started before the "flat css style" became popular. As a designer once told me, the site looks a bit "dated" with the styling choices I have made. I do recognize this, but I not consider making any kind of style changes a high priority.
 
-The site has not been designed as a "responsive" one. To be able to use the site effectively, I believe that users need a screen size larger than that available on some small devices. 
+The site has not been designed as a "responsive" one. To be able to use the site effectively, I believe that users need a screen size larger than that available on some small devices.
+
+I have decided to adopt a single color scheme for code styling. To distinguish between code that can be edited, and code that cannot be edited, the background of the latter is striped; I did not receive much feedback as to whether the visual effect was useful in helping students identify what could could be edited.
+
+![](/assets/code_striped.png) ![](/assets/code_not_striped.png)
 
 ## Silencing some errors
 
