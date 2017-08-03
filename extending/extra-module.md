@@ -6,7 +6,13 @@ Suppose that you would like to provide your students with additional functions o
 from extra import turn_right, RepairedRobot
 ```
 
-Alternatively, you can do this code importation in the Pre editor which is executed just before the student's program: you can thus provide students with additional functions without requiring them to know and use an explicit import statement.
+Alternatively, **you **can do this code importation in the Pre editor which is executed just before the student's program: you can thus provide students with additional functions without requiring them to have to know how to use an explicit import statement.
+
+Important: if you do not want to have the extra editor tab shown, after adding the content, set 
+
+```py
+RUR.state.extra_code_visible = False;
+```
 
 There are two ways you can create such a module:
 
@@ -16,7 +22,7 @@ There are two ways you can create such a module:
 The preferred way is to use `RUR.extra_python_code(python_code)`. Have a look at
 
 ```py
-World("worlds/examples/extra_python_code_test.json", "Extra 1")
+# world to be included here
 ```
 
 and, as usual, click on **World Info** for details about the code.
@@ -24,12 +30,12 @@ and, as usual, click on **World Info** for details about the code.
 The second method is to use the Python specific `install_extra(url)`\(without the `RUR` prefix\). An example is provided in
 
 ```py
-World("worlds/examples/install_extra_test.json", "Extra 2")
+# example world to be included here.
 ```
 
-This second example loads some code from a URL.
 
-Currently, if you open the **Additional options** menu, at the very bottom there is an **Update extra** button; clicking on it should reveal the current content of the extra module if it was not already there.  In a future version, I might change this to add the content to another editor tab easily visible for students, next to the **library** tab instead.
+
+
 
 ### What about JavaScript?
 
