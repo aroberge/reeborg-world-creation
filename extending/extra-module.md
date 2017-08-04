@@ -6,7 +6,7 @@ Suppose that you would like to provide your students with additional functions o
 from extra import turn_right, RepairedRobot
 ```
 
-Alternatively, **you **can do this code importation in the Pre editor which is executed just before the student's program: you can thus provide students with additional functions without requiring them to have to know how to use an explicit import statement. 
+Alternatively, **you **can do this code importation in the Pre editor which is executed just before the student's program: you can thus provide students with additional functions without requiring them to have to know how to use an explicit import statement.
 
 ### Creating the extra module
 
@@ -44,7 +44,7 @@ An example is provided in
 # example world to be included here.
 ```
 
-By default, the code will be shown in an additional editor tab in read-only mode.  If you do not wish to have this tab shown, include a second parameter \(`hide`\) set to `True` when setting the content:
+By default, the code will be shown in an additional editor tab in read-only mode.  If you do not wish to have this tab shown, include a second parameter \(`hidden`\) set to `True` when setting the content:
 
 ```py
 RUR.set_extra_content(python_code, True)
@@ -65,6 +65,4 @@ window.turn_right = function () {
 ```
 
 .After executing this program, you should be able to use `turn_right()` in any subsequent programs written in JavaScript.  You could include such definitions in the Onload part of a special world that student would load first, and then be able to use such definitions at any time in a given session.
-
-
 
