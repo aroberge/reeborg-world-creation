@@ -31,7 +31,7 @@
   * [Extra frame insertion \[TODO\]](extending/extra-frame-insertion.md)
 * [Python teaching support \[TODO\]](teaching_py/python.md)
   * [Why repeat?](teaching_py/why-repeat.md)
-  * [Using the Python REPL \[TODO\]](teaching_py/using-the-python-repl.md)
+  * [Using the Python REPL](teaching_py/using-the-python-repl.md)
   * [Lists, tuples, dicts \[TODO\]](teaching_py/lists-tuples-dicts.md)
   * [Watching variables \[TODO\]](teaching_py/watching-variables.md)
   * [Python OOP \[TODO\]](teaching_py/python-oop.md)
