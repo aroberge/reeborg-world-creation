@@ -91,7 +91,7 @@ Still, I did get some requests to add beepers, from teachers familiar with eithe
 
 Reeborg's World now includes beepers as one possible object type. Visually, they are represented by a series of images that cycle repeatedly.
 
-![](/assets/beeper0.png)![](/assets/beeper1.png)![](/assets/beeper2.png)![](/assets/beeper3.png)![](/assets/beeper0.png)![](/assets/beeper1.png)...
+![](/assets/beeper.gif)
 
 If you hover your mouse over the image of Reeborg in a given world, you can see how many objects of each type it is carrying:
 
