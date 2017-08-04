@@ -1,6 +1,6 @@
 # Python code pre-processing: the gory details
 
-As far as I know, most if not all Karel simulators implement their own code interpreter, so that students can step through instructions one at a time.  However, this is not the case for Reeborg's World.  The reason for this is that I wanted for anyone using the program to be able to use **any** valid Python or Javascript code, using a generic interpreter implemented by someone else.  Here is what I do.
+As far as I know, most if not all Karel simulators implement their own code interpreter, so that students can step through instructions one at a time.  However, this is not the case for Reeborg's World.  The reason for this is that I wanted for anyone using the program to be able to use **any** valid Python or Javascript code, and I am not competent enough to implement a fully-featured JavaScript or Python interpreter.  Here is what I do instead.
 
 ## Javascript
 
@@ -12,7 +12,7 @@ eval(Pre + program + Post)
 
 During the execution, each time the world changes \(e.g. Reeborg changes position using `move()`\), a copy of the world's content is made \(which I call a frame\) and appended to an Javascript array \(similar to a Python list\). When `eval()` terminates, the content of that array is displayed frame by frame with a user-definable interval \(using `think()`\) between each frame; this is done using Javascript's `setTimeout` function.
 
-The initial reason why I used a recording of frames was that Javascript is a single-threaded language which does have a `sleep()` function - otherwise, I would have likely used this. However, since I use a list of frames, users can not only step forward through the recording but also backwards if they so desire; they can even quickly go through a particular frame using the html slider.
+The initial reason why I used a recording of frames was that Javascript is a single-threaded language which does have a `sleep()` function - otherwise, I would have likely used this. However, since I use a list of frames, students can not only step forward through the recording but also backwards if they so desire, which would not have been possible with using an approach based on the existence of a `sleep()` function.  With the approach used, students can even quickly go through a particular frame using the html slider.
 
 #### Dealing with Javascript errors
 
@@ -24,9 +24,15 @@ try {
 } catch (e) {
     analyze_error(e);
 }
+// If there was not a fatal error:
+display_result_frame_by_frame()
+// after last frame, 
+if (wold_includes_goal()) {
+   check_goal();
+}
 ```
 
-The error analysis consists essentially in formatting the information received and presenting it to the user.
+The error analysis and goal checking consists essentially in formatting the information received and presenting it to the user.
 
 ![](/assets/good_result.png)
 
@@ -65,7 +71,6 @@ where each required `count_variable` is chosen to be a unique name in _program_,
 #### Additional processing: non-breaking space
 
 In addition to the above, non-breaking spaces \(html `&nbsp;`  or `&\#160;`\) are transformed into regular spaces \(ASCII 32\). This is to allow users to copy code from a teacher's website or from the [API page](http://reeborg.ca/api/RUR.html) into the editor and have it executed correctly. Python does not recognize this character as a valid space character, whereas Javascript does.
-
 
 #### The library
 
@@ -192,3 +197,4 @@ Prior to execution of this code, a copy of variables found in `locals()` is made
 [^1]: Rather than calling `exec()` each time, for efficiency I now call it once at the beginning of a browser session, save the result in a `dict` and update the `locals()` using the saved result. However, I believe that the above code faithfully describes the basic idea of what is actually done.
 
 [^2]: A similar improvement to that noted in [^1] has been made to the code since it was written.
+
