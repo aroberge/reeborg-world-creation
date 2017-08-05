@@ -53,5 +53,5 @@
   * [About CORS \[TODO\]](appendices/about-cors.md)
   * [Uses of local storage \[TODO\]](appendices/uses-of-local-storage.md)
 * [Design choices \[To be completed\]](design-choices-to-be-completed.md)
-* [Sound effects \[TODO\]](sound-effects-todo.md)
+* [Sound effects](sound-effects-todo.md)
 
