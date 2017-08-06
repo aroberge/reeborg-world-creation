@@ -1,8 +1,8 @@
-# List, tuples, dicts
+# Lists, tuples, and dicts
 
-In all the examples below, I use the world **Alone** to ensure that there is a robot present at position \(1, 1\).
+One of the goals I had in creating Reeborg's World was to have functions or methods that would return some basic data structures, such as Python's lists, tuples, and dict \(and their JavaScript equivalent, if possible\), thus giving a starting point to discuss such data structures in an environment that had become familiar to students.
 
-
+In all the examples below, unless specified otherwise, I used the world **Alone** to ensure that there is a robot present at position \(1, 1\).
 
 ## List
 
@@ -34,7 +34,7 @@ write(object_here("token"), "\n")
 write(object_here("apple"), "\n")
 ```
 
-## Tuples
+## Tuple
 
 ```py
 print("Here:", position_here())
@@ -114,7 +114,7 @@ yields
 {"apple":3,"banana":4}
 ```
 
-Note however that if we specify an argument to `carries_object`, it is an integer \(the number of such objects being carried\) that is returned and not a dict \(nor an object in JavaScript\). 
+Note however that if we specify an argument to `carries_object`, it is an integer \(the number of such objects being carried\) that is returned and not a dict \(nor an object in JavaScript\).
 
 ```py
 RUR.give_object_to_robot("apple", 3)
@@ -131,10 +131,4 @@ The result is:
 ```
 
 **Caution: **if Reeborg carries no object, the returned value of `carries_object()` will be 0, and not an empty dict.
-
-
-
-
-
-
 
