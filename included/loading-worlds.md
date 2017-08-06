@@ -25,7 +25,7 @@ Now, reload the world, and run the program again. This time, the `World()` instr
 In the previous section, you have created worlds that were saved in the browser. If you look at the html selector, you will see that their name is present, but that the background is yellow instead of white for the worlds included by default. I told you that I saved a world with the name `world_1` To select this world, I could use
 
 ```py
-World("world_1")World("worlds/examples/simple_path.json", "Simple path")
+World("world_1")
 ```
 
 and it would work just like it does for the worlds included by default. \(You should really try it with yours.\)
@@ -69,7 +69,13 @@ Furthermore, if you load many such worlds, it becomes difficult to identify them
 World("worlds/examples/nice_path.json", "Nice path")
 ```
 
-The name argument is what will be displayed in the html selector.  Later in the session, if needed, you will be able to load this world by simply using `World(name)`
+The name argument is what will be displayed in the html selector.  Later in the session, if needed, you will be able to load this world by simply using `World(name)`.
+
+### Caveat
+
+To load a resource, such as a world or an image, from a third party site, an intermediate server is used (see the appendix about CORS) and the result may not always be reliable.
+
+A more reliable approach is for me to add your resources to the server where Reeborg's World is hosted. Contact me for more details.
 
 ### Sharing with a custom URL
 

@@ -23,12 +23,16 @@ I will first describe how you might implement this by writing explicit code.  Im
 recording_state = recording(False)
 move()
 x, y = position_in_front()
+
+# conditions at this location
 if (   RUR.is_pushable("box", x, y) and
        RUR.is_obstacle("water", x, y) and
        not RUR.is_bridge("bridge", x, y)
     ):
+    # actions to perform at the same location
     RUR.remove_pushable("box", x, y)
     RUR.add_bridge("bridge", x, y)
+
 recording(recording_state)
 RUR.record_frame()
 ```
@@ -69,7 +73,9 @@ new_thing = {'name': 'new_box',
          'actions:' [ [RUR.remove_pushable, "newbox"],
                       [RUR.add_bridge, "bridge"]
                     ]
-        }]
+        } # ,{...}
+    ]
+}
 ```
 
 If you compare with the first code example, you will see that the `transform` attribute captures the essence of the first code sample above.  Whenever an object or pushable is added to a grid location, an automatic evaluation is done to find out if it has a `transform` attribute; if it does, the conditions listed are evaluated; if they are met, the corresponding actions are performed.

@@ -42,7 +42,7 @@ A typical world would be represented as follows[^1]:
 
 ## RUR-PLE's beepers
 
-I created RUR-PLE in 2004 as a means to teach myself Python. Like many others, I decided to follow my programming language's convention to write the various functions.  Python programmers traditionally use underscore to separate individual words making up a programming instruction. I also made some slightly different choices for some names and made use of the existence of the logical `not` keyword; here are a few instructions
+I created RUR-PLE in 2004 as a means to teach myself Python. Like many others, I decided to follow my programming language's convention to write the various functions.  Python programmers traditionally use underscores to separate individual words making up a programming instruction instead of camelCase names. I also made some slightly different choices for some names and made use of the existence of the logical `not` keyword; here are a few instructions
 
 ```py
 pick_beeper()
@@ -83,15 +83,18 @@ Finally, computers are quite capable of making sounds. Having objects that are d
 
 ## The initially beeperless Reeborg's World
 
-When I created Reeborg's World, I originally replaced beepers by "tokens". To detect tokens, Reeborg initially used `token_here()`. Soon, I added other objects and this was replaced by `object_here()`. More objects meant being able to create more visually interesting worlds. Having multiple objects also gave the added bonus of being able to have an easy and natural way to introduce \[optional\] function arguments, such as `object_here("token")`: thus, one more concept could be taught in an environment with which students had become familiar.
+When I created Reeborg's World, I originally replaced beepers by "tokens". To detect tokens, Reeborg initially used `token_here()` instead of something like `next_to_a_token()`. Soon, I added other objects and this was replaced by `object_here()`. More objects meant being able to create more visually interesting worlds. Having multiple objects also gave the added bonus of being able to have an easy and natural way to introduce \[optional\] function arguments, such as `object_here("token")`: thus, one more concept could be taught in an environment with which students had become familiar.
 
-Still, I did get some requests to add beepers, from teachers familiar with either Karel or RUR-PLE.
+Still, I did occasionally get some requests to add beepers, from teachers familiar with either Karel or RUR-PLE.
 
 ## Beepers in Reeborg's World
 
-Reeborg's World now includes beepers as one possible object type. Visually, they are represented by a series of images that cycle repeatedly.
+Reeborg's World now includes beepers as one possible object type. Visually, they are represented by a series of images
 
-![](/assets/beeper.gif)
+![](/assets/beeper0.png) ![](/assets/beeper1.png) ![](/assets/beeper2.png) ![](/assets/beeper3.png)
+
+
+which cycle repeately resulting in this amination: ![](/assets/beeper.gif)
 
 If you hover your mouse over the image of Reeborg in a given world, you can see how many objects of each type it is carrying:
 
@@ -99,9 +102,9 @@ If you hover your mouse over the image of Reeborg in a given world, you can see 
 
 When carried by Reeborg, beepers are "clearly" silent. Still, one would have to explain why...
 
-Reeborg's world has the possibility to include sounds.  However, it does not always work well and is something that I intend to improve.  You can turn sound on at any part of a program by including `sound(True)`. Currently, there is no sound effect to indicate that beepers are present.
+Reeborg's world has the possibility to include sounds (see the relevant appendix).  However, it does not always work well and is something that I intend to improve.  You can turn sound on at any part of a program by including `sound(True)`. Currently, there is no sound effect to indicate that beepers are present.
 
-[^1]: Source of the images: [https://www.cs.mtsu.edu/~untch/karel/fundamentals.html](https://www.cs.mtsu.edu/~untch/karel/fundamentals.html) and [https://csis.pace.edu/~bergin/KarelJava2ed/greenfoot.html](https://csis.pace.edu/~bergin/KarelJava2ed/greenfoot.html). 
+[^1]: Source of the images: [https://www.cs.mtsu.edu/~untch/karel/fundamentals.html](https://www.cs.mtsu.edu/~untch/karel/fundamentals.html) and [https://csis.pace.edu/~bergin/KarelJava2ed/greenfoot.html](https://csis.pace.edu/~bergin/KarelJava2ed/greenfoot.html).
 
 [^2]: Adapted \(with a very minor change\) from [http://karelsim.com/reference\_overview.html](http://karelsim.com/reference_overview.html)
 

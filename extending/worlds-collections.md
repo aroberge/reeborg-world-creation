@@ -19,7 +19,7 @@ If you click on the html selector, you should see something like the following \
 
 ![](/assets/make_menu.png)
 
-You should recognize the first two worlds; their background is normally in white.  The yellow \(\#ff9\) background is used for worlds that are saved in your browser's local storage. The greenish-blue background \(\#9ff\) is used for **any **world whose URL converted to lowercase contains the string "menu". 
+You should recognize the first two worlds; their background is normally in white.  The yellow \(\#ff9\) background is used for worlds that are saved in your browser's local storage. The greenish-blue background \(\#9ff\) is used for **any **world whose URL converted to lowercase contains the string "menu".
 
 Instead of typing the example code above in the editor and running the program, load the following world:
 
@@ -35,7 +35,5 @@ To go back to Reeborg's World default menu, switch to a different language from 
 
 ## Contribute
 
-Loading worlds from a third party site \(like from your server, or from http://pastebin.com/, etc.\) requires the use of another server \(see the appendix **About CORS**\) which may not always be reliable. I will gladly host your worlds on my server in a special contributor area. Your worlds could include custom images, or supplementary code \(for the **extra **module\) which would all be more reliably retrieved from the main site.  However, I do ask that you provide such content under a license like CC-BY-SA or similar. Please contact me for more details.
-
-
+Loading worlds from a third party site \(like from your server, or from http://pastebin.com/, etc.\) requires the use of another server \(see the appendix **About CORS**\) which may not always be reliable. I will gladly host your worlds on my server in a special contributor area. Your worlds could include custom images which would also be more reliably retrieved from the main site.  Ideally, you should provide such content under a license like CC-BY-SA or similar. Please contact me for more details.
 
