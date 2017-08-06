@@ -206,11 +206,13 @@ def turn_left():
     del _desired_turns[0]
 ```
 
+I encourage you to try it and see by yourself how it works ... and how complicated the code has become.
+
 ## A better solution
 
 With the above version, students can still "cheat" by using `_old_move` or `_old_turn_left`.in their program.  Also, if they do `help(move)`, they will get the wrong information \[this could easily be corrected, but it is one more detail to take care of\].
 
-Given that the students have access to all the code running in their browser, programming tasks in Reeborg's World should normally only be assigned as learning exercises and not in exam situations. Nonetheless, it is possible to write code that prevents such cheating from taking place, and avoid having to repeat some tedious code. This is done by using the **decorator pattern**.  If you are not familiar with it, I encourage you to read the appendix **Closures and the decorator pattern**.  Here's the final proposed solution:
+Given that the students have access to all the code running in their browser, programming tasks in Reeborg's World should normally only be assigned as learning exercises and not in exam situations. Nonetheless, it is possible to write code that prevents such cheating from taking place[^1], and avoid having to repeat some tedious code. This is done by using the **decorator pattern**.  If you are not familiar with it, I encourage you to read the appendix **Closures and the decorator pattern**.  Here's the final proposed solution:
 
 ```py
 # This code would be in the Pre editor
@@ -222,9 +224,6 @@ _desired_path = [(1, 2), (1, 1), (2, 1)]
 
 turn_left = ensure_position_sequence(turn_left, [(1,1)], message)
 move = ensure_position_sequence(move, _desired_path, message)
-
-def done():
-    raise ReeborgError("You cannot use done() in your program!")
 
 #-----------------
 # This could be the code written by the student
@@ -238,5 +237,31 @@ help(move) # Confirm that the docstring is correct!
 # We don't need to add anything in the Post editor
 ```
 
+Note that we do not have to redefine `done()` anymore!
 
+As for the decorator we use, here is its definition:
+
+```py
+def ensure_position_sequence(fn, path, message):
+    '''redefine an action so that it is performed only
+       at a predefined set of locations'''
+    def wrapper():
+        fn()
+        try:
+            x, y = path[0]
+        except IndexError:
+            raise ReeborgError(message)
+
+        if position_here() != (x, y):
+            raise ReeborgError(message)
+        del path[0]
+
+    wrapper.__name__ = fn.__name__
+    wrapper.__doc__ = fn.__doc__
+    return wrapper
+```
+
+Note that, in spite of the fact that we use `position_here()` in the decorator definition and not `position_ici()`, this decorator can be used in the French version as long as it is imported from the `reeborg_decorators` module.
+
+[^1]: Actually, it is still possible to "cheat" by using some internal JavaScript methods belonging to the RUR namespace.
 
