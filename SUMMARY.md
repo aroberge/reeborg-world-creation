@@ -49,7 +49,7 @@
 * [Appendices](appendices/appendices.md)
   * [Example worlds](appendices/appendix-example-worlds.md)
   * [Layers and canvases](appendices/layers-and-canvases.md)
-  * [Python code pre-processing: the gory details](appendices/python-code-pre-processing-the-gory-details.md)
+  * [JavaScript and Python code pre-processing: the gory details](appendices/python-code-pre-processing-the-gory-details.md)
   * [About CORS \[TODO\]](appendices/about-cors.md)
   * [Uses of local storage](appendices/uses-of-local-storage.md)
 * [Design choices \[To be completed\]](design-choices-to-be-completed.md)

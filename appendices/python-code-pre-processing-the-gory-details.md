@@ -1,10 +1,10 @@
-# Python code pre-processing: the gory details
+# JavaScript and Python code pre-processing: the gory details
 
 As far as I know, most if not all Karel simulators implement their own code interpreter, so that students can step through instructions one at a time.  However, this is not the case for Reeborg's World.  The reason for this is that I wanted for anyone using the program to be able to use **any** valid Python or Javascript code, and I am not competent enough to implement a fully-featured JavaScript or Python interpreter.  Here is what I do instead.
 
-## Javascript
+## JavaScript
 
-I concatenate the code found in the Pre editor \(written by the creator of the world\) with the user's code and the code found in the Post editor \(also written by the creator of the world\). Then, I use Javascript's `eval()` to execute the program. This can essentially be summed up by:
+For JavaScriptI concatenate the code found in the Pre editor \(written by the creator of the world\) with the user's code and the code found in the Post editor \(also written by the creator of the world\). Then, I use Javascript's `eval()` to execute the program. This can essentially be summed up by:
 
 ```js
 eval(Pre + program + Post)
