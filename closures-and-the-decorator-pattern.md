@@ -181,7 +181,7 @@ We could **repeat** this process for as many other robot instructions as we want
 ...     do_fn.__name__ = fn.__name__
 ...     return do_fn
 ...
- 
+
 >>> forward = duplicate(move)
 >>> print(forward)
 <function move>
@@ -208,7 +208,7 @@ Instead of duplicating the existing behaviour, let's modify it. For example, aft
 >>> move = celebrate(move)
 >>> while front_is_clear():
 ...     move()
-... 
+...
 ```
 
 And the result is the following:
@@ -257,26 +257,26 @@ turn_right()
 
 The variable `three` is not part of the local scope of the function `turn_right`, but it is nonetheless available from within that function. Nothing so far should be surprising or confusing for you \(except for asking yourself why I bother with such a simple example\).
 
-Now, let's go back to our previous `celebrate` example and modify it ever so slightly by introducing a variable named `four`.
+Now, let's go back to our previous `celebrate` example and modify it ever so slightly by introducing a variable named `four`.; this time, we write it in a way that makes it easy for you to cut and paste in the editor instead of using the REPL
 
 ```py
->>> def celebrate(fn):
-...     four = 4
-...     def wrapper():
-...         fn()
-...         for i in range(four):
-...             turn_left()
-...     wrapper.__name__ = fn.__name__
-...     wrapper.__doc__ = fn.__doc__
-...     return wrapper
-... 
->>> move = celebrate(move)
->>> while front_is_clear():
-...     move()
-... 
+def celebrate(fn):
+    four = 4
+    def wrapper():
+        fn()
+        for i in range(four):
+            turn_left()
+    wrapper.__name__ = fn.__name__
+    wrapper.__doc__ = fn.__doc__
+    return wrapper
+
+move = celebrate(move)
+while front_is_clear():
+    move()
+
 ```
 
-The variable `four` is not defined outside of `celebrate`; however, it is "known" from within `wrapper` and, since `wrapper` is returned, it is "known" by the redefined `move` which is a new name for the `wrapper` function.  This is the concept of closure: an environment/namespace is available to a function \(`wrapper`\) even though this environment/namespace is no longer in scope for the rest of the program.  
+The variable `four` is not defined outside of `celebrate`; however, it is "known" from within `wrapper` and, since `wrapper` is returned, it is "known" by the redefined `move` which is a new name for the `wrapper` function.  This is the concept of closure: an environment/namespace is available to a function \(`wrapper`\) even though this environment/namespace is no longer in scope for the rest of the program.
 
 In this instance, `celebrate` is somewhat similar to our **library** module in that any function defined within either of them has access to other variables defined within either of them. \[There is of course a difference in that we **can** have access `three` by doing `from library import three`, whereas we cannot have access to `four` from outside the function.\]
 
@@ -287,7 +287,7 @@ In both Python and JavaScript, the decorator pattern is normally used when defin
 ```py
 def some_function():
     # code here
-   
+
 some_function = decorator(some_function)
 ```
 
@@ -301,7 +301,7 @@ def some_function():
 
 This notation avoids having to write the name `some_function` three times.  Note that many people use the name **decorator** both to mean the special syntax \(decorator expression\) **and** to refer to the decorator function itself.
 
-Because we want to preserve some information \(such as the docstring or the name of the function\) when using the decorator pattern in Python, a special decorator named `wraps` is available in the `functools` module of the standard library. In general, it is preferable to use code from the Python standard library wherever possible, since it is almost guaranteed to be more efficient and bug-free than code you might write yourself. However, importing this module triggers many other modules import ... and, since Brython requires calls over the internet any time a module is imported, the first time `wraps` is imported causes a noticeable delay in the code execution. I thus recommend that you write your own code instead of using a decorator from the standard library or use some of the decorators I have made available for you as mentioned elsewhere in this book.
+Because we want to preserve some information \(such as the docstring or the name of the function\) when using the decorator pattern in Python, a special decorator named `wraps` is available in the `functools` module of the standard library. In general, it is preferable to use code from the Python standard library wherever possible, since it is almost guaranteed to be more efficient and bug-free than code you might write yourself. However, importing this module triggers many other modules import ... and, since Brython requires calls over the internet any time a module is imported, the first time `wraps` is imported causes a noticeable delay in the code execution. I thus recommend that you write your own code instead of using a decorator from the standard library or, **even better**, use some of the decorators I have made available for you as mentioned elsewhere in this book.
 
 [^1]: In French, use `ecrit()`.
 

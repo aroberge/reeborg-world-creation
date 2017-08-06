@@ -212,5 +212,33 @@ def turn_left():
 
 With the above version, students can still "cheat" by using `_old_move` or `_old_turn_left`.in their program.  Also, if they do `help(move)`, they will get the wrong information \[this could easily be corrected, but it is one more detail to take care of\].
 
-Given that the students have access to all the code running in their browser, programming tasks in Reeborg's World should normally only be assigned as learning exercises and not in exam situations. Nonetheless, it is possible to write code that prevents such cheating from taking place, and avoid having to repeat some tedious code. This is done by using the **decorator pattern**.  If you are not familiar with it, I encourage you to read the appendix **Closures and the decorator pattern**.
+Given that the students have access to all the code running in their browser, programming tasks in Reeborg's World should normally only be assigned as learning exercises and not in exam situations. Nonetheless, it is possible to write code that prevents such cheating from taking place, and avoid having to repeat some tedious code. This is done by using the **decorator pattern**.  If you are not familiar with it, I encourage you to read the appendix **Closures and the decorator pattern**.  Here's the final proposed solution:
+
+```py
+# This code would be in the Pre editor
+
+from reeborg_decorators import ensure_position_sequence
+
+message = "The correct path was not followed"
+_desired_path = [(1, 2), (1, 1), (2, 1)]
+
+turn_left = ensure_position_sequence(turn_left, [(1,1)], message)
+move = ensure_position_sequence(move, _desired_path, message)
+
+def done():
+    raise ReeborgError("You cannot use done() in your program!")
+
+#-----------------
+# This could be the code written by the student
+World("worlds/examples/easy_path.json")
+move()
+move()
+turn_left()
+move()
+help(move) # Confirm that the docstring is correct!
+#-----------------------
+# We don't need to add anything in the Post editor
+```
+
+
 
