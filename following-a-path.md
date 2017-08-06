@@ -136,7 +136,6 @@ _old_move = move
 
 def move():
     '''Redefining move'''
-    global _desired_path
     _old_move()
     try:
         x, y = _desired_path[0]
@@ -146,8 +145,8 @@ def move():
     if position_here() != (x, y):
         raise ReeborgError("The correct path was not followed")
 
-    # remove first element
-    _desired_path = _desired_path[1:]
+    # remove first element which has been done correctly
+    del _desired_path[0]
 
 def done():
     raise ReeborgError("You cannot use done() in your program!")
@@ -196,7 +195,6 @@ _old_turn_left = turn_left
 
 def turn_left():
     '''redefining turn_left'''
-    global _desired_turns
     _old_turn_left()
     try:
         x, y = _desired_turns[0]
@@ -204,8 +202,8 @@ def turn_left():
         raise ReeborgError("The correct path was not followed")
     if position_here() != (x, y):
         raise ReeborgError("The correct path was not followed")
-    # remove first element
-    _desired_turns = _desired_turns[1:]
+
+    del _desired_turns[0]
 ```
 
 ## A better solution
