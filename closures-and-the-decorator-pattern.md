@@ -273,12 +273,28 @@ def celebrate(fn):
 move = celebrate(move)
 while front_is_clear():
     move()
-
 ```
 
 The variable `four` is not defined outside of `celebrate`; however, it is "known" from within `wrapper` and, since `wrapper` is returned, it is "known" by the redefined `move` which is a new name for the `wrapper` function.  This is the concept of closure: an environment/namespace is available to a function \(`wrapper`\) even though this environment/namespace is no longer in scope for the rest of the program.
 
 In this instance, `celebrate` is somewhat similar to our **library** module in that any function defined within either of them has access to other variables defined within either of them. \[There is of course a difference in that we **can** have access `three` by doing `from library import three`, whereas we cannot have access to `four` from outside the function.\]
+
+Finally, instead of hard-coding the value `four`, we can pass it as an argument to the decorator:
+
+```py
+def celebrate(fn, n):
+    def wrapper():
+        fn()
+        for i in range(n):
+            turn_left()
+    wrapper.__name__ = fn.__name__
+    wrapper.__doc__ = fn.__doc__
+    return wrapper
+
+move = celebrate(move, 4)
+while front_is_clear():
+    move()
+```
 
 ## Python specific considerations
 
