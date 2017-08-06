@@ -56,4 +56,5 @@
 * [Sound effects](sound-effects-todo.md)
 * [Closures and the decorator pattern](closures-and-the-decorator-pattern.md)
 * [To do](to-do.md)
+* [Following a path](following-a-path.md)
 
