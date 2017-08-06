@@ -124,9 +124,190 @@ This may seem like a completely silly example at this point, but it will come in
 
 Note that, In all of the examples above, we never call \(directly\) the function `move`[^3], but simply pass its name around so that we can assign new names to the object it represents.
 
+## And now, for something different
+
+Prior to reading this appendix, if I had asked you to define a new function that would make Reeborg **move**, you would likely have done something like this:
+
+```py
+def do_move():
+    move()
+```
+
+Indeed, this would work, as calling `do_move()` would do the same as calling `move()` directly.  However, this would be clearly a different function:
+
+```py
+>>> def do_move():
+...     move()
+... 
+>>> print(do_move)
+<function do_move>
+```
+
+However, we could try to fix this:
+
+```py
+>>> do_move.__name__ = move.__name__
+>>> print(do_move)
+<function move>
+```
+
+But curious students trying to do `help(do_move)` would see something different from `help(move)` as you could \(should?\) see by yourself.  This could be fixed as follows:
+
+```py
+>>> do_move.__doc__ = move.__doc__
+```
+
+This is something you should verify by yourself.
+
+We could do something like this for functions other than `move`; for example:
+
+```py
+>>> def do_take():
+...     take()
+... 
+>>> do_take.__name__ = take.__name__
+>>> do_take.__doc__ = take.__doc__
+>>> print(do_take)
+<function take>
+```
+
+We could **repeat** this process for as many other robot instructions as we wanted.  However, we know that repeatedly typing the same series of instructions in a program is a signal that we should define a function that does the repeated pattern for us.
+
+```py
+>>> def duplicate(fn):
+...     def do_fn():
+...         fn()
+...     do_fn.__doc__ = fn.__doc__
+...     do_fn.__name__ = fn.__name__
+...     return do_fn
+...
+ 
+>>> forward = duplicate(move)
+>>> print(forward)
+<function move>
+
+>>> grab = duplicate(take)
+>>> print(grab)
+<function take>
+```
+
+Usually, instead of the name `do_fn`, people use the name `wrapper` which we shall use from now on.
+
+Instead of duplicating the existing behaviour, let's modify it. For example, after a successful action \(`move`, `take`, `put`\), let's have Reeborg celebrate by doing a little dance
+
+```py
+>>> def celebrate(fn):
+...     def wrapper():
+...         fn()
+...         for i in range(4):
+...             turn_left()
+...     wrapper.__name__ = fn.__name__
+...     wrapper.__doc__ = fn.__doc__
+...     return wrapper
+... 
+>>> move = celebrate(move)
+>>> while front_is_clear():
+...     move()
+... 
+```
+
+And the result is the following:
+
+![](/assets/celebrate.png)
+
+We can of course do the same thing in JavaScript, as you can easily verify by yourself.  Since JavaScript functions do not have docstrings nor a "name" attribute, the code is slightly simpler:
+
+```js
+function celebrate(fn) {
+    function wrapper() {
+        fn();
+        for (var i=0; i < 4; i++) {
+            turn_left();
+        }
+    }
+    return wrapper;
+}
+
+move = celebrate(move);
+
+while (front_is_clear()) {
+    move();
+}
+```
+
+This is the essence of the decorator pattern: we have a function[^4] \(`celebrate`\) that takes another function as an argument \(`move` in our last example\) and returns ... _something _\(for cases of interest to us, what will be returned will always be another function\).
+
+## Closure
+
+If the number of tutorials found on the Internet is any indication, the concept of **closure** seems to be confusing for many people. Let's start by considering a simple but slightly unrelated example.  Using Python, define the following in the library:
+
+```py
+three = 3
+def turn_right():
+    for i in range(three):
+        turn_left()
+```
+
+If I ask you to run the following program in the main editor, you will most likely not be surprised by the result:
+
+```py
+from library import turn_right
+turn_right()
+```
+
+The variable `three` is not part of the local scope of the function `turn_right`, but it is nonetheless available from within that function. Nothing so far should be surprising or confusing for you \(except for asking yourself why I bother with such a simple example\).
+
+Now, let's go back to our previous `celebrate` example and modify it ever so slightly by introducing a variable named `four`.
+
+```py
+>>> def celebrate(fn):
+...     four = 4
+...     def wrapper():
+...         fn()
+...         for i in range(four):
+...             turn_left()
+...     wrapper.__name__ = fn.__name__
+...     wrapper.__doc__ = fn.__doc__
+...     return wrapper
+... 
+>>> move = celebrate(move)
+>>> while front_is_clear():
+...     move()
+... 
+```
+
+The variable `four` is not defined outside of `celebrate`; however, it is "known" from within `wrapper` and, since `wrapper` is returned, it is "known" by the redefined `move` which is a new name for the `wrapper` function.  This is the concept of closure: an environment/namespace is available to a function \(`wrapper`\) even though this environment/namespace is no longer in scope for the rest of the program.  
+
+In this instance, `celebrate` is somewhat similar to our **library** module in that any function defined within either of them has access to other variables defined within either of them. \[There is of course a difference in that we **can** have access `three` by doing `from library import three`, whereas we cannot have access to `four` from outside the function.\]
+
+## Python specific considerations
+
+In both Python and JavaScript, the decorator pattern is normally used when defining a function. So, in Python, we might want to write:
+
+```py
+def some_function():
+    # code here
+   
+some_function = decorator(some_function)
+```
+
+This requires us to write the name `some_function` three times.  Python uses a special syntax called a **decorator expression** as a simplified notation to do the above:
+
+```py
+@decorator
+def some_function():
+    # code here
+```
+
+This notation avoids having to write the name `some_function` three times.  Note that many people use the name **decorator** both to mean the special syntax \(decorator expression\) **and** to refer to the decorator function itself.
+
+Because we want to preserve some information \(such as the docstring or the name of the function\) when using the decorator pattern in Python, a special decorator named `wraps` is available in the `functools` module of the standard library. In general, it is preferable to use code from the Python standard library wherever possible, since it is almost guaranteed to be more efficient and bug-free than code you might write yourself. However, importing this module triggers many other modules import ... and, since Brython requires calls over the internet any time a module is imported, the first time `wraps` is imported causes a noticeable delay in the code execution. I thus recommend that you write your own code instead of using a decorator from the standard library or use some of the decorators I have made available for you as mentioned elsewhere in this book.
+
 [^1]: In French, use `ecrit()`.
 
 [^2]: You may see a different result if I change the program in the mean time.
 
 [^3]: We never wrote `move()` in any of the examples above.
+
+[^4]: Instead of a function, we could have some other callable, such as a Python class.
 
