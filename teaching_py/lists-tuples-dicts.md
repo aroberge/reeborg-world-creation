@@ -1,6 +1,6 @@
 # Lists, tuples, and dicts
 
-One of the goals I had in creating Reeborg's World was to have functions or methods that would return some basic data structures, such as Python's lists, tuples, and dict \(and their JavaScript equivalent, if possible\), thus giving a starting point to discuss such data structures in an environment that had become familiar to students.
+One of the goals I had in creating Reeborg's World was to have functions or methods that would return some basic data structures, such as Python's lists, tuples, and dict \(and their JavaScript equivalent, if possible\), thus giving a starting point to discuss such data structures in an environment that students were already familiar with.
 
 In all the examples below, unless specified otherwise, I used the world **Alone** to ensure that there is a robot present at position \(1, 1\).
 
@@ -131,4 +131,68 @@ The result is:
 ```
 
 **Caution: **if Reeborg carries no object, the returned value of `carries_object()` will be 0, and not an empty dict.
+
+## For advanced students
+
+A much more complex example of Python dict \(or JavaScript object\) is that of the "world map".  We start with a Python example:
+
+```py
+World("Tokens 1")
+gps = SatelliteInfo()
+gps.print_world_map()
+```
+
+The result looks something like the following:
+
+```
+{
+  "robots": [
+    {
+      "x": 1,
+      "y": 1,
+      "prev_orientation": 0,
+      "objects": {},
+      "_orientation": 0,
+      "_is_leaky": true,
+      "_prev_x": 1,
+  ...
+```
+
+with many more lines printed. For complex worlds, this can be **very** long.  We can access the information as a **dict** implemented as a Python property for the class.
+
+```py
+World("Tokens 1")
+gps = SatelliteInfo()
+goal = gps.world_map["goal"]
+print(goal)
+```
+
+The printed result is not formatted as nicely as the previous "printed" version, but give us the required information.
+
+```py
+{'position': {'x': 4, 'y': 1}, 'objects': {'3,1': {'token': 1}}}
+```
+
+> The French equivalent of the above would be
+>
+> ```py
+> Monde("Jetons 1")
+> gps = InfoSatellite()
+> gps.imprime_carte()
+> but = gps.carte_du_monde["goal"]
+> print(but)
+> ```
+
+There is also a Javascript version which is available in both English and French as follows:
+
+```js
+var goal, map;
+RUR.print_world_map();
+
+map = RUR.world_map();
+goal = map.goal;
+write(goal)
+```
+
+
 
