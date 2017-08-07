@@ -4,9 +4,9 @@
 >
 > Using this tool, you can write [Python](http://www.pythontutor.com/visualize.html#py=2), [Java](http://www.pythontutor.com/java.html), [JavaScript](http://www.pythontutor.com/javascript.html), [TypeScript](http://www.pythontutor.com/typescript.html), [Ruby](http://www.pythontutor.com/ruby.html), [C](http://www.pythontutor.com/c.html), and [C++](http://www.pythontutor.com/cpp.html) code in your web browser and visualize what the computer is doing step-by-step as it runs your code.
 
-Python Tutor is a **proper** code visualizer; it is an excellent tool to use in demonstrating what happens step by step as one runs a program. It is done using appropriate tools such as a debugger.
+Python Tutor is a proper code visualizer; it is an excellent tool to use in demonstrating what happens step by step as one runs a program. It is done using appropriate tools such as a debugger.
 
-By constrast, Reeborg's World "watch variables" features is a hack, one that is most likely fragile.  In the appendix **JavaScript and Python code pre-processing: the gory details**, I give a very brief explanation of how it is implemented.
+By constrast, Reeborg's World "watch variables" features is a hack, one that is most likely fragile and may break unexpectedly if it encounters code formatted in a way that had not been predicted.  In the appendix **JavaScript and Python code pre-processing: the gory details**, I give a very brief explanation of how it is implemented.
 
 As a quick comparison, if you go to the [Python Tutor main page](http://www.pythontutor.com/), you will see a visualization of the following code:
 
@@ -38,6 +38,10 @@ add_watch("position_in_front()")`
 ```
 
 We could have added any valid Python expressions, such as `"some_list[3:6]"`, `"a + b * 2"`, etc.  This unique feature might make it worthwhile to consider using it instead of some other visualizers like the Python Tutor.
+
+> **\[info\] French version**
+>
+> En français, utilisez `observe()` au lieu de `add_watch()`.
 
 
 
