@@ -1,5 +1,7 @@
 ## Task Driven Learning
 
+![](/assets/simple_task.gif)
+
 Reeborg's World is designed for _**Task Driven Learning**_: students are given tasks that Reeborg has to complete, and they must write programs instructing Reeborg how to do so. Feedback is given automatically to students, without requiring a teacher to be present.
 
 Tasks include having Reeborg move objects, build walls, or go to a particular location.  Objects in Reeborg's World are colourful; the places they be must moved to by Reeborg are usually indicated by having a picture of the object in shades of grey.
