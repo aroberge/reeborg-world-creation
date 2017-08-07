@@ -2,3 +2,6 @@ img {
     margin: auto;
     display:block;
 }
+blockquote {
+    margin-left: 25%;
+}
