@@ -6,7 +6,7 @@ In all the examples below, unless specified otherwise, I used the world **Alone*
 
 ## List
 
-> **\[info\]**
+> **\[info\] Why a list?**
 >
 > Using `object_here()`, Reeborg can see what kind of objects are present, but does not know how many of each are there. To find out the exact number, Reeborg would need to pick up the objects to count them.
 
