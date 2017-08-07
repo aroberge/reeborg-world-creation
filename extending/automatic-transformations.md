@@ -1,6 +1,6 @@
 # Automatic transformations
 
-> **\[caution\]** 
+> **\[warning\]**
 >
 > This section needs to be expanded.
 
