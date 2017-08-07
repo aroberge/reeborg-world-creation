@@ -1,6 +1,8 @@
 # Beepers
 
-> **New and Improved** beepers are back in Reeborg's World!
+> **\[success\] New and improved**
+>
+> Beepers are back in Reeborg's World!
 
 To understand what is meant by this statement, a bit of history is required. This chapter includes very little material that can be used to help you understand how to create interesting worlds. However, it may help you understand the reasoning behind some choices I made, and perhaps prompt you to make suggestions for other improvements.  In addition, it will illustrate a useful feature for students and introduce you to the basics of creating animated objects in Reeborg's World.
 
@@ -93,7 +95,6 @@ Reeborg's World now includes beepers as one possible object type. Visually, they
 
 ![](/assets/beeper0.png) ![](/assets/beeper1.png) ![](/assets/beeper2.png) ![](/assets/beeper3.png)
 
-
 which cycle repeately resulting in this amination: ![](/assets/beeper.gif)
 
 If you hover your mouse over the image of Reeborg in a given world, you can see how many objects of each type it is carrying:
@@ -102,7 +103,7 @@ If you hover your mouse over the image of Reeborg in a given world, you can see 
 
 When carried by Reeborg, beepers are "clearly" silent. Still, one would have to explain why...
 
-Reeborg's world has the possibility to include sounds (see the relevant appendix).  However, it does not always work well and is something that I intend to improve.  You can turn sound on at any part of a program by including `sound(True)`. Currently, there is no sound effect to indicate that beepers are present.
+Reeborg's world has the possibility to include sounds \(see the relevant appendix\).  However, it does not always work well and is something that I intend to improve.  You can turn sound on at any part of a program by including `sound(True)`. Currently, there is no sound effect to indicate that beepers are present.
 
 [^1]: Source of the images: [https://www.cs.mtsu.edu/~untch/karel/fundamentals.html](https://www.cs.mtsu.edu/~untch/karel/fundamentals.html) and [https://csis.pace.edu/~bergin/KarelJava2ed/greenfoot.html](https://csis.pace.edu/~bergin/KarelJava2ed/greenfoot.html).
 
