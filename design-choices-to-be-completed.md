@@ -10,7 +10,9 @@ The site has not been designed as a "responsive" one. To be able to use the site
 
 I have decided to adopt a single color scheme for code styling. To distinguish between code that can be edited, and code that cannot be edited, the background of the latter is striped; I did not receive much feedback as to whether the visual effect was useful in helping students identify what could could be edited.
 
-![](/assets/code_striped.png) ![](/assets/code_not_striped.png)
+![Striped background: read only](/assets/code_striped.png) 
+
+![Solid background: can be edited](/assets/code_not_striped.png)
 
 ## Mobile devices are not supported
 
