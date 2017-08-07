@@ -35,5 +35,9 @@ To go back to Reeborg's World default menu, switch to a different language from 
 
 ## Contribute
 
-Loading worlds from a third party site \(like from your server, or from http://pastebin.com/, etc.\) requires the use of another server \(see the appendix **About CORS**\) which may not always be reliable. I will gladly host your worlds on my server in a special contributor area. Your worlds could include custom images which would also be more reliably retrieved from the main site.  Ideally, you should provide such content under a license like CC-BY-SA or similar. Please contact me for more details.
+> **\[danger\] Using third-party sites**
+>
+> Loading worlds from a third-party site \(like from your server, or from [http://pastebin.com/](http://pastebin.com/), etc.\) requires the use of another server \(see the appendix **About CORS**\) which may not always be reliable.
+
+I will gladly host your worlds on my server in a special contributor area. Your worlds could include custom images which would also be more reliably retrieved from the main site.  Ideally, you should provide such content under a license like CC-BY-SA or similar. Please contact me for more details.
 
