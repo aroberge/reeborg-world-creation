@@ -2,7 +2,9 @@
 
 #### Or how to modify the behaviour of functions in Python and JavaScript
 
-If you already know how to write your own decorators in Python, you can ignore the content of this appendix.
+> **\[info\]**
+>
+> If you already know how to write your own decorators in Python, you can ignore the content of this appendix.
 
 In this appendix, I will describe how to use the decorator pattern to modify functions in either Python or JavaScript. Most of the examples will be given using Python, but, whenever it makes sense, I will make a point of showing how to reproduce using JavaScript the main ideas demonstrated with Python.
 
