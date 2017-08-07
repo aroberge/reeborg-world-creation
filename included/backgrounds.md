@@ -4,9 +4,10 @@ While walls can be used to create obstacles in Reeborg's path, using other eleme
 
 If you are familiar with the menu-driven **World editor**, you will realize that most of the examples given below could be created just as easily using the **World editor**.** **However, the methods we present can be used more generally to create much more interesting worlds, which could not be done by simply using the World editor.
 
-## Preamble
-
-When a user click on the "run" button or the "step" button to execute a program, the entire program gets executed, with a **frame **being recorded whenever the state of the world changes. What is shown is a playback of the recorded frames, shown one by one. This allows for easy stepping through a given program, or even stepping back.
+> **[info] About frames**
+>
+> When a user click on the "run" button or the "step" button to execute a program, the entire program  gets executed, with a **frame **being recorded whenever the state of the world changes. What is
+> shown is a playback of the recorded **frames**, shown one by one. This allows for easy stepping through  a given program, or even stepping back.
 
 ## Background tiles
 

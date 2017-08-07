@@ -4,7 +4,7 @@ Reeborg's World is designed for _Task Driven Learning_: students are given tasks
 
 Tasks include having Reeborg move objects, build walls, or go to a particular location.  Objects in Reeborg's World are colourful; the places they be must moved to by Reeborg are usually indicated by having a picture of the object in shades of grey.
 
-![](/assets/simple_task.png)
+![Reeborg must pick up the token and move it to the next grid position](/assets/simple_task.png)
 
 While most programming tasks will likely be relatively simple and aimed at beginners, such as "_Have Reeborg move these objects to some specific location_", there is no limit to how complex a given programming task can be.  As an example,  **very advanced students** can be given a randomly generated maze with one or more objects to be collected and asked to
 

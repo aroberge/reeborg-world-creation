@@ -9,7 +9,7 @@
   * [A brief word about Blockly](about/blockly.md)
   * [Checklist for a good programming environment](about/checklist.md)
   * [Support for non-English students](about/international.md)
-* [Out of the box](included/part1.md)
+* [Out of the box](included/README.md)
   * [Creating a world: three different ways](included/chapter1.md)
   * [Loading worlds and other files](included/loading-worlds.md)
   * [The many different editors](included/the-many-different-editors.md)

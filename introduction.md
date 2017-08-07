@@ -2,10 +2,6 @@
 
 If you have stumbled upon this document, please be advised that many of the features described here are currently **not** available on the live version of [Reeborg's World](http://reeborg.ca/reeborg.html).
 
-<div class="note">
-<p class="note-title">Test title</p>
-<p>Test content for note.</p>
-</div>
 
 # Introduction
 
