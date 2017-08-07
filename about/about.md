@@ -8,6 +8,8 @@ I am using the words _**Reeborg's World**_ to mean three different things.
 
 ## About Reeborg
 
+![Photo courtesy of Andy Judkis](/assets/reeborg_judkis.jpg)
+
 Here is how I describe Reeborg and its world to students:
 
 _Not so good programmers state that “bugs” are not really bugs but that they are “features” of their programs. **You **are going to be a good programmer, unlike the maker of Reeborg, whose program is littered with bugs._
@@ -26,6 +28,7 @@ _Sometimes to find the cause of bugs, it can help to break the normal flow of th
 3. _You can step through a program, one instruction at a time, by pressing the "execute one instruction and pause", or **step **button. By default, the line about to be executed is highlighted; you can turn off the highlighting by clicking on a button above the code editor._
 
 4. _You can change the speed of execution at any point inside a program using the _`think()`_ command._
+
 5. _You can have Reeborg write some information at any given point inside a program using the _`print()`_ function. _
 6. _Finally, you can stop a program at any point by pressing the **stop **button; this unfortunately may not work if you create what is known as an infinite loop, outside of Reeborg’s control. If worse comes to worst, you can always just reload the web page._
 
