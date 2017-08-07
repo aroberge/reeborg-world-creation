@@ -1,6 +1,6 @@
 ## Learning programming
 
-![Student using Reeborg’s World in California, USA. _Photo courtesy of A. Castano._](/assets/student.jpg)
+![Student using Reeborg’s World in California, USA. Photo courtesy of A. Castano.](/assets/student.jpg)
 
 Reeborg's World is designed to help students learn programming in Python or Javascript. Reeborg's World is the natural evolution of a project which started in 2004 as a desktop program I wrote named RUR-PLE, and which is now obsolete. It is based on the [_Karel the robot_](http://www.amazon.ca/Karel-Robot-Gentle-Introduction-Programming/dp/0471089281/ref=sr_1_6?s=books&ie=UTF8&qid=1440177128&sr=1-6) approach introduced by Richard Pattis in 1981.
 
