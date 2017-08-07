@@ -1,4 +1,5 @@
-{   "title": "Reeborg's World: a Teacher's Guide",
+{   "gitbook": "3.2.2",
+    "title": "Reeborg's World: a Teacher's Guide",
     "theme-default": {
         "styles": {
             "website": "styles/website.css",
@@ -14,6 +15,9 @@
     "pluginsConfig": {
       "image-captions": {
           "caption": "Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
-      }
+      },
+        "theme-default": {
+             "showLevel": true
+        }
   }
 }
