@@ -32,7 +32,9 @@ import library
 from library import turn_right
 ```
 
-In French, `biblio` is used instead, as shown in the editor tab when using that language for the user interface.
+> **\[info\] En français**
+>
+> In French, `biblio` is used instead, as shown in the editor tab when using that language for the user interface.
 
 When a program is run without syntax errors, the content of this editor is saved in the browser's local storage, so that it can be "remembered" when a new browser session is started.
 
