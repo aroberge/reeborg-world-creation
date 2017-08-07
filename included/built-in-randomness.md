@@ -8,9 +8,11 @@ World("worlds/examples/river_demo.json", "Crossing the river")
 
 where we were using Python's random module to select a secret location \(not visible to the student\) where Reeborg could cross a river.
 
-### Important caveat
 
-The examples given in this chapter should only be used for _creating_ worlds, either by restricting the code to be in the Onload editor or by saving the world in a json file and removing the code.
+
+> **\[warning\]**
+>
+> The examples given in this chapter should only be used for _creating_ worlds, either by restricting the code to be in the Onload editor or by saving the world in a json file and removing the code.
 
 ## Random number of objects
 
