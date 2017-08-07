@@ -1,9 +1,8 @@
-
 # Summary
 
 ## Introduction
 
-[Introduction](introduction.md)
+* [Introduction](introduction.md)
 
 ## About Reeborg's World
 
@@ -84,4 +83,5 @@
 ## To do
 
 * [To do](to-do.md)
+* [Exploring and getting help](exploring-and-getting-help.md)
 
