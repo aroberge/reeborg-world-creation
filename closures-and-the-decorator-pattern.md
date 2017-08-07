@@ -2,7 +2,7 @@
 
 #### Or how to modify the behaviour of functions in Python and JavaScript
 
-> **\[info\]**
+> **\[info\] This section is not specific to Reeborg's World**
 >
 > If you already know how to write your own decorators in Python, you can ignore the content of this appendix.
 
