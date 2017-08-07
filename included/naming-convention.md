@@ -4,7 +4,7 @@
 >
 > reference: [wikipedia:R.U.R.](https://en.wikipedia.org/wiki/R.U.R.)
 >
-> \[Note that Karel the robot, the inspiration for Reeborg, was thus named by R. Pattis in honour of Karel Čapek.\]
+> \[Note that Karel the robot was thus named by R. Pattis in honour of Karel Čapek.\]
 
 Since the goal of Reeborg's World is to allow students to run their own programs, name clashes have to be avoided between functions created for Reeborg's World and those created by the student. The imperfect solution I have chosen is to try, as much as possible, to use a single global object or namespace, `RUR`, originally inspired by the 1920 science fiction play but which can stand for _**R**eeborg the **U**sed **R**obot_ and is also valid in French as _le **R**obot **U**sagé **R**eeborg_.
 
@@ -17,6 +17,10 @@ RUR.add_wall("east", 1, 1)
 ```
 
 You can see all the relevant functions included in the [Application Programming Interface \(API\)](http://reeborg.ca/api/RUR.html) for creating world. Please note that there are likely more functions belonging to the `RUR` namespace than what is documented on that site.  As a general rule, you should not create additional functions belonging to the RUR namespace.
+
+> **\[info\] Finding out more**
+>
+> Currently, if you execute`help_js(RUR)` in a JavaScript program, you will see all the names belonging to that namespace. The name `help_js` is subject to change.
 
 ## A simple pattern
 
@@ -73,19 +77,6 @@ If you are using a non-English version, an extra column is shown using the trans
 Instead of entering this line in the editor, you can use the Python REPL mode; this is something I find useful when I look things up as it leaves the code in the editor unchanged.
 
 ![](/assets/show_all_things_repl.png)
-
-From either the editor or the Python REPL, you can also get some _help_:
-
-* To list all available Python functions, classes, etc., simply enter `help()`.
-* To get help about a particular function, for example `move`, enter `help(move)`
-* To get a complete, up-to-date version of every Python function available in the English version, enter
-
-  ```python
-    import reeborg_en
-    help(reeborg_en)
-  ```
-
-  You can use `reeborg_fr` to get the corresponding French version. \[**Suggestion**: if you teach using a language other than English or French, I will gladly add a version in your own language ;-\)\] Note that this help system is specific to Python and does **not** include the available functions prefixed by `RUR.` With a few exceptions, if a function exists in Python \(e.g. `move()`\), there is one with the same name also available when using Javascript.
 
 There is a separate function to show existing robot images:
 
