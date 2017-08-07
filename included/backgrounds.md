@@ -4,9 +4,9 @@ While walls can be used to create obstacles in Reeborg's path, using other eleme
 
 If you are familiar with the menu-driven **World editor**, you will realize that most of the examples given below could be created just as easily using the **World editor**.** **However, the methods we present can be used more generally to create much more interesting worlds, which could not be done by simply using the World editor.
 
-> **[info] About frames**
+> **\[info\] About frames**
 >
-> When a user click on the "run" button or the "step" button to execute a program, the entire program  gets executed, with a **frame **being recorded whenever the state of the world changes. What is
+> When a user click on the "run" button or the "step" button to execute a program, the entire program  gets executed, with a **frame **being recorded whenever the state of the world changes. What is  
 > shown is a playback of the recorded **frames**, shown one by one. This allows for easy stepping through  a given program, or even stepping back.
 
 ## Background tiles
@@ -37,7 +37,9 @@ move()
 
 Since `pause()` does not change the content of the world, it does not trigger a recording; however, by using it, we can delay showing the next recorded frame which is triggered by a `move()`, so as to show all at once the changes \(2 background tiles added and a new location for Reeborg\).
 
-> French version: _En français, utilisez _`enregistrement()`_ au lieu de _`recording()`_._
+> **\[info\] French version**
+>
+>  _En français, utilisez _`enregistrement()`_ au lieu de _`recording()`_._
 
 If we want to fill the entire world with a single tile type, we can use something like the following:
 
