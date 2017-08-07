@@ -71,11 +71,11 @@ World("worlds/examples/nice_path.json", "Nice path")
 
 The name argument is what will be displayed in the html selector.  Later in the session, if needed, you will be able to load this world by simply using `World(name)`.
 
-### Caveat
-
-To load a resource, such as a world or an image, from a third party site, an intermediate server is used (see the appendix about CORS) and the result may not always be reliable.
-
-A more reliable approach is for me to add your resources to the server where Reeborg's World is hosted. Contact me for more details.
+> **\[danger\] This may fail**
+>
+> To load a resource, such as a world or an image, from a third party site, an intermediate server is used \(see the appendix about CORS\) and the result may not always be reliable.
+>
+> A more reliable approach is for me to add your resources to the server where Reeborg's World is hosted. Contact me for more details.
 
 ### Sharing with a custom URL
 
@@ -98,5 +98,5 @@ As a concrete example, try
 
 [http://reeborg.ca/reeborg.html?lang=en&mode=python&url=http://pastebin.com/raw/rGHudX7a&name=Desert](http://reeborg.ca/reeborg.html?lang=en&mode=python&url=http://pastebin.com/raw/rGHudX7a&name=Desert)
 
-As a rule, if Reeborg's World is already loaded in your browser, you should use `World(URL)` instead of clicking on a link as this will minimize the bandwidth use.
+As a rule, if Reeborg's World is already loaded in your browser, you should use `World(URL)` instead of clicking on a link as this will minimize the bandwidth use. Furthermore, the same warning about CORS applies when loading a world from a third-party site like [pastebin](http://pastebin.com).
 
