@@ -26,11 +26,18 @@ And here's how the visualization done by "Reeborg watching variables" looks like
 
 ![](/assets/python_tutor.gif)
 
-With both Python tutor and Reeborg's World you can look at individual "frames". What is recorded in each frame is different for each visualizers.  By default, Reeborg's World focuses on showing the contents of the `locals()` and `globals()` dict, highlighting in **red** any variable whose value changed from a previous frame.
+With both Python Tutor and Reeborg's World you can look at individual "frames". What is recorded in each frame is different for each visualizers.  By default, Reeborg's World focuses on showing the contents of the `locals()` and `globals()` dict, highlighting in **red** any variable whose value changed from a previous frame. Also, I should note that I have not been able to implement a reliable way to record values corresponding to the last line of a given code block; this likely explains why the above example has fewer recorded frames than shown on the Python Tutor \(even with the addition of two frames for `think()` and `pause()`\).
 
 One feature that is unique to Reeborg's World "watch variables" implementation is the ability to add any expression to a watch list.
 
-    add_watch("position_in_front()")`
+![](/assets/watch_vars2.gif)In the above example, we added two expressions to watch:
+
+```py
+add_watch("carries_object()")
+add_watch("position_in_front()")`
+```
+
+We could have added any valid Python expressions, such as `"some_list[3:6]"`, `"a + b * 2"`, etc.  This unique feature might make it worthwhile to consider using it instead of some other visualizers like the Python Tutor.
 
 
 
