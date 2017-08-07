@@ -17,5 +17,9 @@
 
   * It is my hope that you will contribute your worlds \(including images\) freely so that they can be shared with others.
 
-If by using Reeborg's World you can help others learn programming, while being paid for doing so, I say congratulations to you!  However, please note that this book is released under a [licence](https://creativecommons.org/licenses/by-nc-sa/4.0/) which allows you to adapt its content, but not for commercial purpose.  Reading and learning from this book, and using that knowledge to profit from using [Reeborg's World](http://reeborg.ca/reeborg.html) does not constitute deriving a commercial purpose from this book; selling some version of this book does. While I have no intention of doing so at the moment, I reserve all rights for selling copies of this book or some adaptation of its content.
+If by using Reeborg's World you can help others learn programming, while being paid for doing so, I say congratulations to you!   However, please note that this book is released under a [licence](https://creativecommons.org/licenses/by-nc-sa/4.0/) which allows you to adapt its content, but not for commercial purpose.  Reading and learning from this book, and using that knowledge to profit from using [Reeborg's World](http://reeborg.ca/reeborg.html) does not constitute deriving a commercial purpose from this book; selling some version of this book does. While I have no intention of doing so at the moment, I reserve all rights for selling copies of this book or some adaptation of its content.
+
+[![](/assets/cc-by-nc-sa.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+
 
