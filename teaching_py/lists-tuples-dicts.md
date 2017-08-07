@@ -6,6 +6,8 @@ In all the examples below, unless specified otherwise, I used the world **Alone*
 
 ## List
 
+> **\[info\]**
+>
 > Using `object_here()`, Reeborg can see what kind of objects are present, but does not know how many of each are there. To find out the exact number, Reeborg would need to pick up the objects to count them.
 
 ```py
@@ -173,7 +175,9 @@ The printed result is not formatted as nicely as the previous "printed" version,
 {'position': {'x': 4, 'y': 1}, 'objects': {'3,1': {'token': 1}}}
 ```
 
-> The French equivalent of the above would be
+> **\[info\] French version**
+>
+> En français, une version équivalente du code décrit ci-dessus serait comme suit:
 >
 > ```py
 > Monde("Jetons 1")
