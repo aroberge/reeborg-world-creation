@@ -194,7 +194,7 @@ Prior to execution of this code, a copy of variables found in `locals()` is made
 
 Note that the last call to `__watch` in the indented block occurs **before** the last line of that block is executed: any change of variables occurring in the last line of code for a given block is never recorded by `__watch.`
 
-> **`[info] A better solution`**
+> `[info] A better solution?`
 >
 > At one point, Brython apparently had a [working debugger as a demo](https://www.brython.info/tests/debugger.html); it no longer works. I believe that a similar approach used in creating Brython's debugger would likely work better and much more reliably, both for identifying which line of code is being executed and what is the current content of `locals()` and `globals()` than the solution I have implemented.
 
