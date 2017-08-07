@@ -1,6 +1,8 @@
 # Automatic transformations
 
-**This section is just a rough draft.**
+> **\[caution\]** 
+>
+> This section needs to be expanded.
 
 In Reeborg's World, some artefacts can be pushed, some can be tossed \(thrown on the square in front of Reeborg\), and some can be put down by Reeborg. When this happens, depending on the particular artefact and the content of the grid square where it ends up, some automatic transitions can take place:
 
