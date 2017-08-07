@@ -2,6 +2,6 @@ img {
     margin: auto;
     display:block;
 }
-blockquote {
-    margin-left: 25%;
+.markdown-section blockquote {
+    margin-left: 15% !important;
 }
