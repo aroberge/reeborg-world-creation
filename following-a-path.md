@@ -25,6 +25,8 @@ move()
 
 This type of problem could be equally suitable for beginners, with a simple world like this one, or for very advanced students who have to find the shortest path to accomplish a given task in a maze-like world generated randomly each time it is run.
 
+> **Suggestion**: turn off the code highlighting if you follow along with coding on Reeborg's World, which is something I always recommend to do.
+
 ## Finding the path
 
 The first step is to find the correct path; by path, I mean which grid locations must visited other than the starting point.  In this particular case, it is trivial:
