@@ -1,7 +1,9 @@
 
-# [Introduction](introduction.md)
+# Summary
 
-# [About Reeborg's World](about/about.md)
+* [Introduction](introduction.md)
+
+* [About Reeborg's World](about/about.md)
   * [Learning programming](about/learning.md)
   * [Task driven learning](about/tdl.md)
   * [A quick tour](about/a-quick-tour.md)
@@ -10,7 +12,8 @@
   * [Checklist for a good programming environment](about/checklist.md)
   * [Support for non-English students](about/international.md)
 
-# [Out of the box](included/README.md)
+
+* [Out of the box](included/README.md)
   * [Creating a world: three different ways](included/chapter1.md)
   * [Loading worlds and other files](included/loading-worlds.md)
   * [The many different editors](included/the-many-different-editors.md)
@@ -20,7 +23,7 @@
   * [Built-in randomness](included/built-in-randomness.md)
   * [Beepers](included/beepers.md)
 
-# [Adding your own creations](extending/part2.md)
+* [Adding your own creations](extending/part2.md)
   * [Setting up a custom goal](extending/setting-up-a-custom-goal.md)
   * [The default robot \[TODO\]](extending/about-the-default-robot.md)
   * [Adding your own robots and artefacts](extending/adding-your-own-robots-and-artefacts.md)
@@ -32,7 +35,7 @@
   * [Extra module](extending/extra-module.md)
   * [Extra frame insertion \[TODO\]](extending/extra-frame-insertion.md)
 
-# [Python teaching support \[TODO\]](teaching_py/python.md)
+* [Python teaching support \[TODO\]](teaching_py/python.md)
   * [Why repeat?](teaching_py/why-repeat.md)
   * [Using the Python REPL](teaching_py/using-the-python-repl.md)
   * [Lists, tuples, dicts](teaching_py/lists-tuples-dicts.md)
@@ -40,19 +43,19 @@
   * [Python OOP \[TODO\]](teaching_py/python-oop.md)
   * [Traditional Python exercises \[TODO\]](teaching_py/traditional-python-exercices.md)
 
-# [Special tools](tools/special_tools.md)
+* [Special tools](tools/special_tools.md)
   * [Reeborg's keyboard \[TODO\]](tools/reeborgs-keyboard.md)
   * [Real-time collaboration \[TODO\]](tools/real-time-collaboration.md)
   * [Getting information about the code \[TODO\]](tools/getting-information-about-the-code.md)
   * [Blockly example \[TODO\]](tools/blockly-example.md)
   * [Mazes \[TODO\]](tools/mazes.md)
 
-# [Fun and games](games/games.md)
+* [Fun and games](games/games.md)
   * [Sokoban \[TODO\]](games/sokoban.md)
   * [Breakout - Javascript edition \[TODO\]](games/breakout_js.md)
   * [Breakout - Python edition \[TODO\]](games/breakout_py.md)
 
-# [Appendices](appendices/appendices.md)
+* [Appendices](appendices/appendices.md)
   * [Example worlds](appendices/appendix-example-worlds.md)
   * [Layers and canvases](appendices/layers-and-canvases.md)
   * [JavaScript and Python code pre-processing: the gory details](appendices/python-code-pre-processing-the-gory-details.md)
@@ -63,5 +66,5 @@
   * [Closures and the decorator pattern](closures-and-the-decorator-pattern.md)
   * [Following a path](following-a-path.md)
 
-# [To do](to-do.md)
+* [To do](to-do.md)
 
