@@ -56,7 +56,6 @@
 * [Special tools](tools/special_tools.md)
 * [Reeborg's keyboard \[TODO\]](tools/reeborgs-keyboard.md)
 * [Real-time collaboration \[TODO\]](tools/real-time-collaboration.md)
-* [Getting information about the code \[TODO\]](tools/getting-information-about-the-code.md)
 * [Blockly example \[TODO\]](tools/blockly-example.md)
 * [Mazes \[TODO\]](tools/mazes.md)
 
