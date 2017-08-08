@@ -58,7 +58,9 @@ Here (1, 1)
 Facing West, in front: ()
 ```
 
-We can, of course, assign values
+The last value is an empty tuple, which is used to represent a position that does not exist in the world.
+
+We can, of course, assign values to each tuple item.
 
 ```py
 # facing East at (1, 1)
@@ -134,7 +136,33 @@ The result is:
 
 **Caution: **if Reeborg carries no object, the returned value of `carries_object()` will be 0, and not an empty dict.
 
-## For advanced students
+## Ideas for worlds
+
+In a tutorial that unfortunately has disappeared from the web[^1], Andres Castano had created some worlds which had the students learn to use Python lists. The premise of the exercises included having to move some row of strawberry plants to a different location, or move some artefacts from an archeological dig, preserving the information as to the number of objects and their location.  For a one-dimensional list, such a world might look like this:
+
+![](/assets/archeology.png)
+
+where Reeborg would have to move the stars \(with an unknown number at each location\) from the recently dug up area to a cleaner location.  
+
+A problem requiring a two-dimensional list might look as follows:
+
+![](/assets/archeology2.png)
+
+For the first few exercises, students could be given worlds with lists already created, and simply use array indexing to set and retrieve the number of object at a given location. Afterwards, the students could be asked to create their own lists and use `append()` to record the number of objects at each location: this would be most effective if the size of the enclosure in which the objects are found could be changed randomly, each time the world is \(re\)loaded.
+
+More advanced students may be given configurations with multiple types of objects at the same location. They could also be asked to use dicts, with tuples as keys, and other dicts as values such as
+
+```py
+archeological_site[(x, y)] = {'star': 3, 'token': 2}
+```
+
+Moving objects to a new location would then mean to use the values found at `(x, y)` and move them to `(x + c, y)`.
+
+> **\[success\] Contribute**
+>
+> If you design worlds using similar ideas, please feel free to share them!
+
+## For very advanced students
 
 A much more complex example of Python dict \(or JavaScript object\) is that of the "world map".  We start with a Python example:
 
@@ -187,7 +215,7 @@ The printed result is not formatted as nicely as the previous "printed" version,
 > print(but)
 > ```
 
-There is also a Javascript version which is available in both English and French as follows:
+There is also a Javascript version which is available in both English and French[^2] as follows:
 
 ```js
 var goal, map;
@@ -199,4 +227,8 @@ write(goal)
 ```
 
 
+
+[^1]: It seems to have been partly saved by the Internet web archive at: [https://web.archive.org/web/20150118234111/http://ezprog.weebly.com/l11---grouping.html](https://web.archive.org/web/20150118234111/http://ezprog.weebly.com/l11---grouping.html)
+
+[^2]: Functions that belong to the RUR namespace are not translated; they are only available with an English name.
 
