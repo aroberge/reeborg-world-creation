@@ -1,6 +1,6 @@
 # Introduction
 
-> **\[danger\] Caution**
+> **[danger] Caution**
 >
 > If you have stumbled upon this document, please be advised that many of the features described here are currently **not** available on the live version of [Reeborg's World](http://reeborg.ca/reeborg.html).
 
@@ -16,9 +16,9 @@ I also hope that you have already explored the user interface of Reeborg's World
 
 While I have included many screenshots to give examples, to get the full picture it is essential that you run examples on the site, especially when animations are involved: these simply cannot be given justice by simply showing a series of static images in a book like this one.
 
-> **\[info\] Work in progress**
+> **[info] Work in progress**
 >
-> I now consider that the web version of the book is more important than any other versions \(like a pdf\). Since animated images are useable online, I have started to include animated images and plan to continue doing so.
+> I now consider that the web version of the book is more important than any other version \(like a pdf\). Since animated images are usable online, I have started to include animated images and plan to continue doing so.
 
 ## A brief word about the organization of this book
 
