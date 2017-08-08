@@ -1,6 +1,6 @@
 # Introduction
 
-> **\[Warning\] Warning**
+> **\[warning\] Warning**
 >
 > This book documents the new version of [Reeborg's World](http://reeborg.ca/reeborg.html), which has just been released and has not been fully tested by outside users.
 >
