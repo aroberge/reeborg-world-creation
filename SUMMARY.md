@@ -22,6 +22,7 @@
 * [Loading worlds and other files](included/loading-worlds.md)
 * [The many different editors](included/the-many-different-editors.md)
 * [Naming convention](included/naming-convention.md)
+* [Exploring and getting help](exploring-and-getting-help.md)
 * [Adding objects](included/adding-objects.md)
 * [Adding other types of artefacts](included/backgrounds.md)
 * [Built-in randomness](included/built-in-randomness.md)
@@ -82,5 +83,4 @@
 ## To do
 
 * [To do](to-do.md)
-* [Exploring and getting help](exploring-and-getting-help.md)
 
