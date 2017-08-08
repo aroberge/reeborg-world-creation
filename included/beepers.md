@@ -95,7 +95,7 @@ Reeborg's World now includes beepers as one possible object type. Visually, they
 
 ![](/assets/beeper0.png) ![](/assets/beeper1.png) ![](/assets/beeper2.png) ![](/assets/beeper3.png)
 
-which cycle repeately resulting in this amination: ![](/assets/beeper.gif)
+which cycle repeately resulting in this animation: ![](/assets/beeper.gif)
 
 If you hover your mouse over the image of Reeborg in a given world, you can see how many objects of each type it is carrying:
 
