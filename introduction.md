@@ -1,8 +1,10 @@
 # Introduction
 
-> **[danger] Caution**
+> **\[Warning\] Warning**
 >
-> If you have stumbled upon this document, please be advised that many of the features described here are currently **not** available on the live version of [Reeborg's World](http://reeborg.ca/reeborg.html).
+> This book documents the new version of [Reeborg's World](http://reeborg.ca/reeborg.html), which has just been released and has not been fully tested by outside users.
+>
+> This book has not been completed yet.
 
 This book, _**Reeborg's World: a Teacher's Guide**_, is intended for those who create **worlds** \(i.e. programming tasks\) to help others learn programming using [Reeborg's World](http://reeborg.ca/reeborg.html).  In this book I will refer to you as a _**teacher**_ and to those who wish to learn programming using your creations as _**students**_.
 
@@ -16,7 +18,7 @@ I also hope that you have already explored the user interface of Reeborg's World
 
 While I have included many screenshots to give examples, to get the full picture it is essential that you run examples on the site, especially when animations are involved: these simply cannot be given justice by simply showing a series of static images in a book like this one.
 
-> **[info] Work in progress**
+> **\[info\] Work in progress**
 >
 > I now consider that the web version of the book is more important than any other version \(like a pdf\). Since animated images are usable online, I have started to include animated images and plan to continue doing so.
 
