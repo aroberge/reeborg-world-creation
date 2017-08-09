@@ -50,8 +50,6 @@ It was from a suggestion of Steve Howell for the Guido van Robot project that I 
 
 Python's support for Reeborg's World would not be possible without [Brython](http://brython.info), created by Pierre Quentel with the help of many collaborators.
 
-I strongly suspect that Ian Bicking, who never took credit for it, made the necessary changes to [Mozilla's TogetherJS](https://togetherjs.com/) so that Reeborg's World could use it; an early version did not work but, after a brief email sent to Ian, suddenly everything just worked.
-
 I am also thankful to Google's development and support of [Blockly](https://developers.google.com/blockly/).
 
 Reeborg's World has an interface available in Korean thanks to Kwangchun Lee and Muhun Kim.  Hopefully their contribution will inspire others to help make Reeborg's World available in even more languages.
