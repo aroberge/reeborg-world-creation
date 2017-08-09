@@ -11,7 +11,7 @@
   * I do use [Clicky ](https://clicky.com/)to keep track of how many people are using the site. However I know that some adblockers will disable Clicky. I would appreciate if you did not disable Clicky so that I can have a reliable estimate of the number of people using the site.
   * I do not embed any social media widgets, nor do I have any ads on the site. \[If the traffic on the site increases substantially, I might consider accepting support from a sponsor.\]
   * Reeborg's World does save the current state of a session in your browser's local storage, thus allowing to resume your work when you leave and come back to the site at a later time. I do not have access to this information.
-  * ~~There is a live collaboration feature available where two or more people can work together remotely; this makes use of Mozilla's server with ~~[~~TogetherJS~~](https://togetherjs.com/)~~. If you use this feature, Mozilla may know who you are - I do not~~.This is currently broken.
+  * There is a live collaboration feature available where two or more people can work together remotely; this makes use of Mozilla's server with [TogetherJS](https://togetherjs.com/). If you use this feature, Mozilla may know who you are - I do not.
 
 * Reeborg's World is also designed with teachers in mind: while some basic **worlds **\(i.e., programming tasks\) are included by default, you can easily create and add your own. In fact, the motivation for writing this book was to give you the tools required to create interesting programming tasks.
 
