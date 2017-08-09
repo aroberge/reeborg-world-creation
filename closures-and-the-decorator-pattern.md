@@ -252,7 +252,7 @@ def turn_right():
         turn_left()
 ```
 
-If I ask you to run the following program in the main editor, you will most likely not be surprised by the result:
+If I ask you to run the following program in the main editor, you will most likely **not** be surprised by the result:
 
 ```py
 from library import turn_right
@@ -261,7 +261,7 @@ turn_right()
 
 The variable `three` is not part of the local scope of the function `turn_right`, but it is nonetheless available from within that function. Nothing so far should be surprising or confusing for you \(except for asking yourself why I bother with such a simple example\).
 
-Now, let's go back to our previous `celebrate` example and modify it ever so slightly by introducing a variable named `four`.; this time, we write it in a way that makes it easy for you to cut and paste in the editor instead of using the REPL
+Now, let's go back to our previous `celebrate` example and modify it ever so slightly by introducing a variable named `four`; this time, we write it in a way that makes it easier for you to cut and paste in the editor instead of using the REPL
 
 ```py
 def celebrate(fn):
