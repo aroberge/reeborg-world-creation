@@ -195,7 +195,9 @@ We could **repeat** this process for as many other robot instructions as we want
 
 Usually, instead of the name `do_fn`, people use the name `wrapper` which we shall use from now on.
 
-Instead of duplicating the existing behaviour, let's modify it. For example, after a successful action \(`move`, `take`, `put`\), let's have Reeborg celebrate by doing a little dance
+## Ready to decorate
+
+Instead of duplicating the existing behaviour, let's modify it - or decorate it, as people say. For example, after a successful action \(`move`, `take`, `put`\), let's have Reeborg celebrate by doing a little dance
 
 ```py
 >>> def celebrate(fn):
@@ -237,7 +239,7 @@ while (front_is_clear()) {
 }
 ```
 
-This is the essence of the decorator pattern: we have a function[^4] \(`celebrate`\) that takes another function as an argument \(`move` in our last example\) and returns ... _something _\(for cases of interest to us, what will be returned will always be another function\).
+This is the essence of the decorator pattern: we have a function[^4] \(`celebrate`\) that takes another function as an argument \(`move` in our last example\) and returns ... a modified function.[^5]
 
 ## Closure
 
@@ -328,4 +330,6 @@ Because we want to preserve some information \(such as the docstring or the name
 [^3]: We never wrote `move()` in any of the examples above.
 
 [^4]: Instead of a function, we could have some other callable, such as a Python class.
+
+[^5]: Some people say that something else than a function could be returned and that it should still be called a decorator.
 
