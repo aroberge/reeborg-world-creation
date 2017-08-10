@@ -2,11 +2,11 @@
 
 Mozilla has developed a tool,[ TogetherJS](https://togetherjs.com/), enabling real-time collaboration on a single site. Reeborg's World has integrated this tool; unfortunately, it does not work with Blockly.
 
-To enable TogetherJS, click on **Additional options** and find the **Collaboration** button. 
+To enable TogetherJS, click on **Additional options** and find the **Collaboration** button.
 
 ![](/assets/collaboration.png)
 
-If you do, you will be greeted by a display with multiple screens. Below I show the second one which gives you the option of entering your name and, if desired, an avatar.  Note the name and the color.
+If you do, you will be greeted by a display with multiple screens. Below I show the second one which gives you the option of entering your name and, if desired, an avatar.  Note the name and the color as you will see them again below.
 
 ![](/assets/collaboration3.png)
 
@@ -25,10 +25,4 @@ I rarely make use of this feature and had not realized, until I started writing 
 ## Ending a session
 
 To end a session, click on the **Collaboration** button again.
-
-
-
-
-
-
 
