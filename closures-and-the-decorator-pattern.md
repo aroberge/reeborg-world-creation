@@ -20,14 +20,23 @@ When I was learning about decorators, I found that most of the tutorials were to
 
 ## Assigning a name to an object in Python
 
-To understand the explanation that follows, I **strongly** urge you to follow along not simply by reading but by reproducing the examples in Reeborg's World.  Using the Python REPL, we can see that `move` is the name of a function:
+To understand the explanation that follows, I **strongly** urge you to follow along not simply by reading but by reproducing the examples in Reeborg's World.  In what follows, I will show what the result should look like if you use the Python REPL.
+
+Instead of calling a function, we can see that it is recognized as being a function and see its "secret name" by printing it as in
+
+```py
+>>> print(some_function)
+<function secret_name>
+```
+
+As a specific example, we can see that `move` is the name of a function we know very well:
 
 ```py
 >>> print(move)
 <function move>
 ```
 
-As you can see \(especially is you try on your own\), using `print` on a function \(without calling it\) tells us that it _**is**_ a function, with a defined "name".  We can use the `=` operator to give another name to this same object
+We can use the `=` operator to give another name to this same object
 
 ```py
 >>> forward = move
@@ -114,7 +123,7 @@ whereas calling `help(move)` gives
 
 ![](/assets/move_help.png)
 
-So, even though calling `do_move()` has the same effect as calling `move()`, they are completely different object.
+So, even though calling `do_move()` has the same effect as calling `move()`, they are completely different object: they have a different name and a different docstring.
 
 However, we can make `do_move()` look identical to `move()` if we redefine its name attribute **and** its docstring as follows:
 
@@ -162,7 +171,7 @@ Usually, instead of the name `do_fn`, people use the name `wrapper` which we sha
 
 ## Ready to decorate
 
-Instead of duplicating the existing behaviour, let's modify it - or decorate it, as people say. For example, after a successful action \(`move`, `take`, `put`\), let's have Reeborg celebrate by doing a little dance
+Instead of duplicating exactly the existing behaviour, let's modify it - or decorate it, as people say. For example, after a successful action \(`move`, `take`, `put`\), let's have Reeborg celebrate by doing a little dance
 
 ```py
 >>> def celebrate(fn):
@@ -184,7 +193,7 @@ And the result is the following:
 
 ![](/assets/celebrate.png)
 
-This is the essence of the decorator pattern: we have a function[^2] \(`celebrate`\) that takes another function as an argument \(`move` in our last example\) and returns ... a modified function[^3] which assign to one that has the same name as the original.
+This is the essence of the decorator pattern: we have a function[^2] \(`celebrate`\) that takes another function as an argument \(`move` in our last example\) and returns ... a modified function[^3] which we assign to a new one that has the exact same name as the original.
 
 ## Closure
 
