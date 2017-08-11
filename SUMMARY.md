@@ -27,6 +27,7 @@
 * [Adding other types of artefacts](included/backgrounds.md)
 * [Built-in randomness](included/built-in-randomness.md)
 * [Beepers](included/beepers.md)
+* [Small tiles](included/small-tiles.md)
 
 ## Adding your own creations
 
