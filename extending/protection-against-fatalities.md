@@ -13,7 +13,7 @@ However, Reeborg can sometimes be protected against these fatal encounters:
 * if Reeborg carries an object with the appropriate protections.
 
 To see how bridges can protect against fatal background tiles, but not  
-obstacles, load up the following and click on **World Info** for the details  
+obstacles, load the following and click on **World Info** for the details  
 prior to running the program:
 
 ```py
