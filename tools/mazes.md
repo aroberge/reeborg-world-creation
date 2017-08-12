@@ -1,6 +1,6 @@
 # Mazes
 
-If you need to create simple mazes, with a single path randomly generated and one square grid wide, fills the entire world, you can use the following:
+If you need to create simple mazes, with a single path randomly generated and one square grid wide which fills the entire world, you can use the following:
 
 ```py
 RUR.create_maze(7, 7)

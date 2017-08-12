@@ -4,7 +4,7 @@ With many different possible types of "objects" that need to be drawn \(backgrou
 
 Drawing on all the canvases is done periodically, at a fixed time interval which can be changed by the function `think()`. However, this approach has been found to be too limiting when introducing animated objects which are drawn on a different schedule. While it would have been possible to use the same canvases for both static and animated objects, we have decided instead to introduce a second set of canvases, intended for animated images only. For a given class of objects, these secondary canvases typically sit on top of the corresponding "static" one, thus giving visual precedence to the animated objects. The drawing schedule for all the animated objects is determined by the global variable `RUR.ANIMATION_TIME`.
 
-In addition to the different time scale, there is another big difference between the way drawing updates are performed.  When a program is executed, a series of frames are recorded.  Embedded in each frame, there can be some variables \(frame\_delay, pause, etc.\) which can determine the time delay before the next frame is drawn. Thus, one can use `think()` or `pause()` within a program to control how the display will be updated. However, for the animated images, `RUR.ANIMATION_TIME` is a variable whose value at the end of the program's execution will stay constant throughout the display \(playback\) of the frames that have been recorded.
+In addition to the different time scale, there is another big difference between the way drawing updates are performed.  When a program is executed, a series of frames is recorded.  Embedded in each frame, there can be some variables \(frame\_delay, pause, etc.\) which can determine the time delay before the next frame is drawn. Thus, one can use `think()` or `pause()` within a program to control how the display will be updated. However, for the animated images, `RUR.ANIMATION_TIME` is a variable whose value at the end of the program's execution will stay constant throughout the display \(playback\) of the frames that have been recorded.
 
 * add example
 
@@ -49,7 +49,7 @@ Other than the overlay layer, which is intended for special effects, robots shou
 
 Pushable objects, when pushed onto a given tile \(background or obstacle\), can transform into some obstacle or disappear altogether. This is determined by the property of the object and is handled automatically.
 
-* add example: box+water = bridge; box+fire=fire \(box disappear\)  \(Maybe make the fire temporarily bigger\).
+* add example: box+water = bridge; box+fire=fire \(box disappears\)  \(Maybe make the fire temporarily bigger\).
 
 ## Controlling the frame update
 
