@@ -8,7 +8,7 @@ If you have Reeborg's World loaded in your browser, run the following program:
 World("worlds/examples/simple_path.json", "path")
 ```
 
-If you do not have Reeborg's World loaded in your browser, you can simply click on the link below which will load the exact same world:
+If you do not have Reeborg's World loaded in your browser, you can simply click on the link below which will load exactly the same world:
 
 [http://reeborg.ca/reeborg.html?lang=en&mode=python&url=worlds/examples/simple\_path.json&name=path](http://reeborg.ca/reeborg.html?lang=en&mode=python&url=worlds/examples/simple_path.json&name=path)
 

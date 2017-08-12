@@ -26,7 +26,7 @@ Instead of a number, we see a "**?**" next to the token, indicating an unknown q
 
 When a user clicks on the _run_ or _step_ button, before their program is actually executed, a special function is called \(`RUR.world_init`\) to identify values that should be chosen at random within a certain range, and set them, after which the code entered by the user is run. If other random values are introduced afterwards, they may yield inconsistent states.
 
-This is why you should use code like the above in one of two ways only as mentioned above:
+This is why you should use code like the above in one of two ways only as mentioned previously:
 
 1. write the above code in the **main editor**, run the program and save the result in a .json file;
 2. write the above code in the **Onload** editor, and save the world including that code.

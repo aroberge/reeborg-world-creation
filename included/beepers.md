@@ -31,7 +31,7 @@ no-beepers-in-bag
 
 ## Karel's children
 
-From what I have read, I understand that Pattis did not create an actual simulator to run Karel's program. However, his idea proved so popular that many people adapted his idea and created simulators.  Most followed his exact design, except that they adapted the instructions names to follow the conventions of their own languages, most often using camelCase names, as in:
+From what I have read, I understand that Pattis did not create an actual simulator to run Karel's program. However, his idea proved so popular that many people adapted his idea and created simulators.  Most followed his exact design, except that they adapted the names of the instructions to follow the conventions of their own languages, most often using camelCase names, as in:
 
 ```
 pickBeeper
