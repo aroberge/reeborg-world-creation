@@ -99,7 +99,7 @@ help_js(RUR.control.move);
 
 > **\[success\] Tip**
 >
-> Instead of going to Github and browse the code repository to find out the implementation details, it might be more effective to use `help_js()` as shown above.
+> Instead of going to Github and browsing the code repository to find out the implementation details, it might be more effective to use `help_js()` as shown above.
 
 ## About RUR
 
