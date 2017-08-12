@@ -19,7 +19,7 @@ _Not so good programmers state that “bugs” are not really bugs but that they
 3. _Reeborg has a compass, which makes it possible to find out which direction it is facing. Unfortunately, yet again, the program that enables Reeborg to get the information from the compass has a bug: it only tells Reeborg if it is facing North ... or not. Once again, you will first learn how to implement a workaround solution and later how to fix permanently Reeborg and get rid of what its maker calls a “feature”. Learning to do so will require you to learn how to use the _`return`_ keyword in either Python or JavaScript._
 4. _Reeborg can see if a wall is blocking its way, and can also turn its head to the right to see if there is a wall there. However, a software “glitch” \(which is another weasel term that software manufacturers use to avoid having to say that their product has a bug\) prevents Reeborg’s program from properly registering a wall when it turns its head left. You will be able to fix this too._
 
-_Sometimes to find the cause of bugs, it can help to break the normal flow of the program. To this end, you may do one or more of the following, some of which will be explained later:_
+_Sometimes, changing the normal flow of a program can help to find the cause of bugs. To this end, you may do one or more of the following, some of which will be explained later:_
 
 1. _You can pause program as it is running by pressing the **pause **button. This is similar to what people refer to as setting a **breakpoint **in a computer program._
 
@@ -30,6 +30,7 @@ _Sometimes to find the cause of bugs, it can help to break the normal flow of th
 4. _You can change the speed of execution at any point inside a program using the _`think()`_ command._
 
 5. _You can have Reeborg write some information at any given point inside a program using the _`print()`_ function. _
+
 6. _Finally, you can stop a program at any point by pressing the **stop **button; this unfortunately may not work if you create what is known as an infinite loop, outside of Reeborg’s control. If worse comes to worst, you can always just reload the web page._
 
 
