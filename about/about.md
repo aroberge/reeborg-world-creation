@@ -21,7 +21,7 @@ _Not so good programmers state that “bugs” are not really bugs but that they
 
 _Sometimes, changing the normal flow of a program can help to find the cause of bugs. To this end, you may do one or more of the following, some of which will be explained later:_
 
-1. _You can pause program as it is running by pressing the **pause **button. This is similar to what people refer to as setting a **breakpoint **in a computer program._
+1. _You can pause the program as it is running by pressing the **pause **button. This is similar to what people refer to as setting a **breakpoint **in a computer program._
 
 2. _Instead of actually pressing the pause button, you can type in the instruction _`pause()`_ at any point inside a program and Reeborg will pause, awaiting your instruction to continue. _
 
