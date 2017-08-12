@@ -5,7 +5,7 @@ If you have learned Python from a traditional tutorial, or have used it somewhat
 * Python **reads** your input and parses it;
 * it **evaluates** the statement in the current context;
 * it **prints** some result automatically without requiring you to type in an explicit `print()` call
-* it **loops** back to its original state where it awaits for your input.
+* it **loops** back to its original state where it waits for your input.
 
 The REPL in Reeborg's World is based on the one written by Pierre Quentel for Brython, itself adapted from a similar interpreter in Python's standard library.
 
@@ -15,7 +15,7 @@ Using the REPL mode is different from entering code in the editor and running it
 * When loading a world, both the code in the **Onload** editor _**and**_ the code in the **Pre** editor are executed automatically.
 * For the robot in the world, no frame is evaluated: the state of the world is immediately updated.  Thus, if we start with ![](/assets/repl_world1.png)
 
- and enter the following code 
+  and enter the following code
 
 ```py
 >>> while front_is_clear():
@@ -46,8 +46,4 @@ The Python REPL mode can be used to quickly find out some useful information:
 There is no corresponding REPL in JavaScript specially designed  ... **except** that you can always enter some JavaScript command in the browser's console.  This will work most of the time; however, if an error is raised \(for example, you ask Reeborg to `move()` straight into a wall\), you will not see the usual information appearing on the screen.
 
 Since almost all JavaScript functions, such as `move()`, `turn_left()`, etc., are the same as the Python ones, you can use the example given above for Python to find out which commands are available, or which "things" or robots are available.
-
-
-
-
 
