@@ -22,11 +22,11 @@ myList = (1, (2, (3, None)))
 total = listSum(myList)
 ```
 
-And here's how the visualization done by "Reeborg watching variables" looks like:
+And here's what the visualization done by "Reeborg watching variables" looks like:
 
 ![](/assets/python_tutor.gif)
 
-With both Python Tutor and Reeborg's World you can look at individual "frames". What is recorded in each frame is different for each visualizers.  By default, Reeborg's World focuses on showing the contents of the `locals()` and `globals()` dict, highlighting in **red** any variable whose value changed from a previous frame. Also, I should note that I have not been able to implement a reliable way to record values corresponding to the last line of a given code block; this likely explains why the above example has fewer recorded frames than shown on the Python Tutor \(even with the addition of two frames for `think()` and `pause()`\).
+With both Python Tutor and Reeborg's World you can look at individual "frames". What is recorded in each frame is different for each visualizer.  By default, Reeborg's World focuses on showing the contents of the `locals()` and `globals()` dict, highlighting in **red** any variable whose value changed from a previous frame. Also, I should note that I have not been able to implement a reliable way to record values corresponding to the last line of a given code block; this likely explains why the above example has fewer recorded frames than shown on the Python Tutor \(even with the addition of two frames for `think()` and `pause()`\).
 
 One feature that is unique to Reeborg's World "watch variables" implementation is the ability to add any expression to a watch list.
 
