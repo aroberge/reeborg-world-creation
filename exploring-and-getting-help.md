@@ -2,11 +2,11 @@
 
 In the previous section, I mentioned the [Application Programming Interface \(API\)](http://reeborg.ca/api/RUR.html) which you should definitely consult in parallel with this book when creating your own worlds.  However, there are other ways available for you to get help.
 
-Even if you use only one of either Python or JavaScript in your teaching, both have complementary tools which might be useful to know.
+Even if you use only one of either Python or JavaScript in your teaching, both have complementary tools which might be useful.
 
 > **\[info\] Images may look different from what you see**
 >
-> In the examples below, I have ajusted the size of the windows prior to taking screenshots.
+> In the examples below, I have adjusted the size of the windows prior to taking screenshots.
 
 ## Using Python
 
