@@ -368,9 +368,9 @@ while (front_is_clear()) {
 
 [^2]: Instead of a function, we could have some other callable, such as a Python class.
 
-[^3]: Some people say that something else than a function could be returned and that it should still be called a decorator.
+[^3]: Some people say that something other than a function could be returned and that it should still be called a decorator.
 
 [^4]: In French, use `ecrit()`.
 
-[^5]: You may see a different result if I change the program in the mean time.
+[^5]: You may see a different result if I change the program in the meantime.
 
