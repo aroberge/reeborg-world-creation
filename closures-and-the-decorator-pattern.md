@@ -123,7 +123,7 @@ whereas calling `help(move)` gives
 
 ![](/assets/move_help.png)
 
-So, even though calling `do_move()` has the same effect as calling `move()`, they are completely different object: they have a different name and a different docstring.
+So, even though calling `do_move()` has the same effect as calling `move()`, they are completely different objects: they have different names and different docstrings.
 
 However, we can make `do_move()` look identical to `move()` if we redefine its name attribute **and** its docstring as follows:
 
@@ -193,11 +193,11 @@ And the result is the following:
 
 ![](/assets/celebrate.png)
 
-This is the essence of the decorator pattern: we have a function[^2] \(`celebrate`\) that takes another function as an argument \(`move` in our last example\) and returns ... a modified function[^3] which we assign to a new one that has the exact same name as the original.
+This is the essence of the decorator pattern: we have a function[^2] \(`celebrate`\) that takes another function as an argument \(`move` in our last example\) and returns ... a modified function[^3] to which we give exactly the same name as the original.
 
 ## Closure
 
-The concept of closure is close linked to that of decorator; in fact, the `wrapper` function is a specific example of the use of a **closure**.  If the number of tutorials found on the Internet is any indication, the concept of **closure** seems to be confusing for many people. In what follows, I will expand on the above example to show another example of closure. However, I will first make a small detour and consider something slightly different. Using Python, define the following in the library:
+The concept of closure is closely linked to that of decorator; in fact, the `wrapper` function is a specific example of the use of a **closure**.  If the number of tutorials found on the Internet is any indication, the concept of **closure** seems to be confusing for many people. In what follows, I will expand on the above example to show another example of closure. However, I will first make a small detour and consider something slightly different. Using Python, define the following in the library:
 
 ```py
 three = 3
@@ -257,13 +257,12 @@ while front_is_clear():
     move()              # new "decorated" move function
 ```
 
-## Python specific considerations
+## Python-specific considerations
 
 In Python, the decorator pattern is normally used when **defining** a function, rather than to modify an existing function like we have done so far. Programmers use standard decorators from some libraries to modify functions; for example:
 
 * to log results
-* to cache results from a function \(and speed up later calls to the same function\)
-* etc.
+* to cache results from a function \(and speed up later calls to the same function\), etc.
 
 So, in Python, we might want to write:
 
@@ -285,9 +284,9 @@ def some_function():
 
 This notation avoids having to write the name `some_function` three times, when we are using a pre-defined decorator function.  Note that many people use the name **decorator** both to mean the special syntax \(decorator expression\) **and** to refer to the decorator function itself.
 
-Because we want to preserve some information \(such as the docstring or the name of the function\) when using the decorator pattern in Python, a special decorator named `wraps` is available in the `functools` module of the Python standard library. In general, it is preferable to use code from the Python standard library wherever possible, since it is almost guaranteed to be more efficient and bug-free than code you might write yourself. However, importing this module triggers many other modules import ... and, since Brython requires calls over the internet any time a module is imported, the first time `wraps` is imported causes a noticeable delay in the code execution. I thus recommend that you write your own code instead of using a decorator from the standard library or, **even better**, use some of the decorators I have made available for you as mentioned elsewhere in this book.
+Because we want to preserve some information \(such as the docstring or the name of the function\) when using the decorator pattern in Python, a special decorator named `wraps` is available in the `functools` module of the Python standard library. In general, it is preferable to use code from the Python standard library wherever possible, since it is almost guaranteed to be more efficient and bug-free than any code you might write yourself. However, importing this module triggers many other modules to be imported ... and, since Brython requires calls over the internet any time a module is imported, the first time `wraps` is imported will cause a noticeable delay in the code execution. I thus recommend \(in this specific case\) that you write your own code instead of using a decorator from the standard library or, **even better**, use some of the decorators I have made available for you as mentioned elsewhere in this book.
 
-# Using Javascript
+# Using JavaScript
 
 Except for the special decorator notation using the `@` symbol, all of the important concepts we have shown above also apply for JavaScript. Two minor exceptions are:
 
@@ -298,18 +297,18 @@ For Python, we have used `print()` to verify that two functions were identical. 
 
 You should try it on your own computer to see the result.
 
-This is not very useful for us.  For this reason, I have defined `write()` as a JavaScript function[^4]; `write()` works similarly to Python's `print()` function except that you need to explicitly add new lines characters if you want the next invocation to start on a new line.
+This is not very useful for us.  For this reason, I have defined `write()` as a JavaScript function[^4]; `write()` works similarly to Python's `print()` function except that you need to explicitly add newline characters if you want the next invocation to start on a new line.
 
 So, using JavaScript, if I execute
 
 ```js
-write(move);
+write(move, '\n');
 ```
 
-the result will be ... **undefined**.  This is not very useful.  Perhaps some thing more useful is to ask JavaScript to give us a string representation of the object `move`
+the result will be ... **undefined**.  This is not very useful.  Perhaps something more useful is to ask JavaScript to give us a string representation of the object `move`
 
 ```js
-write(move.toString());
+write(move.toString(), '\n');
 ```
 
 As I write this book[^5], the result is as follows
@@ -324,8 +323,8 @@ You can try the following and see that you will get the same result whether you 
 
 ```js
 forward = move;
-write(move.toString());
-write(forward.toString());
+write(move.toString(), '\n');
+write(forward.toString(), '\n');
 ```
 
 This should confirm to you that the name `forward` refers exactly the same underlying object.
@@ -339,7 +338,7 @@ function return_obj(obj) {
     return obj;
 }
 forward = return_obj(move);
-write(forward.toString());  // same as before
+write(forward.toString(), '\n');  // same as before
 
 // Of course, we could call it
 forward()
