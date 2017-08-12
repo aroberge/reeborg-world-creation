@@ -46,7 +46,7 @@ The addition of this prefix will work for any world you save in the browser, whe
 
 ### Selecting a world from its URL
 
-If you know the URL of a world, you can select it by the URL; for example, this example is for a world that is included on Reeborg's World site:
+If you know the URL of a world, you can select it by the URL; for example, here is a world that is included on Reeborg's World site:
 
 ```py
 World("worlds/examples/simple_path.json")
