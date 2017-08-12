@@ -6,8 +6,7 @@ If you are familiar with the menu-driven **World editor**, you will realize that
 
 > **\[info\] About frames**
 >
-> When a user click on the "run" button or the "step" button to execute a program, the entire program  gets executed, with a **frame **being recorded whenever the state of the world changes. What is  
-> shown is a playback of the recorded **frames**, shown one by one. This allows for easy stepping through  a given program, or even stepping back.
+> When a user click on the "run" button or the "step" button to execute a program, the entire program  gets executed, with a **frame **being recorded whenever the state of the world changes. What is shown is a playback of the recorded **frames**, shown one by one. This allows for easy stepping through  a given program, or even stepping back.
 
 ## Background tiles
 
@@ -39,7 +38,7 @@ Since `pause()` does not change the content of the world, it does not trigger a 
 
 > **\[info\] French version**
 >
->  _En français, utilisez _`enregistrement()`_ au lieu de _`recording()`_._
+> _En français, utilisez _`enregistrement()`_ au lieu de _`recording()`_._
 
 If we want to fill the entire world with a single tile type, we can use something like the following:
 
