@@ -59,7 +59,7 @@
 * [Reeborg's keyboard](tools/reeborgs-keyboard.md)
 * [Real-time collaboration](tools/real-time-collaboration.md)
 * [Blockly example](tools/blockly-example.md)
-* [Mazes](tools/mazes.md)
+* [Mazes \[to be completed\]](tools/mazes.md)
 
 ## Fun and games
 

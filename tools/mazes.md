@@ -18,3 +18,11 @@ RUR.create_maze(14, 14, {"small_tiles": True})
 
 ![](/assets/small_maze.png)
 
+### To do
+
+* Add animation showing maze built
+* Explain how to use `RUR.is_wall(direction, x, y)` to find a path and suggest exploration of various algorithms \(depth-first search, breadth-first search, A\*\)
+* Document option\(s\) to create other types of mazes.
+
+
+
