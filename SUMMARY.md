@@ -80,7 +80,7 @@
 * [Sound effects](sound-effects-todo.md)
 * [Closures and the decorator pattern](closures-and-the-decorator-pattern.md)
 * [Following a path](following-a-path.md)
-* [Images credits](appendices/images-credit.md)
+* [Image credits](appendices/images-credit.md)
 
 ## To do
 
