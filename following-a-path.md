@@ -1,10 +1,10 @@
 # Following a path
 
-In this section, I consider a very simple example which requires the student to have Reeborg following a predefined path to reach its home. The end goal is to come up with code \(in the Pre and Post editors\) which can verify that the correct solution has been found. I am using this simple example to explore some of the issues one needs to consider when designing a custom goal based on the perceived capabilities of the students.
+In this section, I consider a very simple example which requires the student to have Reeborg following a predefined path to reach its home. The end goal is to come up with code \(in the **Pre** and **Post** editors\) which can verify that the correct solution has been found. I am using this simple example to explore some of the issues one needs to consider when designing a custom goal based on the perceived capabilities of the students.
 
 ![](/assets/easy_path.png)
 
-No obstacle exists in this world, so, a-priori, Reeborg could take any path and achieve the goal. However, we want Reeborg to not walk on the grass and take the minimum amount of instructions possible; here's a simple solution in Python:
+No obstacle exists in this world, so, _a priori_, Reeborg could take any path and achieve the goal. However, we want Reeborg to not walk on the grass and take the minimum amount of instructions possible; here's a simple solution in Python:
 
 ```py
 World("worlds/examples/easy_path.json") # I will no longer include this line below
@@ -50,7 +50,7 @@ m()
 print("desired_path =", desired_path)
 ```
 
-It is then a simple matter of using copy-paste to get the desired result.  Alternatively, we could write this code in the Onload editor and make it accessible later by defining
+It is then a simple matter of using copy-paste to get the desired result.  Alternatively, we could write this code in the **Onload** editor and make it accessible later by defining
 
 ```py
 window['desired_path'] = desired_path
@@ -58,7 +58,7 @@ window['desired_path'] = desired_path
 
 ## First solution
 
-Here is a first solution where I will assume that we don't want to write the desired path in the Onload editor, using the other editors instead.
+Here is a first solution where I will assume that we don't want to write the desired path in the **Onload** editor, using the other editors instead.
 
 ```py
 # This code would be in the Pre editor
@@ -121,11 +121,11 @@ move()
 move()
 ```
 
-the error message telling us that the correct path has not been followed will appear only at the very end. This may be acceptable in some situations but it is generally better to show immediately when an error occur.
+the error message telling us that the correct path has not been followed will appear only at the very end. This may be acceptable in some situations but it is generally better to show immediately when an error occurs.
 
 ## A second solution
 
-Here is a second solution which informs the student as soon as the correct path is no longer followed.
+Here is a second solution which informs the student as soon as the correct path is no longer followed:
 
 ```py
 # This code would be in the Pre editor
@@ -208,7 +208,7 @@ def turn_left():
     del _desired_turns[0]
 ```
 
-I encourage you to try it and see by yourself how it works ... and how complicated the code has become.
+I encourage you to try it and see for yourself how it works ... and how complicated the code has become.
 
 ## A better solution
 
