@@ -27,7 +27,7 @@ To create an animation, a series of different images is associated with a given 
 
 The default time interval between changes of images is 120 ms; this is reset whenever a world is loaded and can be changed for a given world by assigning a value to `RUR.ANIMATION_TIME` in the **Onload **or **Pre **editor; this is a global value and the last setting is the one that applies for the entire program.[^1]
 
-Currently, 5 different types of animations are supported. This is demonstrated in the world
+Currently, five different types of animations are supported. This is demonstrated in the world
 
 ```py
 World("/worlds/examples/animated_all.json", "animated")
@@ -54,7 +54,7 @@ Robot animation is done independently of other animations; it also uses a differ
     })
 ```
 
-Each robot is identified by a model number and has 4 different images, one for each orientation. Animating a robot is done by changing the model number in a cyclical pattern, as shown in the following example:
+Each robot is identified by a model number and has four different images, one for each orientation. Animating a robot is done by changing the model number in a cyclical pattern, as shown in the following example:
 
 ```py
 World("Empty")

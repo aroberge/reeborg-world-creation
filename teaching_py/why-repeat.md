@@ -89,7 +89,7 @@ for some_irrelevant_variable in range(4):
     turn_left()
 ```
 
-Python introduces a special built-in iterable, `range()`, which is then used in the generic for-loop construct.  For experienced programmers, re-using such a powerful and relatively simple pattern for iterations is great.  However, I would argue that it is less than ideal for beginners.
+Python introduces a special built-in iterable, `range()`, which is then used in the generic for loop construct.  For experienced programmers, re-using such a powerful and relatively simple pattern for iterations is great.  However, I would argue that it is less than ideal for beginners.
 
 ## What's wrong with the for loop
 
