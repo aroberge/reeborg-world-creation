@@ -21,7 +21,7 @@ From either the editor or the Python REPL, you can also get some _help_:
     help(reeborg_en)
   ```
 
-  You can use `reeborg_fr` to get the corresponding French version. \[**Suggestion**: if you teach using a language other than English or French, I will gladly add a version in your own language ;-\)\] Note that this help system is specific to Python and does **not** include the available functions prefixed by `RUR` and documented in the the [Application Programming Interface \(API\)](http://reeborg.ca/api/RUR.html). With a few exceptions, if a function exists in Python \(e.g. `move()`\), there is one with the same name also available when using Javascript.
+  You can use `reeborg_fr` to get the corresponding French version. \[**Suggestion**: if you teach using a language other than English or French, and create a version of `reeborg_XX` in your own language, I will gladly add it to the site. ;-\)\] Note that this help system is specific to Python and does **not** include the available functions prefixed by `RUR` and documented in the the [Application Programming Interface \(API\)](http://reeborg.ca/api/RUR.html). With a few exceptions, if a function exists in Python \(e.g. `move()`\), there is one with the same name also available when using Javascript.
 
 If you are familiar with Python, you likely already know about `dir()`. This Python built-in function is great in finding out the various attribute of an object. For example, executing
 
