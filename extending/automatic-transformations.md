@@ -60,7 +60,7 @@ def redefine(fn):
 move = redefine(move)
 ```
 
-This would have to be done in the Pre editor in each world where you want this behaviour. Notice that everything is happening always at the same `x, y` coordinate.  In programming, when something is repeated, it often signals that there might be a way to do things more simply, and avoid such repetitions.
+This would have to be done in the **Pre **editor in each world where you want this behaviour. Notice that everything is happening always at the same `x, y` coordinate.  In programming, when something is repeated, it often signals that there might be a way to do things more simply, and avoid such repetitions.
 
 Suppose you wanted to use a different image of a box and have it behave similarly.  You might think that you would have to add in a code similar to the above each time. However, this is not the case.  Here's how you could do it.
 
@@ -82,7 +82,7 @@ new_thing = {'name': 'new_box',
 
 If you compare with the first code example, you will see that the `transform` attribute captures the essence of the first code sample above.  Whenever an object or pushable is added to a grid location, an automatic evaluation is done to find out if it has a `transform` attribute; if it does, the conditions listed are evaluated; if they are met, the corresponding actions are performed.
 
-note that `transform` is an array: there can be multiple sets of conditions/actions that are listed in this array.
+Note that `transform` is an array: there can be multiple sets of conditions/actions that are listed in this array.
 
 If you create a **world collection**, you only have to add such objects when creating the menu ... and they will be available in all worlds used, without having to redefine `move()`, `toss()` or `put()`: Reeborg's World will take care of that for you.
 
