@@ -1,6 +1,6 @@
 # Lists, tuples, and dicts
 
-One of the goals I had in creating Reeborg's World was to have functions or methods that would return some basic data structures, such as Python's lists, tuples, and dict \(and their JavaScript equivalent, if possible\), thus giving a starting point to discuss such data structures in an environment that students were already familiar with.
+One of the goals I had in creating Reeborg's World was to have functions or methods that would return some basic data structures, such as Python's lists, tuples, and dict \(and their JavaScript equivalents, if possible\), thus giving a starting point to discuss such data structures in an environment that students were already familiar with.
 
 In all the examples below, unless specified otherwise, I used the world **Alone** to ensure that there is a robot present at position \(1, 1\).
 
@@ -60,7 +60,7 @@ Facing West, in front: ()
 
 The last value is an empty tuple, which is used to represent a position that does not exist in the world.
 
-We can, of course, assign values to each tuple item.
+We can, of course, assign names to each tuple item.
 
 ```py
 # facing East at (1, 1)
@@ -142,7 +142,7 @@ In a tutorial that unfortunately has disappeared from the web[^1], Andres Castan
 
 ![](/assets/archeology.png)
 
-where Reeborg would have to move the stars \(with an unknown number at each location\) from the recently dug up area to a cleaner location.  
+where Reeborg would have to move the stars \(with an unknown number at each location\) from the recently dug up area to a cleaner location.
 
 A problem requiring a two-dimensional list might look as follows:
 
@@ -164,7 +164,7 @@ Moving objects to a new location would then mean to use the values found at `(x,
 
 ## For very advanced students
 
-A much more complex example of Python dict \(or JavaScript object\) is that of the "world map".  We start with a Python example:
+A much more complex example of a Python dict \(or JavaScript object\) is that of the "world map".  We start with a Python example:
 
 ```py
 World("Tokens 1")
@@ -225,8 +225,6 @@ map = RUR.world_map();
 goal = map.goal;
 write(goal)
 ```
-
-
 
 [^1]: It seems to have been partly saved by the Internet web archive at: [https://web.archive.org/web/20150118234111/http://ezprog.weebly.com/l11---grouping.html](https://web.archive.org/web/20150118234111/http://ezprog.weebly.com/l11---grouping.html)
 
