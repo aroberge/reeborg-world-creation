@@ -25,7 +25,7 @@ Using the REPL mode is different from entering code in the editor and running it
 
 the following will be shown immediately, without any animation indicating that a movement is taking place.![](/assets/repl_world2.png)
 
-* In REPL mode, the function `done()` has been changed so that it runs the code in the Post editor and automatically evaluate to see if an goal defined in the world has been accomplished. Unlike the "normal" mode, one can have other code processed after calling `done()`; in fact,one can call `done()` multiple times without having to reload the world.
+* In REPL mode, the function `done()` has been changed so that it runs the code in the **Post** editor and automatically evaluate to see if an goal defined in the world has been accomplished. Unlike the "normal" mode, one can have other code processed after calling `done()`; in fact, one can call `done()` multiple times without having to reload the world.
   * If `done()` has been redefined in a given world to prevent a student from using it \(as described in some examples discussed elsewhere\), one can use `Done()` instead; this only works in the REPL mode.
 * Commands entered in the REPL are saved in a "history" buffer; navigation in that buffer is done using the UP and DOWN arrow keys.
 * In addition to importing code from the library and the extra module \(described elsewhere\), one can import the code currently in the editor using the standard notation, as in `import editor` or `from editor import something`.
