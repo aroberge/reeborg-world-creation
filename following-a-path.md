@@ -263,7 +263,7 @@ def ensure_position_sequence(fn, path, message):
     return wrapper
 ```
 
-Note that, in spite of the fact that we use `position_here()` in the decorator definition and not `position_ici()`, this decorator can be used in the French version as long as it is imported from the `reeborg_decorators` module.
+In spite of the fact that we use `position_here()` in the decorator definition and not `position_ici()`, this decorator can be used in the French version as long as it is imported from the `reeborg_decorators` module.
 
 [^1]: Actually, it is still possible to "cheat" by using some internal JavaScript methods belonging to the RUR namespace.
 
