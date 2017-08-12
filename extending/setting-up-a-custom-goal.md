@@ -18,7 +18,7 @@ After the new world is loaded, if you click on **World Info**, you will see some
 
 where the path shown is actually an animated gif.  So, the goal is not only to reach a set final position, but to do so following a known path.
 
-Before going further, you may want to write test programs that reach the required destination with or without following the instructions. Note that this example will only work if you use Python for your program, using either the editor, the Blockly interface or the Python REPL. \[_In fact, if you try to change the programming mode to Javascript, you will see that it changes back automatically the Python default. **Try it.**_\]
+Before going further, you may want to write test programs that reach the required destination with or without following the instructions. Note that this example will only work if you use Python for your program, using either the editor, the Blockly interface or the Python REPL. \[_In fact, if you try to change the programming mode to Javascript, you will see that it automatically reverts to the Python default. **Try it.**_\]
 
 As an example, you could try to "cheat" and reach the final position following a different path:
 
