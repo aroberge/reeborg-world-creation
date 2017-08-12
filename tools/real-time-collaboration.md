@@ -14,7 +14,7 @@ When you are ready, you will be given a URL to share:
 
 ![](/assets/collaboration2.png)
 
-As indicated, copy this link and share it with whomever you want to collaborate with.  As an example, I have logged in using two different browsers on the same computer, as shown on the image below. The display at the bottom show my active cursor \(vertical white line\) from the "remote" browser I am using, and a light blue "hand" pointer on the browser from where I initiated the collaboration.  From the initial browser, I see a yellow "hand" pointer showing the position of the cursor on that other browser \(as I had set it above\). The same page can be edited and interacted with \(buttons being pressed, program run initiated, etc.\) from either browsers.
+As indicated, copy this link and share it with whomever you want to collaborate with.  As an example, I have logged in using two different browsers on the same computer, as shown on the image below. The display at the bottom show my active cursor \(vertical white line\) from the "remote" browser I am using, and a light blue "hand" pointer on the browser from where I initiated the collaboration.  From the initial browser, I see a yellow "hand" pointer showing the position of the cursor on that other browser \(as I had set it above\). The same page can be edited and interacted with \(buttons being pressed, program run initiated, etc.\) from either browser.
 
 ![](/assets/collaboration4.png)
 
