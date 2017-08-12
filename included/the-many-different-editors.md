@@ -42,7 +42,7 @@ When a program is run without syntax errors, the content of this editor is saved
 
 This editor can contain code \(in the same language as the code in the main editor\) that is to be run together with the user's program.
 
-Before a program \(entered in the main editor\) is run, it is concatenated with the code found in the **Pre** editor, followed by the code found in the **Post** editor. \[_For Python, there is additional processing of the code done so that lines about to be executed can be highlighted in the editor, and to allow the variable "watch"._\] This additional code can be used to add additional requirements for a task which could not be done using the menu-driven World editor.
+Before a program \(entered in the main editor\) is run, it is concatenated with the code found in the **Pre** editor, followed by the code found in the **Post** editor. \[_For Python, there is extra processing of the code done so that lines about to be executed can be highlighted in the editor, and to allow the variable "watch"._\] This additional code can be used to add supplementary requirements for a task which could not be done using the menu-driven World editor.
 
 ## The Post editor
 

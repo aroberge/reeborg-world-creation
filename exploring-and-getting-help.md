@@ -2,9 +2,9 @@
 
 In the previous section, I mentioned the [Application Programming Interface \(API\)](http://reeborg.ca/api/RUR.html) which you should definitely consult in parallel with this book when creating your own worlds.  However, there are other ways available for you to get help.
 
-Even if you use only one of either Python or JavaScript in your teachingt, both have complementary tools which might be useful to know.
+Even if you use only one of either Python or JavaScript in your teaching, both have complementary tools which might be useful to know.
 
-> **\[info\] Images may look different from what you see** 
+> **\[info\] Images may look different from what you see**
 >
 > In the examples below, I have ajusted the size of the windows prior to taking screenshots.
 
@@ -52,7 +52,7 @@ help(r)
 
 ## Using JavaScript
 
-In a previous version of Reeborg's World, I had included a function, `dir_js` which could be used somewhat like Python's `dir()`. There was also a function named `inspect()` and another named `view_js_source()` which were useful for exploring the code in different ways. In this new version of Reeborg's World, I have simplified the approach, eliminating the old functions and introducing a new one currently named `help_js()`. 
+In a previous version of Reeborg's World, I had included a function, `dir_js` which could be used somewhat like Python's `dir()`. There was also a function named `inspect()` and another named `view_js_source()` which were useful for exploring the code in different ways. In this new version of Reeborg's World, I have simplified the approach, eliminating the old functions and introducing a new one currently named `help_js()`.
 
 > **\[success\] Feedback wanted**
 >
@@ -104,8 +104,4 @@ help_js(RUR.control.move);
 ## About RUR
 
 Previously, I mentioned that there are a lot more functions belonging to the RUR namespace than what I have documented in the [Application Programming Interface \(API\)](http://reeborg.ca/api/RUR.html). You can actually see all the names belonging to that namespace by doing `help_js(RUR)`. However, only those documented in the API are \(reasonably\) guaranteed not to change.
-
-
-
-
 
