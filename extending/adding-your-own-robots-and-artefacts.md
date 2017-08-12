@@ -8,7 +8,7 @@ With Reeborg's World, you can add your own images for robots and other objects, 
 World("worlds/examples/cheese.json", "Eat cheese")
 ```
 
-In this world, we have a rat ![](/assets/rat_e.png) that must eat cheese ![](/assets/fromage.png) while avoiding poison ![](/assets/poison.png).  The dimensions of the world are changing each time the world is \(re\)loaded; so is the number of cheese pieces, poison, their positions and that of the rat.
+In this world, we have a rat ![](/assets/rat_e.png) that must eat cheese ![](/assets/fromage.png) while avoiding poison ![](/assets/poison.png)  The dimensions of the world change each time the world is \(re\)loaded; so is the number of cheese pieces, poison, their positions and that of the rat.
 
 **Note**: if you click on World Info and look at the **Onload** code, there is something that will not be shown, as explained below.
 
