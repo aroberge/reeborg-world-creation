@@ -1,22 +1,22 @@
 # JavaScript and Python code pre-processing: the gory details
 
-As far as I know, most if not all Karel simulators implement their own code interpreter, so that students can step through instructions one at a time.  However, this is not the case for Reeborg's World.  The reason for this is that I wanted for anyone using the program to be able to use **any** valid Python or Javascript code, and I am not competent enough to implement a fully-featured JavaScript or Python interpreter.  Here is what I do instead.
+As far as I know, most if not all Karel simulators implement their own code interpreter, so that students can step through instructions one at a time.  However, this is not the case for Reeborg's World.  The reason for this is that I wanted for anyone using the program to be able to use **any** valid Python or JavaScript code, and I am not competent enough to implement a fully-featured JavaScript or Python interpreter.  Here is what I do instead.
 
 ## JavaScript
 
-For JavaScriptI concatenate the code found in the Pre editor \(written by the creator of the world\) with the user's code and the code found in the Post editor \(also written by the creator of the world\). Then, I use Javascript's `eval()` to execute the program. This can essentially be summed up by:
+For JavaScript, I concatenate the code found in the **Pre **editor \(written by the creator of the world\) with the user's code and the code found in the **Post** editor \(also written by the creator of the world\). Then, I use JavaScript's `eval()` to execute the program. This can essentially be summed up by:
 
 ```js
 eval(Pre + program + Post)
 ```
 
-During the execution, each time the world changes \(e.g. Reeborg changes position using `move()`\), a copy of the world's content is made \(which I call a frame\) and appended to an Javascript array \(similar to a Python list\). When `eval()` terminates, the content of that array is displayed frame by frame with a user-definable interval \(using `think()`\) between each frame; this is done using Javascript's `setTimeout` function.
+During the execution, each time the world changes \(e.g. Reeborg changes position using `move()`\), a copy of the world's content is made \(which I call a frame\) and appended to an JavaScript array \(similar to a Python list\). When `eval()` terminates, the content of that array is displayed frame by frame with a user-definable interval \(using `think()`\) between each frame; this is done using JavaScript's `setTimeout` function.
 
-The initial reason why I used a recording of frames was that Javascript is a single-threaded language which does have a `sleep()` function - otherwise, I would have likely used this. However, since I use a list of frames, students can not only step forward through the recording but also backwards if they so desire, which would not have been possible with using an approach based on the existence of a `sleep()` function.  With the approach used, students can even quickly go through a particular frame using the html slider.
+The initial reason why I used a recording of frames was that JavaScript is a single-threaded language which does have a `sleep()` function - otherwise, I would have likely used this. However, since I use a list of frames, students can not only step forward through the recording but also backwards if they so desire, which would not have been possible with using an approach based on the existence of a `sleep()` function.  With the approach used, students can even quickly go through a particular frame using the html slider.
 
-#### Dealing with Javascript errors
+#### Dealing with JavaScript errors
 
-Reeborg's World uses Javascript Errors / Python Exceptions to signal the end of a user's program - sometimes after some analysis to confirm that the task was accomplished successfully \(or not\). So, the code run is closer to this:
+Reeborg's World uses JavaScript Errors / Python Exceptions to signal the end of a user's program - sometimes after some analysis to confirm that the task was accomplished successfully \(or not\). So, the code run is closer to this:
 
 ```js
 try {
@@ -27,7 +27,7 @@ try {
 // If there was not a fatal error:
 display_result_frame_by_frame()
 // after last frame, 
-if (wold_includes_goal()) {
+if (world_includes_goal()) {
    check_goal();
 }
 ```
@@ -40,7 +40,7 @@ The error analysis and goal checking consists essentially in formatting the info
 
 ## Python - no highlighting
 
-By default when using Python, highlighting of a line of code about to be executed is performed. This can be turned off. In this case, processing of code written in Python closely matches how it is done with Javascript.  The Python interpreter used is [Brython](http://brython.info/). Instead of using `eval()`, `exec()` is used with something like the following:[^1]
+By default when using Python, highlighting of a line of code about to be executed is performed. This can be turned off. In this case, processing of code written in Python closely matches how it is done with JavaScript.  The Python interpreter used is [Brython](http://brython.info/). Instead of using `eval()`, `exec()` is used with something like the following:[^1]
 
 ```py
 import reeborg_en
@@ -50,7 +50,7 @@ program = transform(program)
 exec(Pre + program + Post, globals_)
 ```
 
-Once again, frames are recorded and playback is done using Javascript's `setTimeout`.
+Once again, frames are recorded and playback is done using JavaScript's `setTimeout`.
 
 The function `transform()` scans the user's code as a string \(i.e. it does not evaluate its validity\) and replace any instance of
 
@@ -88,7 +88,7 @@ The function `window.library.getValue()` gets a copy of the code in the library 
 
 #### Dealing with Python Exceptions
 
-Like for Javascript, we also do some analysis at the end of a program.  The analysis performed is however more extensive. If we find a `SyntaxError`, we examine the code and attempt so see if perhaps a colon `:` is missing to indicate the beginning of a block of code, or if parentheses `()` might be missing in a function call. We also try to identify the line of code in the user's program where the error occurred; however, this is not always reliable since the code executed potentially include some additional code in the Pre editor and also some extra lines of code inserted to provide code highlighting and watching variables as described below. We do a similar search for the line number when an `IndentationError` is raised and try to the same for a `NameError`.
+Like for JavaScript, we also do some analysis at the end of a program.  The analysis performed is however more extensive. If we find a `SyntaxError`, we examine the code and attempt so see if perhaps a colon `:` is missing to indicate the beginning of a block of code, or if parentheses `()` might be missing in a function call. We also try to identify the line of code in the user's program where the error occurred; however, this is not always reliable since the code executed potentially include some additional code in the Pre editor and also some extra lines of code inserted to provide code highlighting and watching variables as described below. We do a similar search for the line number when an `IndentationError` is raised and try to the same for a `NameError`.
 
 ## Python - with highlighting
 
