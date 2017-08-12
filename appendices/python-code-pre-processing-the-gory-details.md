@@ -52,7 +52,7 @@ exec(Pre + program + Post, globals_)
 
 Once again, frames are recorded and playback is done using JavaScript's `setTimeout`.
 
-The function `transform()` scans the user's code as a string \(i.e. it does not evaluate its validity\) and replace any instance of
+The function `transform()` scans the user's code as a string \(i.e., it does not evaluate its validity\) and replace any instance of
 
 ```py
 repeat n:
@@ -88,7 +88,7 @@ The function `window.library.getValue()` gets a copy of the code in the library 
 
 #### Dealing with Python Exceptions
 
-Like for JavaScript, we also do some analysis at the end of a program.  The analysis performed is however more extensive. If we find a `SyntaxError`, we examine the code and attempt so see if perhaps a colon `:` is missing to indicate the beginning of a block of code, or if parentheses `()` might be missing in a function call. We also try to identify the line of code in the user's program where the error occurred; however, this is not always reliable since the code executed potentially include some additional code in the Pre editor and also some extra lines of code inserted to provide code highlighting and watching variables as described below. We do a similar search for the line number when an `IndentationError` is raised and try to the same for a `NameError`.
+Like for JavaScript, we also do some analysis at the end of a program.  The analysis performed is however more extensive. If we find a `SyntaxError`, we examine the code and attempt to see if perhaps a colon `:` is missing to indicate the beginning of a block of code, or if parentheses `()` might be missing in a function call. We also try to identify the line of code in the user's program where the error occurred; however, this is not always reliable since the code executed potentially includes both some additional code in the **Pre** editor and also some extra lines of code inserted to provide code highlighting and watching variables as described below. We do a similar search for the line number when an `IndentationError` is raised and try to the same for a `NameError`.
 
 ## Python - with highlighting
 
