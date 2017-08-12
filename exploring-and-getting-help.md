@@ -58,7 +58,7 @@ In a previous version of Reeborg's World, I had included a function, `dir_js` wh
 >
 > Can you think of a better name to use instead of `help_js` ?
 
-Here are the equivalent to the two Python examples I mentioned above:
+Here are the JavaScript equivalents to the two Python examples I mentioned above:
 
 ```js
 r = new UsedRobot();
