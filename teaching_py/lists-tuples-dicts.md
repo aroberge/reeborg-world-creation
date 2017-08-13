@@ -215,7 +215,7 @@ The printed result is not formatted as nicely as the previous "printed" version,
 > print(but)
 > ```
 
-There is also a Javascript version which is available in both English and French[^2] as follows:
+There is also a JavaScript version which is available in both English and French[^2] as follows:
 
 ```js
 var goal, map;
