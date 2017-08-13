@@ -1,6 +1,6 @@
 # Following a path
 
-In this section, I consider a very simple example which requires the student to have Reeborg following a predefined path to reach its home. The end goal is to come up with code \(in the **Pre** and **Post** editors\) which can verify that the correct solution has been found. I am using this simple example to explore some of the issues one needs to consider when designing a custom goal based on the perceived capabilities of the students.
+In this section, I consider a very simple example which requires the student to have Reeborg follow a predefined path to reach its home. The end goal is to come up with code \(in the **Pre** and **Post** editors\) which can verify that the correct solution has been found. I am using this simple example to explore some of the issues one needs to consider when designing a custom goal based on the perceived capabilities of the students.
 
 ![](/assets/easy_path.png)
 
@@ -25,7 +25,7 @@ move()
 
 This type of problem could be equally suitable for beginners, with a simple world like this one, or for very advanced students who have to find the shortest path to accomplish a given task in a maze-like world generated randomly each time it is run.
 
-> **Suggestion**: turn off the code highlighting if you follow along with coding on Reeborg's World, which is something I always recommend to do.
+> **Suggestion**: turn off the code highlighting if you follow along with coding on Reeborg's World, which is something I always recommend doing.
 
 ## Finding the path
 
