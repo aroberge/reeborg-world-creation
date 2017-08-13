@@ -6,7 +6,7 @@ Either from the html selector, or using `World("Around 3")` select the world _Ar
 
 By looking at an animated version of this image, a user can figure out:
 
-1. when Reeborg turns, and with what sequence of orientation, since different images are used for each orientation;
+1. when Reeborg turns, and with what sequence of orientations, since different images are used for each orientation;
 2. how often Reeborg turns, since the path drawn is slighly off-centered which makes it easy to distinguish when a right turn is accomplished as three consecutive left turns;
 3. when an object is dropped, since one can see the object **and** one can see that a number appears next to the object; this is both to give information as to the number of objects at a given location, as well as to distinguish between decorative objects and objects that can be picked up, as we have seen before.
 
