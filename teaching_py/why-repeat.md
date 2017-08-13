@@ -67,7 +67,7 @@ for item in some_iterable:
     do_something(item)   # this can be an arbitrary code block
 ```
 
-It is a powerful pattern which is definitely one of Python's strength. It also needs to be understood before introducing the very useful list comprehensions and generator expressions in Python.
+It is a powerful pattern which is definitely one of Python's strengths. It also needs to be understood before introducing the very useful list comprehensions and generator expressions in Python.
 
 ### While or until a condition is met
 
