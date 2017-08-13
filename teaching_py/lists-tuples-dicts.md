@@ -148,7 +148,7 @@ A problem requiring a two-dimensional list might look as follows:
 
 ![](/assets/archeology2.png)
 
-For the first few exercises, students could be given worlds with lists already created, and simply use array indexing to set and retrieve the number of object at a given location. Afterwards, the students could be asked to create their own lists and use `append()` to record the number of objects at each location: this would be most effective if the size of the enclosure in which the objects are found could be changed randomly, each time the world is \(re\)loaded.
+For the first few exercises, students could be given worlds with lists already created, and simply use array indexing to set and retrieve the number of objects at a given location. Afterwards, the students could be asked to create their own lists and use `append()` to record the number of objects at each location: this would be most effective if the size of the enclosure in which the objects are found could be changed randomly, each time the world is \(re\)loaded.
 
 More advanced students may be given configurations with multiple types of objects at the same location. They could also be asked to use dicts, with tuples as keys, and other dicts as values such as
 
