@@ -76,7 +76,7 @@ x = 2
 y = 1
 ```
 
-Note that Javascript does not have tuples; so arrays are returned instead.
+Note that JavaScript does not have tuples; so arrays are returned instead.
 
 ```js
 write("Here: ", position_here(), "\n")
