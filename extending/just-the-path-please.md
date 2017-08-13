@@ -50,5 +50,5 @@ It is possible to get a path with fewer hints, as was done for the image include
    RUR.state.do_not_draw_info = True
    ```
 
-At the end, we reset the model name to the default value, `r.set_model("classic")` so that we could show Reeborg reaching the final position.
+At the end, we reset the model name to the default value, `r.set_model("classic")` so that we can show Reeborg reaching the final position.
 
