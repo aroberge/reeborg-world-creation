@@ -36,7 +36,7 @@ The reason for having the editor in read-only mode is that one could write Pytho
 
 > **\[info\] Visual design conundrum**
 >
-> I am not a designer and have struggled to come up with a consistent look-and-feel for the site. I have done this over the course of many years \(starting approximately in 2009\) and, as some people have pointed out, in the mean time the "flat css" style has become the norm: Reeborg's World looks dated.
+> I am not a designer and have struggled to come up with a consistent look-and-feel for the site. I have done this over the course of many years \(starting approximately in 2009\) and, as some people have pointed out, in the meantime the "flat css" style has become the norm: Reeborg's World looks dated.
 >
 > One of my early goals was to have the coding area be very distinct from the world; this, and the goal of having a consistent colour scheme, is what led me to create a style for the editor with a dark blue background.  For consistency, I decided that any code that would appear \(like in the **World info**\) should look somewhat similar, with the strings, keywords, functions, etc.,  using the same colour scheme as in the code editors. However, I wanted to have a visual difference between code that could be edited by the user and code that could not be edited and was shown for information only. The choice I have made has been to use a solid background for code that can be edited
 >
