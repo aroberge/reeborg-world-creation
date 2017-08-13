@@ -12,7 +12,7 @@ eval(Pre + program + Post)
 
 During the execution, each time the world changes \(e.g. Reeborg changes position using `move()`\), a copy of the world's content is made \(which I call a frame\) and appended to a JavaScript array \(similar to a Python list\). When `eval()` terminates, the content of that array is displayed frame by frame with a user-definable interval \(using `think()`\) between each frame; this is done using JavaScript's `setTimeout` function.
 
-The initial reason why I used a recording of frames was that JavaScript is a single-threaded language which does have a `sleep()` function - otherwise, I would have likely used this. However, since I use a list of frames, students can not only step forward through the recording but also backwards if they so desire, which would not have been possible with using an approach based on the existence of a `sleep()` function.  With the approach used, students can even quickly go through a particular frame using the html slider.
+The initial reason why I used a recording of frames was that JavaScript is a single-threaded language which does have a `sleep()` function - otherwise, I would have likely used this. However, since I use a list of frames, students can not only step forward through the recording but also backwards if they so desire, which would not have been possible using an approach based on the existence of a `sleep()` function.  With the approach used, students can even quickly go through a particular frame using the html slider.
 
 #### Dealing with JavaScript errors
 
@@ -52,7 +52,7 @@ exec(Pre + program + Post, globals_)
 
 Once again, frames are recorded and playback is done using JavaScript's `setTimeout`.
 
-The function `transform()` scans the user's code as a string \(i.e., it does not evaluate its validity\) and replace any instance of
+The function `transform()` scans the user's code as a string \(i.e., it does not evaluate its validity\) and replaces any instance of
 
 ```py
 repeat n:
@@ -66,11 +66,11 @@ for count_variable in range(n):
     block_of_code
 ```
 
-where each required `count_variable` is chosen to be a unique name in _program_, and with the additional requirement that `int(n)` must not raise an exception.  Thus `int( 2 * 3)` would be valid, but `int(variable)` where `variable` is a valid Python identifier would not be valid.
+where each required `count_variable` is chosen to be a unique name in `program`, and with the additional requirement that `int(n)` must not raise an exception.  Thus `int( 2 * 3)` would be valid, but `int(variable)` where `variable` is a valid Python identifier would not be valid.
 
 #### Additional processing: non-breaking space
 
-In addition to the above, non-breaking spaces \(html `&nbsp;`  or `&\#160;`\) are transformed into regular spaces \(ASCII 32\). This is to allow users to copy code from a teacher's website or from the [API page](http://reeborg.ca/api/RUR.html) into the editor and have it executed correctly. Python does not recognize this character as a valid space character, whereas Javascript does.
+In addition to the above, non-breaking spaces \(html `&nbsp;`  or `&\#160;`\) are transformed into regular spaces \(ASCII 32\). This is to allow users to copy code from a teacher's website or from the [API page](http://reeborg.ca/api/RUR.html) into the editor and have it executed correctly. Python does not recognize this character as a valid space character, whereas JavaScript does.
 
 #### The library
 
@@ -88,7 +88,7 @@ The function `window.library.getValue()` gets a copy of the code in the library 
 
 #### Dealing with Python Exceptions
 
-Like for JavaScript, we also do some analysis at the end of a program.  The analysis performed is however more extensive. If we find a `SyntaxError`, we examine the code and attempt to see if perhaps a colon `:` is missing to indicate the beginning of a block of code, or if parentheses `()` might be missing in a function call. We also try to identify the line of code in the user's program where the error occurred; however, this is not always reliable since the code executed potentially includes both some additional code in the **Pre** editor and also some extra lines of code inserted to provide code highlighting and watching variables as described below. We do a similar search for the line number when an `IndentationError` is raised and try to the same for a `NameError`.
+As with JavaScript, we also do some analysis at the end of a program.  The analysis performed is however more extensive. If we find a `SyntaxError`, we examine the code and attempt to see if perhaps a colon `:` is missing to indicate the beginning of a block of code, or if parentheses `()` might be missing in a function call. We also try to identify the line of code in the user's program where the error occurred; however, this is not always reliable since the code executed potentially includes both some additional code in the **Pre** editor and also some extra lines of code inserted to provide code highlighting and watching variables as described below. We do a similar search for the line number when an `IndentationError` is raised and try to do the same for a `NameError`.
 
 ## Python - with highlighting
 
