@@ -44,7 +44,7 @@ We can use the `=` operator to give another name to this same object
 <function move>
 ```
 
-Using the `=` operator to assign our own name does not change anything about the original object, including its name.  You can see this if you use this newly name copy of the original function
+Using the `=` operator to assign our own name does not change anything about the original object, including its name.  You can see this if you use this newly named copy of the original function
 
 ```py
 >>> forward()  # see the robot moving forward
