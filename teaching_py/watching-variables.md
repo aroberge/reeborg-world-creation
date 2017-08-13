@@ -6,7 +6,7 @@
 
 Python Tutor is a proper code visualizer; it is an excellent tool to use in demonstrating what happens step by step as one runs a program. It is done using appropriate tools such as a debugger.
 
-By constrast, Reeborg's World "watch variables" features is a hack, one that is most likely fragile and may break unexpectedly if it encounters code formatted in a way that had not been predicted.  In the appendix **JavaScript and Python code pre-processing: the gory details**, I give a very brief explanation of how it is implemented.
+By contrast, Reeborg's World "watch variables" features is a hack, one that is most likely fragile and may break unexpectedly if it encounters code formatted in a way that had not been predicted.  In the appendix **JavaScript and Python code pre-processing: the gory details**, I give a very brief explanation of how it is implemented.
 
 As a quick comparison, if you go to the [Python Tutor main page](http://www.pythontutor.com/), you will see a visualization of the following code:
 
