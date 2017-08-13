@@ -58,7 +58,7 @@ By "objects", I mean those that Reeborg can `take()` and `put()`. Depending on w
 RUR.add_object('name', x, y, options)
 ```
 
-will normally result in either adding to the total number of objects present \(if `replace==True`\) or in having the existing number of objects being replace by the specified value of `options.number` \(with a default of 1\).  For code in the Onload editor, it is assumed that `replaced==True` by default \(it makes no sense to repeatedly add objects in the Onload editor since no individual frame is recorded and only the final result is shown to the student as the initial world\).
+will normally result in either adding to the total number of objects present \(if `replace==True`\) or in having the existing number of objects being replaced by the specified value of `options.number` \(with a default of 1\).  For code in the **Onload **editor, it is assumed that `replaced==True` by default \(it makes no sense to repeatedly add objects in the **Onload **editor since no individual frame is recorded and only the final result is shown to the student as the initial world\).
 
 #### Obstacles
 
@@ -70,7 +70,7 @@ Multiple obstacles can exist at a given location. However, attempting to add a n
 raise NotImplementedError
 ```
 
-Overlays do not exist yet. When they are, they should be handled somewhat similarly to decorative objects.
+Overlays do not exist yet. When they do, they should be handled somewhat similarly to decorative objects.
 
 #### Pushables
 
