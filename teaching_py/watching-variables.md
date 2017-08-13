@@ -1,6 +1,6 @@
 # Watching variables
 
-> [Python Tutor](http://www.pythontutor.com/visualize.html), created by[Philip Guo](http://www.pgbovine.net/), helps people overcome a fundamental barrier to learning programming: understanding what happens as the computer runs each line of source code.
+> [Python Tutor](http://www.pythontutor.com/visualize.html), created by [Philip Guo](http://www.pgbovine.net/), helps people overcome a fundamental barrier to learning programming: understanding what happens as the computer runs each line of source code.
 >
 > Using this tool, you can write [Python](http://www.pythontutor.com/visualize.html#py=2), [Java](http://www.pythontutor.com/java.html), [JavaScript](http://www.pythontutor.com/javascript.html), [TypeScript](http://www.pythontutor.com/typescript.html), [Ruby](http://www.pythontutor.com/ruby.html), [C](http://www.pythontutor.com/c.html), and [C++](http://www.pythontutor.com/cpp.html) code in your web browser and visualize what the computer is doing step-by-step as it runs your code.
 
