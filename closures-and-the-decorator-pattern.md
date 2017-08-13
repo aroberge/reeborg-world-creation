@@ -92,7 +92,7 @@ We can make this even more convoluted by passing as an argument to a function th
 
 This may seem like a completely silly example at this point, but it will come in handy before the end of this appendix.
 
-Note that, in all of the examples above, we never call \(directly\) the function `move`[^1], but simply pass its name around so that we can assign new names to the object it represents.
+Note that, in all of the examples above, we never \(directly\) call the function `move`[^1], but simply pass its name around so that we can assign new names to the object it represents.
 
 ## And now, for something different
 
