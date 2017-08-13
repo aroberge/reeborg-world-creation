@@ -114,5 +114,5 @@ To be explained
 
 ## Why have both obstacles and background tiles?
 
-While both obstacles and background tiles can be "fatal", having both enables a world creator to combine images and make the world more visually appealing. For example, we can have fire or fences as an obstacles on an otherwise harmless grass background. The alternative would be, for example, to combine fire and grass into a single image to be used as a fatal element. Such an approach could lead to an exponentially growing number of images having to be created.
+While both obstacles and background tiles can be "fatal", having both enables a world creator to combine images and make the world more visually appealing. For example, we can have fire or fences as obstacles on an otherwise harmless grass background. The alternative would be, for example, to combine fire and grass, or various fences and grass into a single image to be used as a fatal element. Such an approach could lead to an exponentially growing number of images having to be created.
 
