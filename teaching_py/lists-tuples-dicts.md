@@ -138,7 +138,7 @@ The result is:
 
 ## Ideas for worlds
 
-In a tutorial that unfortunately has disappeared from the web[^1], Andres Castano had created some worlds which had the students learn to use Python lists. The premise of the exercises included having to move some row of strawberry plants to a different location, or move some artefacts from an archeological dig, preserving the information as to the number of objects and their location.  For a one-dimensional list, such a world might look like this:
+In a tutorial that unfortunately has disappeared from the web[^1], Andres Castano had created some worlds which had the students learn to use Python lists. The premise of the exercises included having to move some rows of strawberry plants to a different location, or move some artefacts from an archeological dig, preserving the information as to the number of objects and their location.  For a one-dimensional list, such a world might look like this:
 
 ![](/assets/archeology.png)
 
