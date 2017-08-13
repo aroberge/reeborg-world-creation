@@ -182,7 +182,7 @@ you will need to explain \(or at least mention\):
 
 I believe that, until students have seen that functions can have arguments, such as `take("token")`, and have seen the concept of a variable, it is better to use `repeat` than the standard Python for loop idiom.[^2]
 
-I should also mention that I have often seen the following awful construct by Python beginners, some of which were competent programmers in other languages:
+I should also mention that I have often seen the following awful construct by Python beginners, some of whom were competent programmers in other languages:
 
 ```py
 for i in range(len(some_list)):
