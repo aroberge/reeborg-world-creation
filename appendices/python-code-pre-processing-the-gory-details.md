@@ -10,7 +10,7 @@ For JavaScript, I concatenate the code found in the **Pre **editor \(written by 
 eval(Pre + program + Post)
 ```
 
-During the execution, each time the world changes \(e.g. Reeborg changes position using `move()`\), a copy of the world's content is made \(which I call a frame\) and appended to an JavaScript array \(similar to a Python list\). When `eval()` terminates, the content of that array is displayed frame by frame with a user-definable interval \(using `think()`\) between each frame; this is done using JavaScript's `setTimeout` function.
+During the execution, each time the world changes \(e.g. Reeborg changes position using `move()`\), a copy of the world's content is made \(which I call a frame\) and appended to a JavaScript array \(similar to a Python list\). When `eval()` terminates, the content of that array is displayed frame by frame with a user-definable interval \(using `think()`\) between each frame; this is done using JavaScript's `setTimeout` function.
 
 The initial reason why I used a recording of frames was that JavaScript is a single-threaded language which does have a `sleep()` function - otherwise, I would have likely used this. However, since I use a list of frames, students can not only step forward through the recording but also backwards if they so desire, which would not have been possible with using an approach based on the existence of a `sleep()` function.  With the approach used, students can even quickly go through a particular frame using the html slider.
 
