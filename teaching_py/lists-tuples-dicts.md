@@ -1,6 +1,6 @@
 # Lists, tuples, and dicts
 
-One of the goals I had in creating Reeborg's World was to have functions or methods that would return some basic data structures, such as Python's lists, tuples, and dict \(and their JavaScript equivalents, if possible\), thus giving a starting point to discuss such data structures in an environment that students were already familiar with.
+One of the goals I had in creating Reeborg's World was to have functions or methods that would return some basic data structures, such as Python's lists, tuples, and dicts \(and their JavaScript equivalents, if possible\), thus giving a starting point to discuss such data structures in an environment that students were already familiar with.
 
 In all the examples below, unless specified otherwise, I used the world **Alone** to ensure that there is a robot present at position \(1, 1\).
 
