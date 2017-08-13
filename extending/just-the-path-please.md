@@ -44,7 +44,7 @@ It is possible to get a path with fewer hints, as was done for the image include
    put("invisible")   # instead of put() since Reeborg carries tokens as well
    ```
 
-   Also, we use the following setting to not draw the number of object at a given location, thus giving no indication that Reeborg is putting down an object.
+   Also, we use the following setting to not draw the number of objects at a given location, thus giving no indication that Reeborg is putting down an object.
 
    ```python
    RUR.state.do_not_draw_info = True
