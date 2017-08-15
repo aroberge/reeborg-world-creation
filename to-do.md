@@ -26,5 +26,10 @@ Other content
 >
 > Some text
 
+* A\* algorithm http://www.redblobgames.com/pathfinding/a-star/introduction.html \(uses Queue\)
+* Breadth-first search and Depth-first search http://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/ \(uses simpler data structures\)
+  * http://www.redblobgames.com/pathfinding/a-star/implementation.html see Queue implementation
+* control animated gifs https://stackoverflow.com/questions/39374962/control-gif-animation-with-js-play-stop-play-backwards
+
 
 
