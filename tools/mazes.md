@@ -1,5 +1,15 @@
 # Mazes
 
+Mazes can provide interesting examples for various programming puzzles; they can also be used to illustrate various search algorithms.  
+
+
+
+![](/assets/maze.png)
+
+
+
+## Creating simple mazes
+
 If you need to create simple mazes, with a single path randomly generated and one square grid wide which fills the entire world, you can use the following:
 
 ```py
@@ -17,6 +27,19 @@ RUR.create_maze(14, 14, {"small_tiles": True})
 ```
 
 ![](/assets/small_maze.png)
+
+### Maze construction
+
+Mazes are constructed using a depth-first search algorithm adapted from [http://rosettacode.org/wiki/Maze\_generation](http://rosettacode.org/wiki/Maze_generation); using this algorithm results in a simply connected maze, one without any loops or closed circuits, and without any inaccessible areas; this type of maze is sometimes called a "perfect maze".  We can show how a maze is constructed by using the `"recording"` option.
+
+```py
+think(100)   # speeding up from default value of 300 ms
+RUR.create_maze(10, 10, 
+                {"small_tiles": True,
+                "recording": True})
+```
+
+
 
 ### To do
 
