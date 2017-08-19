@@ -13,11 +13,11 @@
         "image-captions", "alerts"
     ],
     "pluginsConfig": {
-      "image-captions": {
-          "caption": "Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
-      },
+        "image-captions": {
+            "caption": "Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
+        },
         "theme-default": {
-             "showLevel": true
+                "showLevel": true
         }
-  }
+    }
 }
