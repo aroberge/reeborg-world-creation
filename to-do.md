@@ -33,8 +33,11 @@ Other content
 * control animated gifs [https://stackoverflow.com/questions/39374962/control-gif-animation-with-js-play-stop-play-backwards](https://stackoverflow.com/questions/39374962/control-gif-animation-with-js-play-stop-play-backwards)
 
 * For A\*, implement cost function related to number of turns: right turns are penalized more than left turns and, overall, the number of turns is minimized
+
   * alternative for straighter paths: treat left and right turns equally \(use RepairedRobot\) and penalize two consecutive moves compared with a turn \(or penalize weight based on manhattan heuristics?\)
   * this may require to reprioritize
+
+* For graph demo, add tiles that are arrows \(see redblobames\); perhaps arrows with an offset to show the overlap, rather than staying into a normal grid square.
 
 
 
