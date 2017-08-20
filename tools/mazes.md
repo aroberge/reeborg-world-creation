@@ -94,8 +94,6 @@ RUR.create_maze(12, 10,
 
 ![](/assets/maze_rooms2.png)
 
-
-
 In this second example, we can see that fewer rooms were created than the stated goal.  In both of these examples, the rooms were created without doors. Furthermore, the grid pattern is not visible within the rooms: the default "color" used was the pattern used to represent `gravel` which is opaque, unlike the other colors that were used by default.  We can make the grid visible **and** add doors to the rooms as follows:
 
 ```py
@@ -156,13 +154,30 @@ RUR.create_maze(12, 10,
 
 ## Getting information about the maze
 
+In a previous section \(add link to "Lists, tuples, dict" section\), I mentioned how one can get a complete "world map". For example, using Python:
+
+```py
+gps = SatelliteInfo()  # English version; different names are used in French
+gps.print_world_map() # prints a formatted version
+
+# extract information from a dict
+gps.world_map["goal"] # extracts the goal information for this world
+```
+
+whereas for JavaScript, we have
+
+```js
+// Same names in all languages
+var goal, map;
+RUR.print_world_map();  // prints formatted version
+
+map = RUR.world_map();  // JavaScript Object
+goal = map.goal;        // or goal = map["goal"] like in the Python version
+```
+
+This "world map" contains all the information required to draw the world. However, the information normally recorded does not allow for an easy identification of regions without walls \(rooms\), or openings leading to these regions, etc.  For this reason, when a maze is created using `RUR.create_maze()`, some additional information is recorded in a more user-friendly format.
 
 
-### To do
-
-* Add animation showing maze built
-* Explain how to use `RUR.is_wall(direction, x, y)` to find a path and suggest exploration of various algorithms \(depth-first search, breadth-first search, A\*\)
-* Document option\(s\) to create other types of mazes.
 
 
 
