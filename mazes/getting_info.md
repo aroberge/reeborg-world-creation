@@ -151,3 +151,5 @@ rooms = RUR.world_map()['maze']['rooms'];
 write(rooms[0]);  // for example
 ```
 
+As an example, this information can be used to place objects to be found by the robot inside rooms, avoiding maze passages.
+
