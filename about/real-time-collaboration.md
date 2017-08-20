@@ -1,6 +1,9 @@
 # Real-time collaboration
 
-Mozilla has developed a tool,[ TogetherJS](https://togetherjs.com/), enabling real-time collaboration on a single site. Reeborg's World has integrated this tool; unfortunately, it does not work with Blockly.
+Mozilla has developed a tool,[ TogetherJS](https://togetherjs.com/), enabling real-time collaboration on a single site. Reeborg's World has integrated this tool.
+This tool could be useful either for teams of students working on separate
+computers, or in mentoring a student at a different location.
+Unfortunately, it does not work with Blockly.
 
 To enable TogetherJS, click on **Additional options** and find the **Collaboration** button.
 
@@ -18,9 +21,8 @@ As indicated, copy this link and share it with whomever you want to collaborate 
 
 ![](/assets/collaboration4.png)
 
-This feature could be useful either for teams of students working on separate computers, or in mentoring a student at a different location.
 
-I rarely make use of this feature and had not realized, until I started writing this section, that it was no longer working and I had to fix it. Since I cannot set up automated tests for it, it might break again without my knowledge. If it does not work for you \(using either Chrome or Firefox, two supported browsers\), please let me know.
+I rarely make use of this collaboration feature and had not realized, until I started writing this section, that it was no longer working and I had to fix it. Since I cannot set up automated tests for it, it might break again without my knowledge. If it does not work for you \(using either Chrome or Firefox, two supported browsers\), please let me know.
 
 ## Ending a session
 

@@ -14,6 +14,7 @@
 * [A brief word about Blockly](about/blockly.md)
 * [Checklist for a good programming environment](about/checklist.md)
 * [Support for non-English students](about/international.md)
+* [Real-time collaboration](about/real-time-collaboration.md)
 
 ## Out of the box
 
@@ -53,13 +54,16 @@
 * [Python OOP \[TODO\]](teaching_py/python-oop.md)
 * [Traditional Python exercises \[TODO\]](teaching_py/traditional-python-exercices.md)
 
-## Special tools
+## Mazes
 
-* [Special tools](tools/special_tools.md)
-* [Reeborg's keyboard](tools/reeborgs-keyboard.md)
-* [Real-time collaboration](tools/real-time-collaboration.md)
-* [Blockly example](tools/blockly-example.md)
-* [Mazes \[to be completed\]](tools/mazes.md)
+* [Mazes ](mazes/mazes.md)
+* [Creating simple mazes](mazes/creating_simple.md)
+* [Maze construction algorithm](mazes/algorithm.md)
+* [Adding rooms](mazes/rooms.md)
+* [Changing colors](mazes/colors.md)
+* [Getting information about the maze](mazes/getting_info.md)
+* [Deleting information about the maze](mazes/deleting_info.md)
+
 
 ## Fun and games
 
