@@ -64,7 +64,6 @@
 * [Getting information about the maze](mazes/getting_info.md)
 * [Deleting information about the maze](mazes/deleting_info.md)
 
-
 ## Fun and games
 
 * [Fun and games](games/games.md)
@@ -89,4 +88,5 @@
 ## To do
 
 * [To do](to-do.md)
+* [Search](search.md)
 
