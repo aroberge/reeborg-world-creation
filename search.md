@@ -2,12 +2,13 @@
 
 ```js
 var start, current, visited, frontier, i, neighbours, next;
-
+think(100);
 RUR.set_world_size(5, 5)
-start = [3, 3]
 frontier = new Container()
-frontier.append(start)
 visited = {}
+
+start = [3, 3]
+frontier.append(start)
 visited[start] = true
 
 while (!frontier.is_empty()){
@@ -20,11 +21,10 @@ while (!frontier.is_empty()){
             visited[next] = next
         }
     }
-    frontier.set_done(current) // purely for aesthetics
+    frontier.mark_done(current); // changing color only
 }
+
 ```
-
-
 
 
 
