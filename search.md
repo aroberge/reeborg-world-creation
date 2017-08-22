@@ -4,7 +4,7 @@
 var start, current, visited, frontier, i, neighbours, next;
 think(100);
 RUR.set_world_size(5, 5)
-frontier = new Container()
+frontier = new RUR.Container()
 visited = {}
 
 start = [3, 3]
@@ -23,7 +23,6 @@ while (!frontier.is_empty()){
     }
     frontier.mark_done(current); // changing color only
 }
-
 ```
 
 
