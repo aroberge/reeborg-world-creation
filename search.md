@@ -1,6 +1,13 @@
 # Search - just a draft to keep idea
 
-See [http://www.redblobgames.com/pathfinding/a-star/introduction.html](http://www.redblobgames.com/pathfinding/a-star/introduction.html) for details
+See [http://www.redblobgames.com/pathfinding/a-star/introduction.html](http://www.redblobgames.com/pathfinding/a-star/introduction.html) for details. Add explanations about the site, and refer readers to complementary views whenever appropriate.
+
+
+
+To be added:
+
+* explain how one can change the default colors
+* add images
 
 ```py
 from search_tools import Container, get_neighbours
@@ -173,10 +180,6 @@ for cell in path:
         reeborg.turn_left()
     reeborg.move()
 ```
-
-
-
-
 
 ## JavaScript versions
 
