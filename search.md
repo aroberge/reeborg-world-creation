@@ -2,6 +2,7 @@
 
 ```js
 var start, current, visited, frontier, i, neighbours, next;
+World("empty")
 think(100);
 RUR.set_world_size(5, 5)
 frontier = new RUR.Container()
@@ -29,6 +30,7 @@ Python version
 
 ```py
 from search_tools import Container, get_neighbours
+World("empty")
 think(100)
 
 RUR.set_world_size(5, 5)
@@ -52,6 +54,7 @@ Add goal \(turn off highlighting\)
 
 ```py
 from search_tools import Container, get_neighbours
+World("empty")
 think(100)
 no_highlight()
 
@@ -80,6 +83,7 @@ Put in function
 
 ```py
 from search_tools import Container, get_neighbours
+World("empty")
 think(100)
 no_highlight()
 
@@ -111,6 +115,7 @@ Get path
 
 ```py
 from search_tools import Container, get_neighbours
+World("empty")
 think(100)
 no_highlight()
 
@@ -148,6 +153,52 @@ path.reverse()
 
 for cell in path:
     RUR.add_colored_tile("maroon", *cell)
+```
+
+Add robot, remove think\(100\), do not append start,etc.
+
+```py
+from search_tools import Container, get_neighbours
+World("empty")
+no_highlight()
+
+RUR.set_world_size(10, 10)
+frontier = Container(no_colors=True)
+came_from = {}
+
+start = (3, 3)
+goal = (6, 4)
+RUR.add_final_position("house", *goal)
+reeborg = UsedRobot(*start)
+frontier.append(start)
+came_from[start] = None
+
+def find_goal():
+    while not frontier.is_empty():
+        current = frontier.get_first()
+        for neighbour in get_neighbours(current):
+            if neighbour not in came_from:
+                frontier.append(neighbour)
+                came_from[neighbour] = current
+                if neighbour == goal:
+                    return
+        frontier.mark_done(current)  # changing color only
+
+find_goal()
+
+current = goal 
+path= []
+while current != start: 
+    path.append(current)
+    current = came_from[current]
+
+path.reverse()
+
+for cell in path:
+    while cell != reeborg.position_in_front():
+        reeborg.turn_left()
+    reeborg.move()
+
 ```
 
 
