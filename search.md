@@ -1,32 +1,6 @@
-# Search - just a draft to keep ideas
+# Search - just a draft to keep idea
 
-```js
-var start, current, visited, frontier, i, neighbours, next;
-World("empty")
-think(100);
-RUR.set_world_size(5, 5)
-frontier = new RUR.Container()
-visited = {}
-
-start = [3, 3]
-frontier.append(start)
-visited[start] = true
-
-while (!frontier.is_empty()){
-    current = frontier.get_first();
-    neighbours = RUR.get_neighbours(current);
-    for(i=0; i<neighbours.length; i++) {
-        next = neighbours[i];
-        if (Object.keys(visited).indexOf(next) == -1) {
-            frontier.append(next)
-            visited[next] = next
-        }
-    }
-    frontier.mark_done(current); // changing color only
-}
-```
-
-Python version
+See [http://www.redblobgames.com/pathfinding/a-star/introduction.html](http://www.redblobgames.com/pathfinding/a-star/introduction.html) for details
 
 ```py
 from search_tools import Container, get_neighbours
@@ -198,7 +172,38 @@ for cell in path:
     while cell != reeborg.position_in_front():
         reeborg.turn_left()
     reeborg.move()
+```
 
+
+
+
+
+## JavaScript versions
+
+```js
+var start, current, visited, frontier, i, neighbours, next;
+World("empty")
+think(100);
+RUR.set_world_size(5, 5)
+frontier = new RUR.Container()
+visited = {}
+
+start = [3, 3]
+frontier.append(start)
+visited[start] = true
+
+while (!frontier.is_empty()){
+    current = frontier.get_first();
+    neighbours = RUR.get_neighbours(current);
+    for(i=0; i<neighbours.length; i++) {
+        next = neighbours[i];
+        if (Object.keys(visited).indexOf(next) == -1) {
+            frontier.append(next)
+            visited[next] = next
+        }
+    }
+    frontier.mark_done(current); // changing color only
+}
 ```
 
 
