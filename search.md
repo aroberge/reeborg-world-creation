@@ -1,6 +1,8 @@
 # Search - just a draft to keep idea
 
-> \*\*\[warning\] The version on the website may not be compatible with the code presented here. This will be fixed in the near future.
+> **\[danger\] The version on the website may not be compatible with the code presented here.**
+>
+> This will be fixed in the near future.
 
 See [http://www.redblobgames.com/pathfinding/a-star/introduction.html](http://www.redblobgames.com/pathfinding/a-star/introduction.html) for details. Add explanations about the site, and refer readers to complementary views whenever appropriate.
 
@@ -8,11 +10,11 @@ See [http://www.redblobgames.com/pathfinding/a-star/introduction.html](http://ww
 
 Instead of the usual grid representation of the world, we will use a graph representation where valid locations are **nodes** connected by **edges**. Reeborg can move from one node to another \(using a `move()` command\) provided that the two nodes are connected.[^1] We will label each node by a 2-tuple, `(x, y)` ; the connected nodes will be called its **neighbours.**
 
-
+![](/assets/graph1.png)
 
 If a location would be **fatal** for Reeborg, or if its path would be blocked by a wall, we do not include it in the neighbours.
 
-
+![](/assets/graph2.png)
 
 To get the neighbours to a position `(x, y)`, you can use the Python function `get_neighbours()`: it returns a list of nodes \(2-tuples\). By default, this list is given in random order. This function is included in the module `search_tools.py`.
 
