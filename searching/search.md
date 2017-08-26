@@ -1,22 +1,20 @@
-# Search - just a draft to keep idea
+# Search algorithms
 
 > **\[danger\] The version on the website may not be compatible with the code presented here.**
 >
 > This will be fixed in the near future.
 
-See [http://www.redblobgames.com/pathfinding/a-star/introduction.html](http://www.redblobgames.com/pathfinding/a-star/introduction.html) for details. Add explanations about the site, and refer readers to complementary views whenever appropriate.
+Many problems can be solved by using an appropriate search algorithm.
+These algorithms are relatively advanced programming topics and are definitely
+**not** suitable for beginning students.  We discuss them here to illustrate
+how Reeborg's World can be used to teach advanced topics.
 
-## Graph representation
 
-Instead of the usual grid representation of the world, we will use a graph representation where valid locations are **nodes** connected by **edges**. Reeborg can move from one node to another \(using a `move()` command\) provided that the two nodes are connected.[^1] We will label each node by a 2-tuple, `(x, y)` ; the connected nodes will be called its **neighbours.** Normally, except at the world's boundary, each node has four neighbours:
 
-![](/assets/graph1.png)
+**Todo**: add better reference; see [http://www.redblobgames.com/pathfinding/a-star/introduction.html](http://www.redblobgames.com/pathfinding/a-star/introduction.html) for details.
+Add explanations about the site, and refer readers to complementary views whenever appropriate.
 
-However, if a location \(node\) would be **fatal** for Reeborg, or if its path \(edge\) would be blocked by a wall, we do not include it in the neighbours.
 
-![](/assets/graph2.png)
-
-To get the neighbours to a position `(x, y)`, you can use the Python function `get_neighbours()`: it returns a list of nodes \(2-tuples\). By default, this list is given in random order. This function is included in the module `search_tools.py`.
 
 To be added:
 
@@ -138,9 +136,9 @@ def find_goal():
 
 find_goal()
 
-current = goal 
+current = goal
 path = [current]
-while current != start: 
+while current != start:
     current = came_from[current]
     path.append(current)
 
@@ -181,9 +179,9 @@ def find_goal():
 
 find_goal()
 
-current = goal 
+current = goal
 path= []
-while current != start: 
+while current != start:
     path.append(current)
     current = came_from[current]
 
@@ -222,6 +220,3 @@ while (!frontier.is_empty()){
     frontier.mark_done(current); // changing color only
 }
 ```
-
-[^1]: We assume that Reeborg faces the required direction in this discussion.
-

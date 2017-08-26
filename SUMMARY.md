@@ -23,7 +23,7 @@
 * [Loading worlds and other files](included/loading-worlds.md)
 * [The many different editors](included/the-many-different-editors.md)
 * [Naming convention](included/naming-convention.md)
-* [Exploring and getting help](exploring-and-getting-help.md)
+* [Exploring and getting help](included/exploring-and-getting-help.md)
 * [Adding objects](included/adding-objects.md)
 * [Adding other types of artefacts](included/backgrounds.md)
 * [Built-in randomness](included/built-in-randomness.md)
@@ -64,6 +64,11 @@
 * [Getting information about the maze](mazes/getting_info.md)
 * [Deleting information about the maze](mazes/deleting_info.md)
 
+## Searching
+
+* [Search algorithms](searching/search.md)
+* [Graph representation](searching/graph.md)
+
 ## Fun and games
 
 * [Fun and games](games/games.md)
@@ -79,14 +84,12 @@
 * [JavaScript and Python code pre-processing: the gory details](appendices/python-code-pre-processing-the-gory-details.md)
 * [About CORS](appendices/about-cors.md)
 * [Uses of local storage](appendices/uses-of-local-storage.md)
-* [Design choices \[To be completed\]](design-choices-to-be-completed.md)
-* [Sound effects](sound-effects-todo.md)
-* [Closures and the decorator pattern](closures-and-the-decorator-pattern.md)
-* [Following a path](following-a-path.md)
+* [Sound effects](appendices/sound-effects-todo.md)
+* [Closures and the decorator pattern](appendices/closures-and-the-decorator-pattern.md)
+* [Following a path](appendices/following-a-path.md)
 * [Image credits](appendices/images-credit.md)
+* [Design choices \[To be completed\]](appendices/design-choices-to-be-completed.md)
 
 ## To do
 
 * [To do](to-do.md)
-* [Search](search.md)
-
