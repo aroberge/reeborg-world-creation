@@ -52,7 +52,6 @@ RUR.add_obstacle("fire", 3, 4)
 print(get_neighbours( (4, 4)))
 # -> [(4, 3)]
 
-
 RUR.add_new_thing({'name': 'fire_protection',
                    'url': 'src/images/token.png',
                    'protections': ['fire']
@@ -84,7 +83,7 @@ print(get_neighbours( (4, 4) ))
 ```
 
 The Python function `get_neighbours()` is a wrapper of a corresponding
-JavaScript function which we describe in the next section.
+JavaScript function which we use in the next section.
 
 ## JavaScript version
 
