@@ -1,15 +1,25 @@
 # Breadth-first and depth-first search
 
-
 Both algorithms follow the same pattern:
 
 * Start at a node, which is the **frontier**, i.e. how far we have visited so far
 * Repeat until all nodes have been visited:
-  - Pick and remove a node from the frontier
-  - Add this node to the ones that have been visited
-  - Get this node's neighbours; any of them that have not been visited is added to the frontier
+  * Pick and remove a node from the **frontier**
+  * Add this node to the ones that have been visited
+  * Get this node's neighbours; any of them that have not been visited is added to the **frontier**
 
-Using Python, this looks as follows:
+Visually, the beginning looks as follows:
+
+![](/assets/bfs.png)
+
+1. We add a node to the frontier \(node color is light blue\)
+2. We retrieve a node added to the frontier \(we have only one to choose from\) and set it as the current node \(green\)
+3. a, b, c, d\) we add the neighbour of the current node to the frontier.
+4. Having found all the neighbour, we add the original node to the visited ones \(colour changed to light grey\)
+5. We retrieve a node from the frontier \(in this case, we picked the last one that was added\)
+6. a\) We add its first neighbour to the frontier; etc.
+
+Using Python, the general algorithm looks as follows:
 
 ```py
 start = (x, y)
@@ -24,31 +34,23 @@ while not frontier.is_empty():
             visited[neighbour] = True
 ```
 
-If `GET_NODE()` is retrieving the **last** node added to the frontier, we have
-a depth-first algorithm (also sometimes described as FILO: First In, Last Out).
-If `GET_NODE()` is retrieving the **first** node that was added to the frontier,
-we have a breadth-first algorithm (also sometimes described as FIFO: First In,
-First Out)
+If `GET_NODE()` is retrieving the **last** node added to the frontier, we have a depth-first algorithm \(also sometimes described as FILO: First In, Last Out\). If `GET_NODE()` is retrieving the **first** node that was added to the frontier, we have a breadth-first algorithm \(also sometimes described as FIFO: First In, First Out\)
 
-For `GET_NEIGHBOURS()` we'll consider two cases: either we get them always
-in the same order, or we get them in a random order each time.
+For `GET_NEIGHBOURS()` we'll consider two cases: either we get them always in the same order, or we get them in a random order each time.
 
-The data structure I will use for the frontier is a double ended queue or deque.
-I have implemented a custom one, not as efficient as the one included in
-the Python standard library but one that does take care of indicating which
-node is visited using colours.
+The data structure I will use for the frontier is a double ended queue or deque. I have implemented a custom deque, not as efficient as the one included in the Python standard library but one that does take care of indicating which node is visited using colours, without cluttering unduly the user's code.
 
-For the visited nodes, we could have used a Python set instead of a dict;
-however, when we will actually use the algorithm to search for the shortest
-path, a set will not be sufficient.
+For the visited nodes, we could have used a Python set instead of a dict; however, when we will actually use the algorithm to search for the shortest path, a set will not be sufficient.
 
-Let's first look at the cases where we select neighbours always in the same
-order. A complete program to do this for breadth-first search is as follows:
+Let's first look at the cases where we select neighbours always **in the same order**. A complete program to do this for breadth-first search is as follows:
 
 ```py
 from search_tools import Deque, get_neighbours
 
 no_highlight()  # highlighting would create too many frames
+                # however, for smaller worlds, you might want to leave it on and
+                # step through the program
+                
 think(0)        # Makes display update as fast as possible
 World("Empty")
 RUR.set_world_size(11, 11)
@@ -69,12 +71,23 @@ while not frontier.is_empty():
     frontier.mark_done(current)  # changing color only
 ```
 
-To change to depth-first, we simply need to change
-`frontier.get_first()` to `frontier.get_last()`.
+To change from breadth-first to depth-first, we simply need to change `frontier.get_first()` to `frontier.get_last()`.
 
-Below is a comparison of the two different algorithms. On the
-left, we are using breadth-first: the frontier is expanding uniformly
-away from the center. On the right, we are using depth-first.
-For both of these, we have made a world with small tiles using
-`RUR.get_current_world().small_tiles = True` after selecting
-`World("Empty")`.
+Below is a comparison of the two different algorithms,. On the left, we are using breadth-first: the frontier is expanding uniformly  
+away from the center. On the right, we are using depth-first. For both of these, we have made a world with small tiles using  
+`RUR.get_current_world().small_tiles = True` after selecting `World("Empty")`.
+
+
+
+![](/assets/bfs_dfs_ordered.gif)
+
+If we choose the neighbours in random order, by removing `ordered=True`, we get the following:
+
+![](/assets/bfs_dfs.gif)
+
+The breadth-first case does not look significantly different; however, the depth-first case definitely does. This depth-first search algorithm with randomly ordered neighbours is what the `RUR.create_maze()` function uses.
+
+
+
+
+
