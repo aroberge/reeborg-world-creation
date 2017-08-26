@@ -8,11 +8,11 @@ See [http://www.redblobgames.com/pathfinding/a-star/introduction.html](http://ww
 
 ## Graph representation
 
-Instead of the usual grid representation of the world, we will use a graph representation where valid locations are **nodes** connected by **edges**. Reeborg can move from one node to another \(using a `move()` command\) provided that the two nodes are connected.[^1] We will label each node by a 2-tuple, `(x, y)` ; the connected nodes will be called its **neighbours.**
+Instead of the usual grid representation of the world, we will use a graph representation where valid locations are **nodes** connected by **edges**. Reeborg can move from one node to another \(using a `move()` command\) provided that the two nodes are connected.[^1] We will label each node by a 2-tuple, `(x, y)` ; the connected nodes will be called its **neighbours.** Normally, except at the world's boundary, each node has four neighbours:
 
 ![](/assets/graph1.png)
 
-If a location would be **fatal** for Reeborg, or if its path would be blocked by a wall, we do not include it in the neighbours.
+However, if a location \(node\) would be **fatal** for Reeborg, or if its path \(edge\) would be blocked by a wall, we do not include it in the neighbours.
 
 ![](/assets/graph2.png)
 
