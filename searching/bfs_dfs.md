@@ -14,8 +14,8 @@ Visually, the beginning looks as follows:
 
 1. We add a node to the frontier \(node color is light blue\)
 2. We retrieve a node added to the frontier \(we have only one to choose from\) and set it as the current node \(green\)
-3. a, b, c, d\) we add the neighbour of the current node to the frontier.
-4. Having found all the neighbour, we add the original node to the visited ones \(colour changed to light grey\)
+3. a, b, c, d\) we add the neighbours of the current node to the frontier.
+4. Having found all the neighbours, we add the original node to the visited ones \(colour changed to light grey\)
 5. We retrieve a node from the frontier \(in this case, we picked the last one that was added\)
 6. a\) We add its first neighbour to the frontier; etc.
 
@@ -50,7 +50,7 @@ from search_tools import Deque, get_neighbours
 no_highlight()  # highlighting would create too many frames
                 # however, for smaller worlds, you might want to leave it on and
                 # step through the program
-                
+
 think(0)        # Makes display update as fast as possible
 World("Empty")
 RUR.set_world_size(11, 11)
@@ -77,8 +77,6 @@ Below is a comparison of the two different algorithms,. On the left, we are usin
 away from the center. On the right, we are using depth-first. For both of these, we have made a world with small tiles using  
 `RUR.get_current_world().small_tiles = True` after selecting `World("Empty")`.
 
-
-
 ![](/assets/bfs_dfs_ordered.gif)
 
 If we choose the neighbours in random order, by removing `ordered=True`, we get the following:
@@ -86,8 +84,4 @@ If we choose the neighbours in random order, by removing `ordered=True`, we get 
 ![](/assets/bfs_dfs.gif)
 
 The breadth-first case does not look significantly different; however, the depth-first case definitely does. This depth-first search algorithm with randomly ordered neighbours is what the `RUR.create_maze()` function uses.
-
-
-
-
 
