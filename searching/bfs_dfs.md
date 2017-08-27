@@ -86,3 +86,43 @@ If we choose the neighbours in random order, by removing `ordered=True`, we get 
 
 The breadth-first case does not look significantly different; however, the other case definitely does. A recursive version of a proper depth-first search algorithm with randomly ordered neighbours is what the `RUR.create_maze()` function uses.
 
+## Customizing the output
+
+As usual, you can find information about `Deque` by importing it and using `help(Deque)` in Python. If you do so you will find out that you can write `frontier = Deque(no_colors=True)` if you wish to have no colors displayed as the algorithm is executed: this will not be useful until later, when we focus on showing only the final path after doing a search.
+
+You can also specify custom colors using `frontier.set_palette()`.
+
+## JavaScript version
+
+To write a JavaScript version of the above program, we need to remember that JavaScript has neither tuples \(we can use arrays instead\) nor sets \(we can use objects instead\).  
+
+```js
+think(0);
+World("Empty");
+RUR.set_world_size(11, 11);
+
+frontier = new RUR.Deque();
+visited = {};
+
+start = [6, 6];
+frontier.append(start);
+visited[start] = true;
+
+while (!frontier.is_empty()){
+    current = frontier.get_first();
+    neighbours = RUR.get_neighbours(current);
+    for(i=0; i<neighbours.length; i++) {
+        neighbour = neighbours[i];
+        if (visited[neighbour] === undefined){
+            frontier.append(neighbour);
+            visited[neighbour] = true;
+        }
+    }
+    frontier.mark_done(current); 
+}
+```
+
+
+
+
+
