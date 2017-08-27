@@ -68,7 +68,7 @@
 
 * [Search algorithms](searching/search.md)
 * [Graph representation](searching/graph.md)
-* [Breadth-first and depth-first search](searching/bfs_dfs.md)
+* [Breadth-first and depth-first algorithms](searching/bfs_dfs.md)
 
 ## Fun and games
 
@@ -94,3 +94,4 @@
 ## To do
 
 * [To do](to-do.md)
+

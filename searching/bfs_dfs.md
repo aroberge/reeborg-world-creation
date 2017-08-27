@@ -1,4 +1,4 @@
-# Breadth-first and depth-first search
+# Breadth-first and depth-first algorithms
 
 Both algorithms follow the same pattern:
 
@@ -34,7 +34,7 @@ while not frontier.is_empty():
             visited[neighbour] = True
 ```
 
-If `GET_NODE()` is retrieving the **last** node added to the frontier, we have a depth-first algorithm \(also sometimes described as FILO: First In, Last Out\). If `GET_NODE()` is retrieving the **first** node that was added to the frontier, we have a breadth-first algorithm \(also sometimes described as FIFO: First In, First Out\)
+If `GET_NODE()` is retrieving the **first** node that was added to the frontier \(First In, First Out, or FIFO\), we have a breadth-first algorithm  If `GET_NODE()` is retrieving the **last** node added to the frontier \(Last In, First Out, or LIFO\), we have something similar to a depth-first algorithm. \(A true depth-first algorithm would label a node as visited only when it is retrieved from the frontier.\)
 
 For `GET_NEIGHBOURS()` we'll consider two cases: either we get them always in the same order, or we get them in a random order each time.
 
@@ -71,11 +71,10 @@ while not frontier.is_empty():
     frontier.mark_done(current)  # changing color only
 ```
 
-To change from breadth-first to depth-first, we simply need to change `frontier.get_first()` to `frontier.get_last()`.
+To change from breadth-first to our quasi-depth-first, we simply need to change `frontier.get_first()` to `frontier.get_last()`.
 
 Below is a comparison of the two different algorithms,. On the left, we are using breadth-first: the frontier is expanding uniformly  
-away from the center. On the right, we are using depth-first. For both of these, we have made a world with small tiles using  
-`RUR.get_current_world().small_tiles = True` after selecting `World("Empty")`.
+away from the center. For both of these, we have made a world with small tiles using `RUR.get_current_world().small_tiles = True` after selecting `World("Empty")`.
 
 ![](/assets/bfs_dfs_ordered.gif)
 
@@ -83,5 +82,5 @@ If we choose the neighbours in random order, by removing `ordered=True`, we get 
 
 ![](/assets/bfs_dfs.gif)
 
-The breadth-first case does not look significantly different; however, the depth-first case definitely does. This depth-first search algorithm with randomly ordered neighbours is what the `RUR.create_maze()` function uses.
+The breadth-first case does not look significantly different; however, the other case definitely does. A recursive version of a proper depth-first search algorithm with randomly ordered neighbours is what the `RUR.create_maze()` function uses.
 
