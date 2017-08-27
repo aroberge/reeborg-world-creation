@@ -40,7 +40,11 @@ For `GET_NEIGHBOURS()` we'll consider two cases: either we get them always in th
 
 The data structure I will use for the frontier is a double ended queue or deque. I have implemented a custom deque, not as efficient as the one included in the Python standard library but one that does take care of indicating which node is visited using colours, without cluttering unduly the user's code.
 
-For the visited nodes, we could have used a Python set instead of a dict; however, when we will actually use the algorithm to search for the shortest path, a set will not be sufficient.
+> **\[info\]** Using a proper data structure
+>
+> Deque and PriorityQueue \(to be introduced later\) should not be used when trying to write efficient code. Students should be taught to use proper data structures when writing their own code.
+
+For the visited nodes, we could have used a Python set instead of a dict; however, when we will actually use the algorithm to search for the shortest path, a set will not be sufficient, and using a dict right now will minimize the changes.
 
 Let's first look at the cases where we select neighbours always **in the same order**. A complete program to do this for breadth-first search is as follows:
 
