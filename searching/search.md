@@ -10,3 +10,16 @@ The content of this chapter will follow fairly closely the description and notat
 
 It is my hope that by using Reeborg's World to run some code examples provided in this chapter, and modifying them at will, can provide a complementary approach to those mentioned above and contribute to a greater understanding by the students.
 
+> **\[success\] Useful resources**
+>
+> You may want to do:
+>
+> ```py
+> import search_tools
+> help(search_tools)
+> ```
+>
+> Also, if you need to copy-paste some examples from this chapter, it may be easier to do it using the raw version of  the [source files](https://github.com/aroberge/reeborg-world-creation/tree/master/searching) as it would ensure that the indentation would be preserved
+
+
+
