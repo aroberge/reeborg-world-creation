@@ -1,5 +1,9 @@
 # Breadth-first search
 
+> **\[danger\] The version on the website may not be compatible with the code presented here.**
+>
+> This will be fixed in the near future.
+
 In the previous section, we used a breadth-first search algorithm to visit an entire world. This is not particularly useful. A better use case is for finding a path between two nodes, which we call **start** and **goal**. All that is required is to add a test to see if we have found the goal, and quit at that point.  To make the code clearer, we encapsulate the algorithm in a function.
 
 ```py
