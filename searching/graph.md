@@ -1,5 +1,9 @@
 # Graph representation
 
+> **\[danger\] The version on the website may not be compatible with the code presented here.**
+>
+> This will be fixed in the near future.
+
 Instead of the usual grid representation of the world, we will use a graph representation where valid locations are **nodes** connected by **edges**. Reeborg can move from one node to another \(using a `move()` command\) provided that the two nodes are connected.[^1] We will label each node by a 2-tuple, `(x, y)` ; the connected nodes will be called its **neighbours.** Normally, except at the world's boundary, each node has four neighbours:
 
 ![](/assets/graph1.png)
