@@ -69,6 +69,7 @@
 * [Search algorithms](searching/search.md)
 * [Graph representation](searching/graph.md)
 * [Breadth-first and depth-first algorithms](searching/bfs_dfs.md)
+* [Breadth-first search](searching/bfs.md)
 
 ## Fun and games
 
