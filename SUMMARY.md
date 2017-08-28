@@ -70,6 +70,7 @@
 * [Graph representation](searching/graph.md)
 * [Breadth-first and depth-first algorithms](searching/bfs_dfs.md)
 * [Breadth-first search](searching/bfs.md)
+* [Minimizing the number of instructions](searching/minimizing-the-number-of-instructions.md)
 
 ## Fun and games
 
