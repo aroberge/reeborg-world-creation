@@ -35,13 +35,53 @@ in the complete example given below.
 
 Finally, when we used the information found when keeping only track of the required `move()` instructions, we had to ask Reeborg to turn until it was facing in the required direction so that a `move()` would take it to the next node; the code was:
 
+```py
+for node in path:
+    while node != reeborg.position_in_front():
+        reeborg.turn_left()
+    reeborg.move()
+```
 
+Now that we know explicitly which direction is required, and that nodes are connected only by a single `move()` or single `turn_left()` instruction, we need to change this to the following:
+
+```py
+for node in path:
+    _, _, direction = node
+    if direction != facing(reeborg):
+        reeborg.turn_left()
+    else:
+        reeborg.move()
+```
+
+All that is required is to define a function, `facing()`, which tells us which direction Reeborg is facing. This requires knowledge not documented in this book, nor obtainable by looking at `help(UsedRobot)`. The following code does what is needed:
+
+```py
+def facing(robot):
+    directions = [(RUR.EAST, "east"),
+                  (RUR.NORTH, "north"),
+                  (RUR.WEST, "west"),
+                  (RUR.SOUTH, "south")]
+    for D, d in directions:
+        if robot.body._orientation == D:
+            return d
+```
+
+Putting all of this together, we end up with the following:
 
 ```py
 from search_tools import Deque, get_neighbours
 World("Empty")
 think(0)
 no_highlight()
+
+def facing(robot):
+    directions = [(RUR.EAST, "east"),
+                  (RUR.NORTH, "north"),
+                  (RUR.WEST, "west"),
+                  (RUR.SOUTH, "south")]
+    for D, d in directions:
+        if robot.body._orientation == D:
+            return d
 
 def find_goal_bfs(start, goal, no_colors=False, directions=False):
     frontier = Deque(no_colors=no_colors)
@@ -60,7 +100,7 @@ def find_goal_bfs(start, goal, no_colors=False, directions=False):
 
 # set-up
 RUR.set_world_size(10, 10)
-goal = 9, 9
+goal = 9, 9    # We do not care about the final orientation
 start = 3, 3, "east"
 RUR.add_final_position("house", *goal)
 reeborg = UsedRobot(*start)
@@ -75,15 +115,6 @@ while current != start:
 path.reverse()
 del path[0]
 
-def facing(robot):
-    directions = [(RUR.EAST, "east"),
-                  (RUR.NORTH, "north"),
-                  (RUR.WEST, "west"),
-                  (RUR.SOUTH, "south")]
-    for D, d in directions:
-        if robot.body._orientation == D:
-            return d
-
 for node in path:
     _, _, direction = node
     if direction != facing(reeborg):
@@ -91,6 +122,14 @@ for node in path:
     else:
         reeborg.move()
 ```
+
+In the example above, we have Reeborg facing `"east"`. Here's the path that is found:
+
+![](/assets/bfs_path_east.png)
+
+This path has a single left turn. By contrast, if we use `3, 3, "north"` as the starting node, we find the following:
+
+![](/assets/bfs_path_north.png)
 
 
 
