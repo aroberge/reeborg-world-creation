@@ -1,6 +1,6 @@
 # Search algorithms
 
-> **\[danger\] The version on the website may not be compatible with the code presented here.**
+> **\[danger\] The version on **[**Reeborg's World**](http://reeborg.ca/reeborg.html)** may not be compatible with the code presented here.**
 >
 > This will be fixed in the near future.
 
@@ -12,14 +12,14 @@ It is my hope that by using Reeborg's World to run some code examples provided i
 
 > **\[success\] Useful resources**
 >
-> You may want to do:
+> If you need to copy-paste some examples from this chapter, it may be easier to do it using the raw version of the [source files](https://github.com/aroberge/reeborg-world-creation/tree/master/searching) as it would ensure that the indentation is preserved.
+>
+> Also, you may want to do:
 >
 > ```py
 > import search_tools
 > help(search_tools)
 > ```
->
-> Also, if you need to copy-paste some examples from this chapter, it may be easier to do it using the raw version of  the [source files](https://github.com/aroberge/reeborg-world-creation/tree/master/searching) as it would ensure that the indentation would be preserved
 
 
 
