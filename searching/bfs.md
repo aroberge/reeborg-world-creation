@@ -141,7 +141,7 @@ Since we select the neighbours of a given node in a random order by default, the
 
 ![](/assets/bfs_path.png)
 
-And here is an animation showing the search done and the path drawn:
+And here is an animation showing the search done and the corresponding path drawn:
 
 ![](/assets/bfs_path.gif)
 
