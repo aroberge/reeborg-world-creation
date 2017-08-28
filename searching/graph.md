@@ -10,23 +10,14 @@ However, if a location \(node\) would be **fatal** for Reeborg, or if its path \
 
 To get the neighbours to a position `(x, y)`, you can use the Python function `get_neighbours()`: it returns a list of nodes \(2-tuples\). By default, this list is given in random order. This function is included in the module `search_tools.py`.
 
-This function has three optional parameters whose use we will illustrate below.
+This function has three optional parameters whose use we will illustrate below.  
 They are:
 
-* `ordered`: when set to `True`, the neighbouring nodes will be given always in
-  the same order: east, north, west and south of the position `(x, y)`.
-* `ignore_walls`: shen set to `True`, nodes that would normally not be reachable because
-  a wall blocks the way will be included in the list of neighbours.
-* `robot_body`: if specified, this specific robot (body) will be taken into account when compiling the
-  list of neighbours. You may recall that a given robot can carry objects offering
-  a protection against otherwise fatal artefacts. Specifying such a robot (body)
-  ensures that all "safe" nodes for that robot are included in the list of
-  neighbours. Note that the position of the robot does **not** have to be the same
-  as where we are compiling the list of neighbours.
+* `ordered`: when set to `True`, the neighbouring nodes will be given always in the same order: east, north, west and south of the position `(x, y)`.
+* `ignore_walls`: shen set to `True`, nodes that would normally not be reachable because a wall blocks the way will be included in the list of neighbours.
+* `robot_body`: if specified, this specific robot \(body\) will be taken into account when compiling the list of neighbours. You may recall that a given robot can carry objects offering a protection against otherwise fatal artefacts. Specifying such a robot \(body\) ensures that all "safe" nodes for that robot are included in the list of neighbours. Note that the position of the robot does **not** have to be the same as where we are compiling the list of neighbours.
 
-  If `robot_body` is left unspecified, and there is at least one robot in the world, it
-  will be assumed that the default robot must be considered when compiling the list
-  of neighbours.
+  If `robot_body` is left unspecified, and there is at least one robot in the world, it will be assumed that the default robot must be considered when compiling the list of neighbours.
 
 Here are some examples for you to try:
 
@@ -82,17 +73,18 @@ print(get_neighbours( (4, 4) ))
 # -> [(4, 3)]
 ```
 
-The Python function `get_neighbours()` is a wrapper of a corresponding
-JavaScript function which we use in the next section.
+The Python function `get_neighbours()` is a wrapper of a corresponding JavaScript function which we use in the next section.
+
+> **\[info\] Further reading**
+>
+> * A complementary [introduction to graphs](http://www.redblobgames.com/pathfinding/grids/graphs.html) can be found on the Amit Patel's Red Blob Games site.
+> * [Artificial Intelligence: a Modern Approach](http://aima.cs.berkeley.edu/), by Russell and Norvig, uses graphs and search algorithms extensively. Some interactive examples, created by Amit Patel, can be [found here](http://aimacode.github.io/aima-javascript/3-Solving-Problems-By-Searching/).
 
 ## JavaScript version
 
-JavaScript does not have tuples; we thus use arrays with two elements
-to represent nodes when using JavaScript.
+JavaScript does not have tuples; we thus use arrays with two elements to represent nodes when using JavaScript.
 
-Also, JavaScript syntax does not include keyword-based arguments like we
-have in Python; instead, we pass an optional object.  Below is the JavaScript
-equivalent to the Python example above.
+Also, JavaScript syntax does not include keyword-based arguments like we have in Python; instead, we pass an optional object.  Below is the JavaScript equivalent to the Python example above.
 
 ```js
 World("Empty");
@@ -146,5 +138,5 @@ writeln(RUR.get_neighbours( [4, 4] ));
 // -> [[4, 3]]
 ```
 
-
 [^1]: When we mention that `move()` could be used for Reeborg to go from one node to another, we assume that Reeborg faces the required direction.
+
