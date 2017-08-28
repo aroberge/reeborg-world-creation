@@ -143,9 +143,7 @@ Since we select the neighbours of a given node in a random order by default, the
 
 ## Make Reeborg follow the path
 
-Add explanation here.
-
-We replace
+In Reeborg's World, what we are usually interested in is not to draw a path that Reeborg can follow but actually make Reeborg move along a given path. This is easily accomplished if we replace
 
 ```py
 # draw the path
