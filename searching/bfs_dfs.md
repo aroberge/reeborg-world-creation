@@ -1,5 +1,9 @@
 # Breadth-first and depth-first algorithms
 
+> **\[danger\] The version on the website may not be compatible with the code presented here.**
+>
+> This will be fixed in the near future.
+
 Both algorithms follow the same pattern:
 
 * Start at a node, which is the **frontier**, i.e. how far we have visited so far
@@ -94,7 +98,7 @@ You can also specify custom colors using `frontier.set_palette()`.
 
 ## JavaScript version
 
-To write a JavaScript version of the above program, we need to remember that JavaScript has neither tuples \(we can use arrays instead\) nor sets \(we can use objects instead\).  
+To write a JavaScript version of the above program, we need to remember that JavaScript has neither tuples \(we can use arrays instead\) nor sets \(we can use objects instead\).
 
 ```js
 think(0);
@@ -121,8 +125,6 @@ while (!frontier.is_empty()){
     frontier.mark_done(current); 
 }
 ```
-
-
 
 
 
