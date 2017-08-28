@@ -17,6 +17,26 @@ print(neighbours)
 # [(3, 3, "east"), (2, 3, "north")]
 ```
 
+You may recall that when we did not keep track of the direction, to see if we had reached the goal, we looked to see if the node we had reached was equal to the goal:
+
+```py
+if current == goal:
+   return came_from
+```
+
+If we still do not care what direction Reeborg should be facing when reaching the goal, we need to change this to only compare the location reached. Also, to reconstruct the path, we will need to keep track of the final orientation. As a result, the above two lines of code will be changed to
+
+```py
+if (current[0], current[1]) == (goal[0], goal[1]):
+    return came_from, current
+```
+
+in the complete example given below.
+
+Finally, when we used the information found when keeping only track of the required `move()` instructions, we had to ask Reeborg to turn until it was facing in the required direction so that a `move()` would take it to the next node; the code was:
+
+
+
 ```py
 from search_tools import Deque, get_neighbours
 World("Empty")
@@ -70,7 +90,6 @@ for node in path:
         reeborg.turn_left()
     else:
         reeborg.move()
-    
 ```
 
 
