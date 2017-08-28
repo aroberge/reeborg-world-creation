@@ -133,8 +133,8 @@ while current != start:
     path.append(current)
 
 # draw the path
-for cell in path:
-    RUR.add_colored_tile("green", *cell)
+for node in path:
+    RUR.add_colored_tile("green", *node)
 ```
 
 Since we select the neighbours of a given node in a random order by default, the path found may vary each time the program is executed. Here's one possible final result:
@@ -149,8 +149,8 @@ We replace
 
 ```py
 # draw the path
-for cell in path:
-    RUR.add_colored_tile("green", *cell)
+for node in path:
+    RUR.add_colored_tile("green", *node)
 ```
 
 by
@@ -159,8 +159,8 @@ by
 path.reverse()
 del path[0]  # Reeborg is there already
 
-for cell in path:
-    while cell != reeborg.position_in_front():
+for node in path:
+    while node != reeborg.position_in_front():
         reeborg.turn_left()
     reeborg.move()
 ```
