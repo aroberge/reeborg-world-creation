@@ -20,15 +20,15 @@ print(neighbours)
 You may recall that when we did not keep track of the direction, to see if we had reached the goal, we looked to see if the node we had reached was equal to the goal:
 
 ```py
-if current == goal:
+if neighbour == goal:
    return came_from
 ```
 
 If we still do not care what direction Reeborg should be facing when reaching the goal, we need to change this to only compare the location reached. Also, to reconstruct the path, we will need to keep track of the final orientation. As a result, the above two lines of code will be changed to
 
 ```py
-if (current[0], current[1]) == (goal[0], goal[1]):
-    return came_from, current
+if (neighbour[0], neibhgour[1]) == (goal[0], goal[1]):
+    return came_from, neighbour
 ```
 
 in the complete example given below.
@@ -90,12 +90,12 @@ def find_goal_bfs(start, goal, no_colors=False, directions=False):
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        if (current[0], current[1]) == (goal[0], goal[1]):
-            return came_from, current
         for neighbour in get_neighbours(current, directions=directions):
             if neighbour not in came_from:
                 frontier.append(neighbour)
                 came_from[neighbour] = current
+                if (neighbour[0], neighbour[1]) == (goal[0], goal[1]):
+                    return came_from, neighbour
         frontier.mark_done(current)
 
 # set-up
@@ -107,13 +107,12 @@ reeborg = UsedRobot(*start)
 came_from, current = find_goal_bfs(start, goal, no_colors=True, directions=True)
 
 # obtain path from search result
-path = [current]
+path = []
 while current != start:
-    current = came_from[current]
     path.append(current)
-
+    current = came_from[current]
+    
 path.reverse()
-del path[0]
 
 for node in path:
     _, _, direction = node
@@ -130,6 +129,4 @@ In the example above, we have Reeborg facing `"east"`. Here's the path that is f
 This path has a single left turn. By contrast, if we use `3, 3, "north"` as the starting node, we find the following:
 
 ![](/assets/bfs_path_north.png)
-
-
 
