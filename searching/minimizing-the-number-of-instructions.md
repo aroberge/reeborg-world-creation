@@ -111,7 +111,7 @@ path = []
 while current != start:
     path.append(current)
     current = came_from[current]
-    
+
 path.reverse()
 
 for node in path:
@@ -129,4 +129,38 @@ In the example above, we have Reeborg facing `"east"`. Here's the path that is f
 This path has a single left turn. By contrast, if we use `3, 3, "north"` as the starting node, we find the following:
 
 ![](/assets/bfs_path_north.png)
+
+## Using the `search_tools` library
+
+Here is an example using the available functions from the `search_tools` library.
+
+```py
+from search_tools import (find_goal_bfs, facing, 
+                          reconstruct_path)
+
+World("Empty")
+think(100)
+no_highlight()
+goal = 11, 11
+start = 3, 3, "east"
+RUR.add_final_position("house", *goal)
+reeborg = UsedRobot(*start)
+RUR.add_wall("north", 11, 10)
+RUR.add_wall("east", 10, 11)
+
+came_from, current = find_goal_bfs(start, 
+                                   goal, 
+                                   no_colors=True, 
+                                   directions=True)
+path = reconstruct_path(came_from, start, current)
+
+for node in path:
+    _, _, direction = node
+    if direction != facing(reeborg):
+        reeborg.turn_left()
+    else:
+        reeborg.move()
+```
+
+
 
