@@ -26,7 +26,7 @@ def find_goal_bfs_v1(start, goal):
             if neighbour not in visited:
                 frontier.append(neighbour)
                 visited.add(neighbour)
-                if current == goal: # <-- new test added
+                if neighbour == goal: # <-- new test added
                      return
 
         frontier.mark_done(current)
@@ -36,7 +36,7 @@ RUR.set_world_size(10, 10)
 start = 3, 3
 goal = 6, 4
 RUR.add_object("star", *goal)
-find_goal_bfs(start, goal)
+find_goal_bfs_v1(start, goal)
 ```
 
 Instead of checking if we have reached the goal when we select a node from the frontier, we could do it when we add a **neighbour** to the set of visited nodes. This would work here but would be guaranteed to yield the best possible path when we introduce a cost function later on.
@@ -123,10 +123,10 @@ came_from = find_goal_bfs_v2(start, goal, no_colors=True)
 current = goal
 path = []
 while current != start:
-    path.append[current]
+    path.append(current)
     current = came_from[current]
     
-path.append[start]
+path.append(start)
 
 # draw the path
 for node in path:
