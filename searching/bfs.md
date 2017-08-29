@@ -4,7 +4,7 @@
 >
 > This will be fixed in the near future.
 
-In the previous section, we used a breadth-first search algorithm to visit an entire world. This is not particularly useful. A better use case is for finding a path between two nodes, which we call **start** and **goal**. All that is required is to add a test to see if we have found the goal, and quit at that point.  To make the code clearer, we encapsulate the algorithm in a function.
+In the previous section, we used a breadth-first search algorithm to visit an entire world. This is not particularly useful. A better use case is for finding a path between two nodes, which we call **start** and **goal**. All that is required is to add a test to see if we have found the goal, and quit at that point.  To make the code clearer, we encapsulate the algorithm in a function whose name ends with `_v1` to indicate that this is only a first version.
 
 ```py
 from search_tools import Deque, get_neighbours
@@ -12,7 +12,7 @@ World("Empty")
 think(0)
 no_highlight()
 
-def find_goal_bfs(start, goal):
+def find_goal_bfs_v1(start, goal):
     '''Starting from the *start* node, uses a breadth-first search
        algorithm to explore a world until the *goal* node is found.
     '''
@@ -21,17 +21,13 @@ def find_goal_bfs(start, goal):
     visited = set([start])
 
     while not frontier.is_empty():
-        current = frontier.get_first()
-
-        if current == goal: # <-- new test added
-            return        
-
+        current = frontier.get_first()   
         for neighbour in get_neighbours(current):
             if neighbour not in visited:
                 frontier.append(neighbour)
                 visited.add(neighbour)
-
-                #  Test here?
+                if current == goal: # <-- new test added
+                     return
 
         frontier.mark_done(current)
 
@@ -51,31 +47,24 @@ So far the algorithm as implemented explores the world until the goal is found, 
 
 Instead of using a set for recording the visited nodes, we use a dict whose keys are nodes and corresponding values are nodes that were immediately visited before; we call this dict `came_from`, and note the relevant line changes below by the comments labeled 1a, 1b, and 1c.  We also add the option of not using colour to show the visited nodes \(comments 2a and 2b\). Finally, we return the `came_from` dict \(comment 3\).
 
-| Old version | New version |
-| :--- | :--- |
-| \`\`\`test\`\`\` | \`\`\`test\`\`\` |
-
-
-
 ```py
-def find_goal_bfs(start, goal, no_colors=False): # 2a
+def find_goal_bfs_v2(start, goal):
     '''Starting from the *start* node, uses a breadth-first search
        algorithm to explore a world until the *goal* node is found,
        recording the nodes visited along the way.
     '''
-    frontier = Deque(no_colors=no_colors)  # 2b
+    frontier = Deque(no_colors=no_colors)      # 2b
     frontier.append(start)
-    came_from = {start: None}  # 1a
+    came_from = {start: None}                  # 1a
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        if current == goal:
-            return came_from  # 3
-
         for neighbour in get_neighbours(current):
-            if neighbour not in came_from:  # 1b
+            if neighbour not in came_from:     # 1b
                 frontier.append(neighbour)
                 came_from[neighbour] = current # 1c
+                if neighbour == goal:
+                    return came_from           # 3
         frontier.mark_done(current)
 ```
 
@@ -83,10 +72,12 @@ The path can be reconstructed using the `came_from` dict as follows:
 
 ```py
 current = goal
-path = [current]
+path = []
 while current != start:
+    path.append[current]
     current = came_from[current]
-    path.append(current)
+    
+path.append[start]
 ```
 
 And here's a full program that can find a path, and show it in colours at the end.
@@ -97,7 +88,7 @@ World("Empty")
 think(0)
 no_highlight()
 
-def find_goal_bfs(start, goal, no_colors=False):
+def find_goal_bfs_v2(start, goal, no_colors=False):
     '''Starting from the *start* node, uses a breadth-first search
        algorithm to explore a world until the *goal* node is found,
        recording the nodes visited along the way.
@@ -108,9 +99,6 @@ def find_goal_bfs(start, goal, no_colors=False):
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        if current == goal:
-            return came_from
-
         for neighbour in get_neighbours(current):
             if neighbour not in came_from:
                 frontier.append(neighbour)
@@ -129,14 +117,16 @@ reeborg.set_model("yellow")
 
 # do the search; do not use colors to indicate the search
 # so that we can focus on the final result
-came_from = find_goal_bfs(start, goal, no_colors=True)
+came_from = find_goal_bfs_v2(start, goal, no_colors=True)
 
 # obtain path from search result
 current = goal
-path = [current]
+path = []
 while current != start:
+    path.append[current]
     current = came_from[current]
-    path.append(current)
+    
+path.append[start]
 
 # draw the path
 for node in path:
