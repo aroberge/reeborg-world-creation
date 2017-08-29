@@ -4,7 +4,7 @@
 >
 > This will be fixed in the near future.
 
-Both algorithms follow the same pattern:
+Both breadth-first and depth-first algorithms follow the same pattern:
 
 * Start at a node, which is the **frontier**, i.e. how far we have visited so far
 * Repeat until all nodes have been visited:
