@@ -39,5 +39,7 @@ Other content
 
 * For graph demo, add tiles that are arrows \(see redblobames\); perhaps arrows with an offset to show the overlap, rather than staying into a normal grid square.
 
+* add https://aroberge.blogspot.ca/2015/10/cryptic-reeborg.html
+* 
 
 
