@@ -51,6 +51,12 @@ So far the algorithm as implemented explores the world until the goal is found, 
 
 Instead of using a set for recording the visited nodes, we use a dict whose keys are nodes and corresponding values are nodes that were immediately visited before; we call this dict `came_from`, and note the relevant line changes below by the comments labeled 1a, 1b, and 1c.  We also add the option of not using colour to show the visited nodes \(comments 2a and 2b\). Finally, we return the `came_from` dict \(comment 3\).
 
+| Old version | New version |
+| :--- | :--- |
+| \`\`\`test\`\`\` | \`\`\`test\`\`\` |
+
+
+
 ```py
 def find_goal_bfs(start, goal, no_colors=False): # 2a
     '''Starting from the *start* node, uses a breadth-first search
