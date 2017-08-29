@@ -1,10 +1,18 @@
-# Graph representation
+# Graphs
 
 > **\[danger\] The version on the website may not be compatible with the code presented here.**
 >
 > This will be fixed in the near future.
 
-Instead of the usual grid representation of the world, we will use a graph representation where valid locations are **nodes** connected by **edges**. Reeborg can move from one node to another \(using a `move()` command\) provided that the two nodes are connected.[^1] We will label each node by a 2-tuple, `(x, y)` ; the connected nodes will be called its **neighbours.** Normally, except at the world's boundary, each node has four neighbours:
+A graph is a set of **nodes** connected by **edges**. Below is a screen capture taken while browsing [Grids and Graphs](http://www.redblobgames.com/pathfinding/grids/graphs.html) from Red Blob Games, showing an example of a graph. 
+
+![](/assets/graph.gif)
+
+From a mathematics point of view, both graphs are identical, since they have the same number of nodes, connected in the same way by edges -- even though their appearance as drawn look different.
+
+## Graph representation of Reeborg's World
+
+Instead of the usual grid representation of the world, we will use a graph representation where valid locations are **nodes** connected by invisibble **edges**. Reeborg can move from one node to another \(using a `move()` command\) provided that the two nodes are connected.[^1] We will label each node by a 2-tuple, `(x, y)` ; the connected nodes will be called its **neighbours.** Normally, except at the world's boundary, each node has four neighbours:
 
 ![](/assets/graph1.png)
 
