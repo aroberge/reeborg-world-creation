@@ -146,6 +146,8 @@ And here is an animation showing the search done and the corresponding path draw
 In Reeborg's World, what we are usually interested in is not to draw a path that Reeborg can follow but actually make Reeborg move along a given path. This is easily accomplished if we replace
 
 ```py
+path.append(start)
+
 # draw the path
 for node in path:
     RUR.add_colored_tile("green", *node)
@@ -154,8 +156,7 @@ for node in path:
 by
 
 ```py
-path.reverse()
-del path[0]  # Reeborg is there already
+path.reverse()  # we don't need "start" in reverse path
 
 for node in path:
     while node != reeborg.position_in_front():
