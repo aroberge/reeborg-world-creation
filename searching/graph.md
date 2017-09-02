@@ -4,7 +4,7 @@
 >
 > This will be fixed in the near future.
 
-A graph is a set of **nodes** connected by **edges**. Below is a screen capture taken while browsing [Grids and Graphs](http://www.redblobgames.com/pathfinding/grids/graphs.html) from Red Blob Games, showing an example of a graph. 
+A graph is a set of **nodes** connected by **edges**. Below is a screen capture taken while browsing [Grids and Graphs](http://www.redblobgames.com/pathfinding/grids/graphs.html) from Red Blob Games, showing an example of a graph.
 
 ![](/assets/graph.gif)
 
@@ -12,7 +12,7 @@ From a mathematics point of view, both graphs are identical, since they have the
 
 ## Graph representation of Reeborg's World
 
-Instead of the usual grid representation of the world, we will use a graph representation where valid locations are **nodes** connected by invisibble **edges**. Reeborg can move from one node to another \(using a `move()` command\) provided that the two nodes are connected.[^1] We will label each node by a 2-tuple, `(x, y)` ; the connected nodes will be called its **neighbours.** Normally, except at the world's boundary, each node has four neighbours:
+Instead of the usual grid representation of the world, we will use a graph representation where valid locations are **nodes** connected by **edges**. Reeborg can move from one node to another \(using a `move()` command\) provided that the two nodes are connected.[^1] We will label each node by a 2-tuple, `(x, y)` ; the connected nodes will be called its **neighbours.** Normally, except at the world's boundary, each node has four neighbours:
 
 ![](/assets/graph1.png)
 
@@ -22,7 +22,7 @@ However, if a location \(node\) would be **fatal** for Reeborg, or if its path \
 
 To get the neighbours to a position `(x, y)`, you can use the Python function `get_neighbours()`: it returns a list of nodes \(2-tuples\). By default, this list is given in random order. This function is included in the module `search_tools.py`.
 
-This function has three optional parameters whose use we will illustrate below.  
+This function has three optional parameters whose use we will illustrate below.
 They are:
 
 * `ordered`: when set to `True`, the neighbouring nodes will be given always in the same order: east, north, west and south of the position `(x, y)`.
@@ -34,25 +34,22 @@ They are:
 Here are some examples for you to try:
 
 ```py
-from search_tools import get_neighbours
+from search_tools import Graph
 
 World("Empty")
-print(get_neighbours( (4, 4), ordered=True))
-# -> [(5, 4), (4, 5), (3, 4), (4, 3)]
 
-print(get_neighbours( (4, 4) ))
-# -> Same as the above, but with nodes in random order
+graph = Graph(ordered=True)
+
+print(graph.get_neighbours( (4, 4)))
+# -> [(5, 4), (4, 5), (3, 4), (4, 3)]
 
 RUR.add_wall("east", 4, 4)
-print(get_neighbours( (4, 4), ordered=True))
+print(graph.get_neighbours( (4, 4)))
 # -> [(4, 5), (3, 4), (4, 3)]
-
-print(get_neighbours( (4, 4), ordered=True, ignore_walls=True))
-# -> [(5, 4), (4, 5), (3, 4), (4, 3)]
 
 RUR.add_obstacle("water", 4, 5)
 RUR.add_obstacle("fire", 3, 4)
-print(get_neighbours( (4, 4)))
+print(graph.get_neighbours( (4, 4)))
 # -> [(4, 3)]
 
 RUR.add_new_thing({'name': 'fire_protection',
@@ -65,23 +62,29 @@ RUR.add_new_thing({'name': 'water_protection',
                    'protections': ['water']
                    })
 
+##=== Adding robots, but unordered neighbours
+
 robot_fire = UsedRobot(1, 1, fire_protection=1)
 assert robot_fire.carries_object("fire_protection")
-
 robot_water = UsedRobot(2, 2, water_protection=1)
 
-print(get_neighbours( (4, 4), ordered=True, robot_body=robot_fire.body))
-# -> [(3, 4), (4, 3)]
+graph_f = Graph(robot_body = robot_fire.body)
+graph_w = Graph(robot_body = robot_water.body)
+graph_new = Graph()
 
-print(get_neighbours( (4, 4), ordered=True, robot_body=robot_water.body))
-# -> [(4, 5), (4, 3)]
+print(graph_f.get_neighbours( (4, 4)))
+# some permutation of  [(3, 4), (4, 3)]
 
-print(get_neighbours( (4, 4), ordered=True))
-# -> [(3, 4), (4, 3)]  default robot is robot_fire,
-#                      which was the first robot added
+print(graph_w.get_neighbours( (4, 4)))
+# some permutation of [(4, 5), (4, 3)]
+
+print(graph_new.get_neighbours( (4, 4)))
+# some permutation of [(3, 4), (4, 3)]
+# default robot is robot_fire,
+# which was the first robot added
 
 robot_fire.put()
-print(get_neighbours( (4, 4) ))
+print(graph_f.get_neighbours( (4, 4) ))
 # -> [(4, 3)]
 ```
 
@@ -100,24 +103,20 @@ Also, JavaScript syntax does not include keyword-based arguments like we have in
 
 ```js
 World("Empty");
-writeln(RUR.get_neighbours( [4, 4], {ordered:true}));
-// -> [[5, 4], [4, 5], [3, 4], [4, 3]]
 
-writeln(RUR.get_neighbours( [4, 4] ));
-// -> Same as the above, but with nodes in random order
+var graph = new RUR.Graph({ordered:true});
+
+writeln(graph.get_neighbours([4, 4]));
+// -> [[5, 4], [4, 5], [3, 4], [4, 3]]
 
 RUR.add_wall("east", 4, 4);
-writeln(RUR.get_neighbours( [4, 4], {ordered:true}));
+writeln(graph.get_neighbours([4, 4]));
 // -> [[4, 5], [3, 4], [4, 3]]
-
-writeln(RUR.get_neighbours( [4, 4], {ordered:true, ignore_walls:true}));
-// -> [[5, 4], [4, 5], [3, 4], [4, 3]]
 
 RUR.add_obstacle("water", 4, 5);
 RUR.add_obstacle("fire", 3, 4);
-writeln(RUR.get_neighbours( [4, 4]));
+writeln(graph.get_neighbours([4, 4]));
 // -> [[4, 3]]
-
 
 RUR.add_new_thing({'name': 'fire_protection',
                    'url': 'src/images/token.png',
@@ -129,26 +128,32 @@ RUR.add_new_thing({'name': 'water_protection',
                    'protections': ['water']
                    });
 
-robot_fire = new UsedRobot(1, 1);
-RUR.give_object_to_robot("fire_protection", 1, robot_fire.body);
+//=== Adding robots, but unordered neighbours
 
-robot_water = new UsedRobot(2, 2);
+var robot_fire = new UsedRobot(1, 1);
+RUR.give_object_to_robot("fire_protection", 1, robot_fire.body);
+var robot_water = new UsedRobot(2, 2);
 RUR.give_object_to_robot("water_protection", 1, robot_water.body);
 
-writeln(RUR.get_neighbours( [4, 4], {ordered:true, robot_body:robot_fire.body}));
-// -> [[3, 4], [4, 3]]
+var graph_f = new RUR.Graph({robot_body: robot_fire.body});
+var graph_w = new RUR.Graph({robot_body: robot_water.body});
+var graph_new = new RUR.Graph()
 
-writeln(RUR.get_neighbours( [4, 4], {ordered:true, robot_body:robot_water.body}));
-// -> [[4, 5], [4, 3]]
+writeln(graph_f.get_neighbours( [4, 4]));
+// some permutation of  [[3, 4], [4, 3]]
 
-writeln(RUR.get_neighbours( [4, 4], {ordered:true}));
-// -> [[3, 4], [4, 3]]  default robot is robot_fire,
-//                      which was the first robot added
+writeln(graph_w.get_neighbours( [4, 4]));
+// some permutation of [[4, 5], [4, 3]]
+
+writeln(graph_new.get_neighbours( [4, 4]));
+// some permutation of [[3, 4], [4, 3]]
+// default robot is robot_fire,
+// which was the first robot added
 
 robot_fire.put();
-writeln(RUR.get_neighbours( [4, 4] ));
+writeln(graph_f.get_neighbours( [4, 4] ));
 // -> [[4, 3]]
 ```
 
-[^1]: When we mention that `move()` could be used for Reeborg to go from one node to another, we assume that Reeborg faces the required direction.
+[^1]: When we mention that `move()` could be used for Reeborg to go from one node to another, we assume that Reeborg faces the required direction.  Later, we will introduce a different definition of a graph for Reeborg's World.
 
