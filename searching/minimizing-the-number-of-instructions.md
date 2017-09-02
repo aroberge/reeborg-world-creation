@@ -133,7 +133,7 @@ This path has a single left turn. By contrast, if we use `3, 3, "north"` as the 
 
 ![](/assets/bfs_path_north.png)
 
-## Using the `search_tools` library
+## Using the `search_tools` module
 
 For convenience, the various functions we have defined above are included in the `search_tools` module.
 
