@@ -35,7 +35,7 @@ visited = set([start])  # a set is the minimal Python data structure
 
 while not frontier.is_empty():
     current = frontier.GET_NODE()
-    # for "true" depth-first, this is where we would add a node to 
+    # for "true" depth-first, this is where we would add a node to
     # the visited set
     for neighbour in graph.get_neighbours(current):
         if neighbour not in visited:
@@ -44,7 +44,7 @@ while not frontier.is_empty():
             # the loop at this point, and expand the frontier
             # only one node at a time
             visited.add(neighbour)
-            
+
 ```
 
 If `GET_NODE()` is retrieving the **first** node that was added to the frontier \(First In, First Out, or FIFO\), we have a breadth-first algorithm  If `GET_NODE()` is retrieving the **last** node added to the frontier \(Last In, First Out, or LIFO\), we have essentially a depth-first algorithm. \(A true depth-first algorithm would label a node as visited only when it is retrieved from the frontier.\)
@@ -62,7 +62,7 @@ The data structure I will use for the frontier is a double ended queue or deque.
 Let's first look at the cases where we select neighbours always **in the same order**. A complete program to do this for breadth-first search is as follows:
 
 ```py
-from search_tools import Deque, get_neighbours
+from search_tools import Deque, Graph
 
 no_highlight()  # highlighting would create too many frames
                 # however, for smaller worlds, you might want
@@ -72,6 +72,7 @@ think(0)        # Makes display update as fast as possible
 World("Empty")
 RUR.set_world_size(11, 11)
 
+graph = Graph(ordered=True)  # <-- See comment below
 frontier = Deque()
 
 start = (6, 6)
@@ -80,7 +81,7 @@ visited = set([start])
 
 while not frontier.is_empty():
     current = frontier.get_first()  # <-- See comment below
-    for neighbour in get_neighbours(current, ordered=True):
+    for neighbour in graph.get_neighbours(current):
         if neighbour not in visited:
             frontier.append(neighbour)
             visited.add(neighbour)
@@ -114,6 +115,7 @@ think(0);
 World("Empty");
 RUR.set_world_size(11, 11);
 
+graph = new RUR.Graph({ordered: true})
 frontier = new RUR.Deque();
 visited = {};
 
@@ -123,7 +125,7 @@ visited[start] = true;
 
 while (!frontier.is_empty()){
     current = frontier.get_first();
-    neighbours = RUR.get_neighbours(current);
+    neighbours = graph.get_neighbours(current);
     for(i=0; i<neighbours.length; i++) {
         neighbour = neighbours[i];
         if (visited[neighbour] === undefined){
@@ -131,7 +133,7 @@ while (!frontier.is_empty()){
             visited[neighbour] = true;
         }
     }
-    frontier.mark_done(current); 
+    frontier.mark_done(current);
 }
 ```
 
