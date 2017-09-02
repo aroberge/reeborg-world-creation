@@ -26,6 +26,7 @@ Visually, the beginning looks as follows:
 Using Python, the general algorithm looks as follows:
 
 ```py
+graph = Graph()  # possibly with additional parameters
 frontier = SomeDataStructure()
 start = (x, y)
 frontier.append(start)
@@ -34,15 +35,23 @@ visited = set([start])  # a set is the minimal Python data structure
 
 while not frontier.is_empty():
     current = frontier.GET_NODE()
-    for neighbour in GET_NEIGHBOURS(current):
+    # for "true" depth-first, this is where we would add a node to 
+    # the visited set
+    for neighbour in graph.get_neighbours(current):
         if neighbour not in visited:
             frontier.append(neighbour)
+            # for "true" depth-first, we would need to break
+            # the loop at this point, and expand the frontier
+            # only one node at a time
             visited.add(neighbour)
+            
 ```
 
 If `GET_NODE()` is retrieving the **first** node that was added to the frontier \(First In, First Out, or FIFO\), we have a breadth-first algorithm  If `GET_NODE()` is retrieving the **last** node added to the frontier \(Last In, First Out, or LIFO\), we have essentially a depth-first algorithm. \(A true depth-first algorithm would label a node as visited only when it is retrieved from the frontier.\)
 
-For `GET_NEIGHBOURS()` we'll consider two cases: either we get them always in the same order, or we get them in a random order each time.
+For `Graph()`, we'll consider two cases: either we get them always in the same order, or we get them in a random order each time.
+
+## Deque data structure
 
 The data structure I will use for the frontier is a double ended queue or deque. I have implemented a custom deque, not as efficient as the one included in the Python standard library but one that does take care of automatically indicating which node is visited using colours, without cluttering unduly the user's code.
 
