@@ -14,7 +14,7 @@ from search_tools import Graph
 graph = Graph(turn_left=True)
 neighbours = graph.get_neighbours((2, 3, "east"))
 print(neighbours)
-# If the world is empty, the result will be: 
+# If the world is empty, the result will be:
 # [(3, 3, "east"), (2, 3, "north")]
 ```
 
@@ -70,9 +70,7 @@ def facing(robot):
 Putting all of this together, we end up with the following:
 
 ```py
-from search_tools import Deque, get_neighbours
-World("Empty")
-think(0)
+from search_tools import Deque, Graph
 no_highlight()
 
 def facing(robot):
@@ -84,14 +82,14 @@ def facing(robot):
         if robot.body._orientation == D:
             return d
 
-def find_goal_bfs(start, goal, no_colors=False, directions=False):
+def find_goal_bfs(start, goal, graph, no_colors=False):
     frontier = Deque(no_colors=no_colors)
     frontier.append(start)
     came_from = {start: None}
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        for neighbour in get_neighbours(current, directions=directions):
+        for neighbour in graph.get_neighbours(current):
             if neighbour not in came_from:
                 frontier.append(neighbour)
                 came_from[neighbour] = current
@@ -100,12 +98,16 @@ def find_goal_bfs(start, goal, no_colors=False, directions=False):
         frontier.mark_done(current)
 
 # set-up
+World("Empty")
+think(0)
 RUR.set_world_size(10, 10)
 goal = 9, 9    # We do not care about the final orientation
 start = 3, 3, "east"
 RUR.add_final_position("house", *goal)
 reeborg = UsedRobot(*start)
-came_from, current = find_goal_bfs(start, goal, no_colors=True, directions=True)
+
+graph = Graph(turn_left=True)
+came_from, current = find_goal_bfs(start, goal, graph, no_colors=True)
 
 # obtain path from search result
 path = []
@@ -133,15 +135,14 @@ This path has a single left turn. By contrast, if we use `3, 3, "north"` as the 
 
 ## Using the `search_tools` library
 
-Here is an example using the available functions from the `search_tools` library.
+Here is an example using the all the available functions from the `search_tools` library.
 
 ```py
-from search_tools import (find_goal_bfs, facing, 
-                          reconstruct_path)
+import search_tools
 
+no_highlight()
 World("Empty")
 think(100)
-no_highlight()
 goal = 11, 11
 start = 3, 3, "east"
 RUR.add_final_position("house", *goal)
@@ -149,15 +150,15 @@ reeborg = UsedRobot(*start)
 RUR.add_wall("north", 11, 10)
 RUR.add_wall("east", 10, 11)
 
-came_from, current = find_goal_bfs(start, 
-                                   goal, 
-                                   no_colors=True, 
-                                   directions=True)
-path = reconstruct_path(came_from, start, current)
+graph = search_tools.Graph(turn_left=True)
+came_from, current = search_tools.find_goal_bfs(start,
+                         goal, graph, no_colors=True)
+path = search_tools.reconstruct_path(came_from, start,
+                                     current)
 
 for node in path:
     _, _, direction = node
-    if direction != facing(reeborg):
+    if direction != search_tools.facing(reeborg):
         reeborg.turn_left()
     else:
         reeborg.move()
