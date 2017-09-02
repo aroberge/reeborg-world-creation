@@ -10,8 +10,9 @@ When it comes to moving from one point to another in the world, Reeborg uses two
 We can encode this information by using a graph with a different definition of nodes: a node will include both coordinates `x` and `y` as well as the direction in which Reeborg is facing.  For example, `(2, 3, "east")` could be a node. For this type of graph, nodes are 3-tuples whereas before we had 2-tuples. As it turns out, we can find its neighbours using the same function as before, but calling it with an optional parameter set to `True`.
 
 ```py
-from search_tools import get_neighbours
-neighbours = get_neighbours((2, 3, "east"), directions=True)
+from search_tools import Graph
+graph = Graph(turn_left=True)
+neighbours = graph.get_neighbours((2, 3, "east"))
 print(neighbours)
 # If the world is empty, the result will be: 
 # [(3, 3, "east"), (2, 3, "north")]
@@ -27,7 +28,7 @@ if neighbour == goal:
 If we still do not care what direction Reeborg should be facing when reaching the goal, we need to change this to only compare the location reached. Also, to reconstruct the path, we will need to keep track of the final orientation. As a result, the above two lines of code will be changed to
 
 ```py
-if (neighbour[0], neibhgour[1]) == (goal[0], goal[1]):
+if (neighbour[0], neighour[1]) == (goal[0], goal[1]):
     return came_from, neighbour
 ```
 
