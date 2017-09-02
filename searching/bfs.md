@@ -7,12 +7,10 @@
 In the previous section, we used a breadth-first search algorithm to visit an entire world. This is not particularly useful. A better use case is for finding a path between two nodes, which we call **start** and **goal**. All that is required is to add a test to see if we have found the goal, and quit at that point.  To make the code clearer, we encapsulate the algorithm in a function whose name ends with `_v1` to indicate that this is only a first version.
 
 ```py
-from search_tools import Deque, get_neighbours
-World("Empty")
-think(0)
+from search_tools import Deque, Graph
 no_highlight()
 
-def find_goal_bfs_v1(start, goal):
+def find_goal_bfs_v1(start, goal, graph):
     '''Starting from the *start* node, uses a breadth-first search
        algorithm to explore a world until the *goal* node is found.
     '''
@@ -21,8 +19,8 @@ def find_goal_bfs_v1(start, goal):
     visited = set([start])
 
     while not frontier.is_empty():
-        current = frontier.get_first()   
-        for neighbour in get_neighbours(current):
+        current = frontier.get_first()
+        for neighbour in graph.get_neighbours(current):
             if neighbour not in visited:
                 frontier.append(neighbour)
                 visited.add(neighbour)
@@ -32,11 +30,15 @@ def find_goal_bfs_v1(start, goal):
         frontier.mark_done(current)
 
 # set up
+World("Empty")
+think(0)
 RUR.set_world_size(10, 10)
 start = 3, 3
 goal = 6, 4
 RUR.add_object("star", *goal)
-find_goal_bfs_v1(start, goal)
+
+graph = Graph()
+find_goal_bfs_v1(start, goal, graph)
 ```
 
 Instead of checking if we have reached the goal when we select a node from the frontier, we could do it when we add a **neighbour** to the set of visited nodes. This would work here but would be guaranteed to yield the best possible path when we introduce a cost function later on.
@@ -48,7 +50,7 @@ So far the algorithm as implemented explores the world until the goal is found, 
 Instead of using a set for recording the visited nodes, we use a dict whose keys are nodes and corresponding values are nodes that were immediately visited before; we call this dict `came_from`, and note the relevant line changes below by the comments labeled 1a, 1b, and 1c.  We also add the option of not using colour to show the visited nodes \(comments 2a and 2b\). Finally, we return the `came_from` dict \(comment 3\).
 
 ```py
-def find_goal_bfs_v2(start, goal):
+def find_goal_bfs_v2(start, goal, graph):
     '''Starting from the *start* node, uses a breadth-first search
        algorithm to explore a world until the *goal* node is found,
        recording the nodes visited along the way.
@@ -59,7 +61,7 @@ def find_goal_bfs_v2(start, goal):
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        for neighbour in get_neighbours(current):
+        for neighbour in graph.get_neighbours(current):
             if neighbour not in came_from:     # 1b
                 frontier.append(neighbour)
                 came_from[neighbour] = current # 1c
@@ -76,19 +78,17 @@ path = []
 while current != start:
     path.append[current]
     current = came_from[current]
-    
+
 path.append[start]
 ```
 
 And here's a full program that can find a path, and show it in colours at the end.
 
 ```py
-from search_tools import Deque, get_neighbours
-World("Empty")
-think(0)
+from search_tools import Deque, Graph
 no_highlight()
 
-def find_goal_bfs_v2(start, goal, no_colors=False):
+def find_goal_bfs_v2(start, goal, graph, no_colors=False):
     '''Starting from the *start* node, uses a breadth-first search
        algorithm to explore a world until the *goal* node is found,
        recording the nodes visited along the way.
@@ -99,7 +99,7 @@ def find_goal_bfs_v2(start, goal, no_colors=False):
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        for neighbour in get_neighbours(current):
+        for neighbour in graph.get_neighbours(current):
             if neighbour not in came_from:
                 frontier.append(neighbour)
                 came_from[neighbour] = current
@@ -108,6 +108,8 @@ def find_goal_bfs_v2(start, goal, no_colors=False):
         frontier.mark_done(current)
 
 # set-up
+World("Empty")
+think(0)
 RUR.set_world_size(10, 10)
 goal = 9, 9
 start = 3, 3
@@ -115,9 +117,10 @@ RUR.add_object("star", *goal)
 reeborg = UsedRobot(*start)
 reeborg.set_model("yellow")
 
+graph = Graph()
 # do the search; do not use colors to indicate the search
 # so that we can focus on the final result
-came_from = find_goal_bfs_v2(start, goal, no_colors=True)
+came_from = find_goal_bfs_v2(start, goal, graph, no_colors=True)
 
 # obtain path from search result
 current = goal
@@ -125,7 +128,7 @@ path = []
 while current != start:
     path.append(current)
     current = came_from[current]
-    
+
 path.append(start)
 
 # draw the path
@@ -170,6 +173,59 @@ Below is an image showing the final result. In addition to the above changes, we
 * replaced `RUR.add_object("star", *goal)` by `RUR.add_final_position("house", *goal)` so that there would be an automatic verification done at the end, confirming that we have reached the goal.
 
 ![](/assets/bfs_path3.png)
+
+And here is the final program in its entirety
+```py
+from search_tools import Deque, Graph
+no_highlight()
+
+def find_goal_bfs_v2(start, goal, graph, no_colors=False):
+    '''Starting from the *start* node, uses a breadth-first search
+       algorithm to explore a world until the *goal* node is found,
+       recording the nodes visited along the way.
+    '''
+    frontier = Deque(no_colors=no_colors)
+    frontier.append(start)
+    came_from = {start: None}
+
+    while not frontier.is_empty():
+        current = frontier.get_first()
+        for neighbour in graph.get_neighbours(current):
+            if neighbour not in came_from:
+                frontier.append(neighbour)
+                came_from[neighbour] = current
+                if neighbour == goal:
+                    return came_from
+        frontier.mark_done(current)
+
+# set-up
+World("Empty")
+think(0)
+RUR.set_world_size(10, 10)
+goal = 9, 9
+start = 3, 3
+RUR.add_final_position("house", *goal)
+reeborg = UsedRobot(*start)
+
+graph = Graph()
+# do the search; do not use colors to indicate the search
+# so that we can focus on the final result
+came_from = find_goal_bfs_v2(start, goal, graph, no_colors=True)
+
+# obtain path from search result
+current = goal
+path = []
+while current != start:
+    path.append(current)
+    current = came_from[current]
+
+path.reverse()
+
+for node in path:
+    while node != reeborg.position_in_front():
+        reeborg.turn_left()
+    reeborg.move()
+```
 
 > **\[info\] Observation**
 >
