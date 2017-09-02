@@ -135,7 +135,7 @@ This path has a single left turn. By contrast, if we use `3, 3, "north"` as the 
 
 ## Using the `search_tools` library
 
-Here is an example using the all the available functions from the `search_tools` library.
+For convenience, the various functions we have defined above are included in the `search_tools` module.
 
 ```py
 import search_tools
@@ -151,10 +151,8 @@ RUR.add_wall("north", 11, 10)
 RUR.add_wall("east", 10, 11)
 
 graph = search_tools.Graph(turn_left=True)
-came_from, current = search_tools.find_goal_bfs(start,
-                         goal, graph, no_colors=True)
-path = search_tools.reconstruct_path(came_from, start,
-                                     current)
+came_from, current = search_tools.find_goal_bfs(start, goal, graph, no_colors=True)
+path = search_tools.reconstruct_path(came_from, start, current)
 
 for node in path:
     _, _, direction = node
