@@ -22,10 +22,9 @@ However, if a location \(node\) would be **fatal** for Reeborg, or if its path \
 
 ## Python data structure
 
-To represent a world, we use a custom class named `Graph()` available from the `search_tools` module. `Graph` has two important methods:
+To represent a world, we use a custom class named `Graph()` available from the `search_tools` module. `Graph` has just a few methods; the only one we need at this point is the following:
 
-* `get_neighbours()` which returns the list of neighbours to a given node, according to rules determined when the instance of `Graph` is created;
-* `get_cost()`, which is a method to be defined later when we consider some specialized algorithms.
+* `get_neighbours():` returns the list of neighbours to a given node, according to rules determined when the instance of `Graph` is created.
 
 When creating a `Graph` instance, we can specify various keyword parameters, each of which may change the representation of a given world by a graph. In particular, we have:
 
@@ -33,7 +32,7 @@ When creating a `Graph` instance, we can specify various keyword parameters, eac
 
 * `robot_body`: if specified, this specific robot \(body\) will be taken into account when compiling the list of neighbours. You may recall that a given robot can carry objects offering a protection against otherwise fatal artefacts. Specifying such a robot \(body\) ensures that all "safe" nodes for that robot are included in the list of neighbours. Note that the position of the robot does **not** have to be the same as where we are compiling the list of neighbours.
 
-  If `robot_body` is left unspecified, and there is at least one robot in the world, it will be assumed that the default robot must be considered when compiling the list of neighbours.
+  If `robot_body` is left unspecified, and there is at least one robot in the world when the `Graph` instance is created, it will be assumed that the default robot must be considered when compiling the list of neighbours.
 
 More parameters will be defined later. Here are some examples for you to try:
 
