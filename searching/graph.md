@@ -20,18 +20,22 @@ However, if a location \(node\) would be **fatal** for Reeborg, or if its path \
 
 ![](/assets/graph2.png)
 
-To get the neighbours to a position `(x, y)`, you can use the Python function `get_neighbours()`: it returns a list of nodes \(2-tuples\). By default, this list is given in random order. This function is included in the module `search_tools.py`.
+## Python data structure
 
-This function has three optional parameters whose use we will illustrate below.
-They are:
+To represent a world, we use a custom class named `Graph()` available from the `search_tools` module. `Graph` has two important methods:
+
+* `get_neighbours()` which returns the list of neighbours to a given node, according to rules determined when the instance of `Graph` is created;
+* `get_cost()`, which is a method to be defined later when we consider some specialized algorithms.
+
+When creating a `Graph` instance, we can specify various keyword parameters, each of which may change the representation of a given world by a graph. In particular, we have:
 
 * `ordered`: when set to `True`, the neighbouring nodes will be given always in the same order: east, north, west and south of the position `(x, y)`.
-* `ignore_walls`: shen set to `True`, nodes that would normally not be reachable because a wall blocks the way will be included in the list of neighbours.
+
 * `robot_body`: if specified, this specific robot \(body\) will be taken into account when compiling the list of neighbours. You may recall that a given robot can carry objects offering a protection against otherwise fatal artefacts. Specifying such a robot \(body\) ensures that all "safe" nodes for that robot are included in the list of neighbours. Note that the position of the robot does **not** have to be the same as where we are compiling the list of neighbours.
 
   If `robot_body` is left unspecified, and there is at least one robot in the world, it will be assumed that the default robot must be considered when compiling the list of neighbours.
 
-Here are some examples for you to try:
+More parameters will be defined later. Here are some examples for you to try:
 
 ```py
 from search_tools import Graph
@@ -88,7 +92,7 @@ print(graph_f.get_neighbours( (4, 4) ))
 # -> [(4, 3)]
 ```
 
-The Python function `get_neighbours()` is a wrapper of a corresponding JavaScript function which we use in the next section.
+The Python class `Graph()` and the method `get_neighbours()` are wrappers for the corresponding JavaScript functions which we use in the next section.
 
 > **\[info\] Further reading**
 >
