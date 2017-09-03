@@ -175,6 +175,7 @@ Below is an image showing the final result. In addition to the above changes, we
 ![](/assets/bfs_path3.png)
 
 And here is the final program in its entirety
+
 ```py
 from search_tools import Deque, Graph
 no_highlight()
