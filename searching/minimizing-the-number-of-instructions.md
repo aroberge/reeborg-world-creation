@@ -12,7 +12,7 @@ We can encode this information by using a graph with a different definition of n
 ```py
 from search_tools import Graph
 graph = Graph(turn_left=True)
-neighbours = graph.get_neighbours((2, 3, "east"))
+neighbours = graph.neighbours((2, 3, "east"))
 print(neighbours)
 # If the world is empty, the result will be:
 # [(3, 3, "east"), (2, 3, "north")]
@@ -89,7 +89,7 @@ def find_goal_bfs(start, goal, graph, no_colors=False):
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        for neighbour in graph.get_neighbours(current):
+        for neighbour in graph.neighbours(current):
             if neighbour not in came_from:
                 frontier.append(neighbour)
                 came_from[neighbour] = current

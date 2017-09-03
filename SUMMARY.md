@@ -71,6 +71,7 @@
 * [Breadth-first and depth-first algorithms](searching/bfs_dfs.md)
 * [Breadth-first search](searching/bfs.md)
 * [Minimizing the number of instructions](searching/minimizing-the-number-of-instructions.md)
+* [Greedy algorithm](searching/greedy.md)
 * [Dijkstra's algorithm](searching/dijkstras-algorithm.md)
 
 ## Fun and games

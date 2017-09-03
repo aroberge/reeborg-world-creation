@@ -37,7 +37,7 @@ while not frontier.is_empty():
     current = frontier.GET_NODE()
     # for "true" depth-first, this is where we would add a node to
     # the visited set
-    for neighbour in graph.get_neighbours(current):
+    for neighbour in graph.neighbours(current):
         if neighbour not in visited:
             frontier.append(neighbour)
             # for "true" depth-first, we would need to break
@@ -81,7 +81,7 @@ visited = set([start])
 
 while not frontier.is_empty():
     current = frontier.get_first()  # <-- See comment below
-    for neighbour in graph.get_neighbours(current):
+    for neighbour in graph.neighbours(current):
         if neighbour not in visited:
             frontier.append(neighbour)
             visited.add(neighbour)
@@ -125,7 +125,7 @@ visited[start] = true;
 
 while (!frontier.is_empty()){
     current = frontier.get_first();
-    neighbours = graph.get_neighbours(current);
+    neighbours = graph.neighbours(current);
     for(i=0; i<neighbours.length; i++) {
         neighbour = neighbours[i];
         if (visited[neighbour] === undefined){

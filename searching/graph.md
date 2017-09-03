@@ -24,7 +24,7 @@ However, if a location \(node\) would be **fatal** for Reeborg, or if its path \
 
 To represent a world, we use a custom class named `Graph()` available from the `search_tools` module. `Graph` has just a few methods; the only one we need at this point is the following:
 
-* `get_neighbours():` returns the list of neighbours to a given node, according to rules determined when the instance of `Graph` is created.
+* `neighbours():` returns the list of neighbours to a given node, according to rules determined when the instance of `Graph` is created.
 
 When creating a `Graph` instance, we can specify various keyword parameters, each of which may change the representation of a given world by a graph. In particular, we have:
 
@@ -43,16 +43,16 @@ World("Empty")
 
 graph = Graph(ordered=True)
 
-print(graph.get_neighbours( (4, 4)))
+print(graph.neighbours( (4, 4)))
 # -> [(5, 4), (4, 5), (3, 4), (4, 3)]
 
 RUR.add_wall("east", 4, 4)
-print(graph.get_neighbours( (4, 4)))
+print(graph.neighbours( (4, 4)))
 # -> [(4, 5), (3, 4), (4, 3)]
 
 RUR.add_obstacle("water", 4, 5)
 RUR.add_obstacle("fire", 3, 4)
-print(graph.get_neighbours( (4, 4)))
+print(graph.neighbours( (4, 4)))
 # -> [(4, 3)]
 
 RUR.add_new_thing({'name': 'fire_protection',
@@ -75,23 +75,23 @@ graph_f = Graph(robot_body = robot_fire.body)
 graph_w = Graph(robot_body = robot_water.body)
 graph_new = Graph()
 
-print(graph_f.get_neighbours( (4, 4)))
+print(graph_f.neighbours( (4, 4)))
 # some permutation of  [(3, 4), (4, 3)]
 
-print(graph_w.get_neighbours( (4, 4)))
+print(graph_w.neighbours( (4, 4)))
 # some permutation of [(4, 5), (4, 3)]
 
-print(graph_new.get_neighbours( (4, 4)))
+print(graph_new.neighbours( (4, 4)))
 # some permutation of [(3, 4), (4, 3)]
 # default robot is robot_fire,
 # which was the first robot added
 
 robot_fire.put()
-print(graph_f.get_neighbours( (4, 4) ))
+print(graph_f.neighbours( (4, 4) ))
 # -> [(4, 3)]
 ```
 
-The Python class `Graph()` and the method `get_neighbours()` are wrappers for the corresponding JavaScript functions which we use in the next section.
+The Python class `Graph()` and the method `neighbours()` are wrappers for the corresponding JavaScript functions which we use in the next section.
 
 > **\[info\] Further reading**
 >
@@ -109,16 +109,16 @@ World("Empty");
 
 var graph = new RUR.Graph({ordered:true});
 
-writeln(graph.get_neighbours([4, 4]));
+writeln(graph.neighbours([4, 4]));
 // -> [[5, 4], [4, 5], [3, 4], [4, 3]]
 
 RUR.add_wall("east", 4, 4);
-writeln(graph.get_neighbours([4, 4]));
+writeln(graph.neighbours([4, 4]));
 // -> [[4, 5], [3, 4], [4, 3]]
 
 RUR.add_obstacle("water", 4, 5);
 RUR.add_obstacle("fire", 3, 4);
-writeln(graph.get_neighbours([4, 4]));
+writeln(graph.neighbours([4, 4]));
 // -> [[4, 3]]
 
 RUR.add_new_thing({'name': 'fire_protection',
@@ -142,19 +142,19 @@ var graph_f = new RUR.Graph({robot_body: robot_fire.body});
 var graph_w = new RUR.Graph({robot_body: robot_water.body});
 var graph_new = new RUR.Graph()
 
-writeln(graph_f.get_neighbours( [4, 4]));
+writeln(graph_f.neighbours( [4, 4]));
 // some permutation of  [[3, 4], [4, 3]]
 
-writeln(graph_w.get_neighbours( [4, 4]));
+writeln(graph_w.neighbours( [4, 4]));
 // some permutation of [[4, 5], [4, 3]]
 
-writeln(graph_new.get_neighbours( [4, 4]));
+writeln(graph_new.neighbours( [4, 4]));
 // some permutation of [[3, 4], [4, 3]]
 // default robot is robot_fire,
 // which was the first robot added
 
 robot_fire.put();
-writeln(graph_f.get_neighbours( [4, 4] ));
+writeln(graph_f.neighbours( [4, 4] ));
 // -> [[4, 3]]
 ```
 

@@ -20,7 +20,7 @@ def find_goal_bfs_v1(start, goal, graph):
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        for neighbour in graph.get_neighbours(current):
+        for neighbour in graph.neighbours(current):
             if neighbour not in visited:
                 frontier.append(neighbour)
                 visited.add(neighbour)
@@ -61,7 +61,7 @@ def find_goal_bfs_v2(start, goal, graph):
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        for neighbour in graph.get_neighbours(current):
+        for neighbour in graph.neighbours(current):
             if neighbour not in came_from:     # 1b
                 frontier.append(neighbour)
                 came_from[neighbour] = current # 1c
@@ -99,7 +99,7 @@ def find_goal_bfs_v2(start, goal, graph, no_colors=False):
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        for neighbour in graph.get_neighbours(current):
+        for neighbour in graph.neighbours(current):
             if neighbour not in came_from:
                 frontier.append(neighbour)
                 came_from[neighbour] = current
@@ -190,7 +190,7 @@ def find_goal_bfs_v2(start, goal, graph, no_colors=False):
 
     while not frontier.is_empty():
         current = frontier.get_first()
-        for neighbour in graph.get_neighbours(current):
+        for neighbour in graph.neighbours(current):
             if neighbour not in came_from:
                 frontier.append(neighbour)
                 came_from[neighbour] = current
