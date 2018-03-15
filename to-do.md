@@ -39,7 +39,12 @@ Other content
 
 * For graph demo, add tiles that are arrows \(see redblobames\); perhaps arrows with an offset to show the overlap, rather than staying into a normal grid square.
 
-* add https://aroberge.blogspot.ca/2015/10/cryptic-reeborg.html
+* add [https://aroberge.blogspot.ca/2015/10/cryptic-reeborg.html](https://aroberge.blogspot.ca/2015/10/cryptic-reeborg.html)
+
+* Explain the custom message \(see https://github.com/aroberge/reeborg/issues/385\).
+
+* Explain how to create language agnostic worlds https://github.com/aroberge/reeborg/issues/386
+
 * 
 
 

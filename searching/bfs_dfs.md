@@ -44,7 +44,6 @@ while not frontier.is_empty():
             # the loop at this point, and expand the frontier
             # only one node at a time
             visited.add(neighbour)
-
 ```
 
 If `GET_NODE()` is retrieving the **first** node that was added to the frontier \(First In, First Out, or FIFO\), we have a breadth-first algorithm  If `GET_NODE()` is retrieving the **last** node added to the frontier \(Last In, First Out, or LIFO\), we have essentially a depth-first algorithm. \(A true depth-first algorithm would label a node as visited only when it is retrieved from the frontier.\)
@@ -89,6 +88,14 @@ while not frontier.is_empty():
 ```
 
 To change from breadth-first to our quasi-depth-first, we simply need to change `frontier.get_first()` to `frontier.get_last()`.
+
+> **\[info\] Notation**
+>
+> There are many different implementation of double ended queues, each with its own notation for appending an item at the end of the queue, and retrieving an item either from the end or the beginning of the queue. I have chosen the following naming convention in an attempt to be clear about what is done:
+>
+> * `append()` adds an item at the end of the queue;
+> * `get_last()` returns the item from the end of the queue, and removes it from the queue;
+> * `get_first()` returns the item from the beginning of the queue, and removes it from the queue.
 
 Below is a comparison of the two different algorithms,. On the left, we are using breadth-first: the frontier is expanding uniformly away from the center. For both of these, we have made a world with small tiles using `RUR.get_current_world().small_tiles = True` after selecting `World("Empty")`.
 

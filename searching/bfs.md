@@ -4,6 +4,10 @@
 >
 > This will be fixed in the near future.
 
+> **\[info\] Copying the code**
+>
+> If you want to copy-paste the example below, you should get them [from the source](https://raw.githubusercontent.com/aroberge/reeborg-world-creation/master/searching/bfs.md), as it will preserve the indentation.
+
 In the previous section, we used a breadth-first search algorithm to visit an entire world. This is not particularly useful. A better use case is for finding a path between two nodes, which we call **start** and **goal**. All that is required is to add a test to see if we have found the goal, and quit at that point.  To make the code clearer, we encapsulate the algorithm in a function whose name ends with `_v1` to indicate that this is only a first version.
 
 ```py
