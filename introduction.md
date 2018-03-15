@@ -2,9 +2,7 @@
 
 > **\[warning\] Warning**
 >
-> This book documents the new version of [Reeborg's World](http://reeborg.ca/reeborg.html), which has just been released and has not been fully tested by outside users.
->
-> This book has not been completed yet.
+> The content of this book is in the process of being migrated to a [simple github repository](https://github.com/aroberge/reeborg-howto).
 
 This book, _**Reeborg's World: a Teacher's Guide**_, is intended for those who create **worlds** \(i.e. programming tasks\) to help others learn programming using [Reeborg's World](http://reeborg.ca/reeborg.html).  In this book I will refer to you as a _**teacher**_ and to those who wish to learn programming using your creations as _**students**_.
 
